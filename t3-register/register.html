@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-skin-base="../skins/" data-default-skin="ituition">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1e4d3a">
+<meta name="robots" content="noindex">
+<title>Register | {business}</title>
+<meta name="description" content="" data-skin-attr="content:business.description">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml" data-skin-attr="href:business.favicon">
+<link rel="preload" href="../shared/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/extra.css">
+<link rel="stylesheet" href="register.css">
+<script src="../shared/skin.js"></script>
+<script type="module" src="../shared/site.js"></script>
+<script type="module" src="../shared/register.js"></script>
+</head>
+<body id="top" class="t3">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+<a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a>
+<nav id="main-nav" aria-label="Main navigation">
+<a href="programmes.html" data-skin="nav.programmes"></a>
+<a href="index.html#why" data-skin="nav.why"></a>
+<a href="index.html#branches" data-skin="nav.branches"></a>
+</nav>
+<a class="header-cta" href="register.html"><span data-skin="nav.headerCta"></span> →</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+</div></header>
+
+<main id="main">
+<section class="page-head"><div class="wrap"><span class="label" data-skin="register.pageLabel"></span><h1 data-skin-html="register.pageTitle"></h1><p data-skin="register.pageText"></p></div></section>
+<section class="section" style="padding-top:20px"><div class="wrap reg-grid">
+ <div class="reg" data-register>
+  <div class="reg-head"><h3 data-skin="register.title"></h3><span class="pill" data-skin="register.pill"></span></div>
+  <form novalidate>
+   <div class="step"><div class="step-title"><span class="n">1</span><span data-skin="register.programmeLabel"></span></div><div class="prog-list" data-programme-list></div></div>
+   <div class="step"><div class="step-title"><span class="n">2</span><span data-skin="register.levelLabel"></span></div><div class="chips" data-level-list></div></div>
+   <div class="step" data-subject-step><div class="step-title"><span class="n">3</span><span data-skin="register.subjectsLabel"></span></div><p class="step-hint" data-skin="register.subjectsHint"></p><div class="chips" data-subject-list></div></div>
+   <div class="step"><div class="step-title"><span class="n">4</span><span data-skin="register.branchLabel"></span></div><div class="chips" data-branch-list></div>
+    <div class="step-title" style="margin-top:16px"><span class="n">5</span><span data-skin="register.modeLabel"></span></div><div class="chips" data-mode-list></div>
+    <div class="step-title" style="margin-top:16px"><span class="n">6</span><span data-skin="register.daysLabel"></span></div><p class="step-hint" data-skin="register.daysHint"></p><div class="chips" data-day-list></div></div>
+   <div class="step"><div class="step-title"><span class="n">7</span><span data-skin="register.contactLabel"></span></div>
+    <div class="fields">
+     <label><span data-skin="register.studentLabel"></span><input name="student" required></label>
+     <label><span data-skin="register.parentLabel"></span><input name="parent" autocomplete="name" required></label>
+     <label class="full"><span data-skin="register.phoneLabel"></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+     <label class="full"><span data-skin="register.notesLabel"></span><textarea name="notes" data-skin-attr="placeholder:register.notesPlaceholder"></textarea></label>
+    </div></div>
+   <div class="reg-foot"><div class="sum"><strong data-summary></strong><span data-fee hidden></span> <span data-skin="register.summaryNote"></span></div><button class="button accent" type="submit"><span data-skin="register.submit"></span> →</button></div>
+   <p class="form-note" data-skin-html="register.formNote"></p>
+  </form>
+  <div class="reg-ready" hidden tabindex="-1">
+   <span class="label" data-skin="register.readyLabel"></span>
+   <h3 data-skin="register.readyTitle"></h3>
+   <div class="ready-summary" data-ready-summary></div>
+   <p class="ref">Reference <code data-reference></code></p>
+   <div class="ready-actions"><a class="button whatsapp-button" data-whatsapp target="_blank" rel="noopener"><span data-skin="register.whatsappCta"></span> ↗</a><a class="button ghost" data-email><span data-skin="register.emailCta"></span> ↗</a></div>
+   <p class="form-note" data-skin="register.readyNote"></p>
+   <div class="ready-links"><button type="button" data-edit>Change details</button><button type="button" data-copy>Copy message</button></div>
+  </div>
+ </div>
+ <aside class="reg-side">
+  <div class="card reveal" data-skin-if="intake"><span class="label" data-skin="intake.label"></span><span class="big" data-skin="intake.title"></span><p data-skin="intake.text"></p><p style="margin-top:8px;font-size:.9rem" data-skin="intake.detail"></p></div>
+  <div class="card reveal"><span class="label" data-skin="register.nextLabel"></span><h3 data-skin="register.nextTitle"></h3><ul><template data-skin-list="register.nextSteps"><li data-skin="."></li></template></ul></div>
+  <div class="card reveal"><span class="label" data-skin="register.askLabel"></span><p data-skin="register.askText"></p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><a class="button whatsapp-button" data-wa><span data-skin="register.askWhatsapp"></span> ↗</a><template data-skin-list="contact.phones"><a class="button ghost" data-skin-attr="href:tel:{tel}" data-skin="label"></a></template></div></div>
+ </aside>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+ <div><h2 data-skin-html="footer.title"></h2><p data-skin-html="footer.blurb"></p><a class="button" href="register.html"><span data-skin="footer.cta"></span> →</a></div>
+ <div><h4 data-skin="footer.contactTitle"></h4><ul><template data-skin-list="contact.phones"><li><a data-skin-attr="href:tel:{tel}" data-skin="label"></a></li></template><li><a data-skin-attr="href:mailto:{contact.email}" data-skin="contact.email"></a></li><li><a data-wa data-skin="footer.whatsappLink" data-skin-if="contact.whatsapp"></a></li></ul></div>
+ <div><h4 data-skin="footer.branchesTitle"></h4><ul><template data-skin-list="branches"><li><a data-skin-attr="href:mapUrl" target="_blank" rel="noopener" data-skin="name"></a></li></template></ul></div>
+ <div class="bottom"><span>© <span data-skin="business.name"></span> · <span data-skin="business.tagline"></span></span><span data-skin="business.ssm"></span></div>
+</div></footer>
+</body>
+</html>

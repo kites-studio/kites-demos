@@ -9,7 +9,8 @@
  *                                          braces interpolate: data-skin-attr="href:contact.html?service={id}"
  *   data-skin-if="proof.reviews"         → element removed when the value is empty/false ("!path" inverts)
  *   <template data-skin-list="services"> → cloned once per item; inside, paths are relative
- *                                          to the item ("name", "fromPrice"), "." for the item itself, or absolute ("$.business.name")
+ *                                          to the item ("name", "fromPrice"), "." for the item itself, or absolute ("$.business.name");
+ *                                          a template nested inside an item lists that item's own array ("levels")
  * Colours: skin.colors.* become CSS custom properties on :root (--navy, --blue, ...).
  * Links between template pages keep the ?skin= parameter automatically.
  */
@@ -62,13 +63,15 @@
     });
   }
 
-  function lists(skin) {
-    document.querySelectorAll("template[data-skin-list]").forEach((tpl) => {
-      const items = get(skin, tpl.dataset.skinList) || [];
+  /* templates clone once per item; nested templates inside an item resolve against that item */
+  function lists(root, ctx, skin) {
+    root.querySelectorAll("template[data-skin-list]").forEach((tpl) => {
+      const items = resolve(ctx, skin, tpl.dataset.skinList) || [];
       const frag = document.createDocumentFragment();
       items.forEach((item, i) => {
         const node = tpl.content.cloneNode(true);
         node.querySelectorAll("[data-skin-index]").forEach((el) => (el.textContent = String(i + 1).padStart(2, "0")));
+        lists(node, item, skin);
         fill(node, item, skin);
         frag.appendChild(node);
       });
@@ -113,7 +116,7 @@
     .then((skin) => {
       window.SKIN = skin;
       colors(skin);
-      lists(skin);
+      lists(document, skin, skin);
       fill(document, skin, skin);
       if (skin.business && skin.business.name) {
         document.title = document.title.replace("{business}", skin.business.name);

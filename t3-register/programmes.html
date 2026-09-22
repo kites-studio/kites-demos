@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-skin-base="../skins/" data-default-skin="ituition">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1e4d3a">
+<meta name="robots" content="noindex">
+<title>Programmes | {business}</title>
+<meta name="description" content="" data-skin-attr="content:business.description">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml" data-skin-attr="href:business.favicon">
+<link rel="preload" href="../shared/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/extra.css">
+<link rel="stylesheet" href="register.css">
+<script src="../shared/skin.js"></script>
+<script type="module" src="../shared/site.js"></script>
+</head>
+<body id="top" class="t3">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+<a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a>
+<nav id="main-nav" aria-label="Main navigation">
+<a href="programmes.html" data-skin="nav.programmes"></a>
+<a href="index.html#why" data-skin="nav.why"></a>
+<a href="index.html#branches" data-skin="nav.branches"></a>
+</nav>
+<a class="header-cta" href="register.html"><span data-skin="nav.headerCta"></span> →</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+</div></header>
+
+<main id="main">
+<section class="page-head"><div class="wrap"><span class="label" data-skin="programmesPage.label"></span><h1 data-skin-html="programmesPage.title"></h1><p data-skin="programmesPage.text"></p></div></section>
+<section class="section" style="padding-top:28px"><div class="wrap">
+ <div class="prog-grid"><template data-skin-list="programmes"><article class="prog reveal" data-skin-attr="id:id"><h3 data-skin="name"></h3><p data-skin="blurb"></p><span class="lv"><template data-skin-list="levels"><span data-skin="."></span></template></span><ul><template data-skin-list="subjects"><li data-skin="."></li></template></ul><span class="fee" data-skin-if="fromPrice">from <span data-skin="$.currency"></span><span data-skin="fromPrice"></span> <small data-skin="feeUnit"></small></span><p style="font-size:.84rem" data-skin="note"></p><a class="go" data-skin-attr="href:register.html?programme={id}"><span data-skin="$.programmesHome.cardCta"></span> →</a></article></template></div>
+</div></section>
+<section class="section" style="padding-top:0" data-skin-if="feesNotes"><div class="wrap"><div class="card reveal"><span class="label" data-skin="feesNotes.label"></span><h3 data-skin="feesNotes.title"></h3><ul><template data-skin-list="feesNotes.items"><li data-skin="."></li></template></ul></div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+ <div><h2 data-skin-html="footer.title"></h2><p data-skin-html="footer.blurb"></p><a class="button" href="register.html"><span data-skin="footer.cta"></span> →</a></div>
+ <div><h4 data-skin="footer.contactTitle"></h4><ul><template data-skin-list="contact.phones"><li><a data-skin-attr="href:tel:{tel}" data-skin="label"></a></li></template><li><a data-skin-attr="href:mailto:{contact.email}" data-skin="contact.email"></a></li><li><a data-wa data-skin="footer.whatsappLink" data-skin-if="contact.whatsapp"></a></li></ul></div>
+ <div><h4 data-skin="footer.branchesTitle"></h4><ul><template data-skin-list="branches"><li><a data-skin-attr="href:mapUrl" target="_blank" rel="noopener" data-skin="name"></a></li></template></ul></div>
+ <div class="bottom"><span>© <span data-skin="business.name"></span> · <span data-skin="business.tagline"></span></span><span data-skin="business.ssm"></span></div>
+</div></footer>
+</body>
+</html>

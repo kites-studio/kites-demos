@@ -1,6 +1,6 @@
 # kites-demos — prospect demo kit
 
-Static, no build step. One shared template + one JSON "skin" per prospect = a full four-page concept site with a working quote brief that hands off to WhatsApp. Bespoke one-offs sit alongside in `bespoke/` and share the same `demo/<slug>/` links.
+Static, no build step. Three templates with genuinely different layouts + one JSON "skin" per prospect = a full concept site whose form ends in a real WhatsApp message with a reference. Bespoke one-offs sit alongside in `bespoke/` and share the same `demo/<slug>/` links.
 
 ```
 kites-demos/
@@ -12,16 +12,24 @@ kites-demos/
 │  ├─ extra.css        concept ribbon, WhatsApp buttons, text wordmark, estimate line
 │  ├─ skin.js          loads ?skin=<slug>, fills data-skin slots, applies colours, keeps the skin in links
 │  ├─ site.js          nav, quote brief module, contact form, WhatsApp/email handoff
-│  ├─ enquiry.js       reference numbers, estimates, brief text, wa.me / mailto links
+│  ├─ enquiry.js       reference numbers, estimates, message text, date helpers, wa.me / mailto links
+│  ├─ book.js          T2 booking module (service → units → price → slot → WhatsApp)
+│  ├─ register.js      T3 registration module (programme → level → subjects → branch → days → WhatsApp)
 │  └─ motion.js        reveal-on-scroll (with reveal-at-rest fallback), motion toggle, magnetic buttons
-├─ t1-quote/           Template 1 — "get a quote" businesses (print, cabinets, signage, aircond, renovation…)
-│  ├─ index.html · services.html · about.html · contact.html
+├─ t1-quote/           Template 1 — "get a quote" (print, cabinets, signage, renovation). Dark editorial, full-bleed hero
+│  ├─ index.html · services.html · about.html · contact.html          (uses shared/style.css)
+├─ t2-book/            Template 2 — "book a slot" (aircond, auto, pest, cleaning). Light utility, booking module in the hero
+│  ├─ index.html · services.html · contact.html · book.css           (engine: shared/book.js)
+├─ t3-register/        Template 3 — "register / trial" (tuition, music, studios). Warm paper prospectus, serif headlines
+│  ├─ index.html · programmes.html · register.html · register.css    (engine: shared/register.js)
 ├─ skins/
 │  ├─ _schema.md       every key explained + the 15-minute checklist
 │  ├─ index.json       list shown on the gallery page
-│  ├─ printngo.json    Print & Go Fast Print (print shop, KL) — reference skin, copy this one
-│  ├─ printngo/        its images
-│  └─ jibuild.json     Ji Build (custom cabinets, Klang Valley) — proves the 15-minute skin
+│  ├─ printngo.json    Print & Go Fast Print (print shop, KL) — T1 reference skin
+│  ├─ jibuild.json     Ji Build (custom cabinets, Klang Valley) — T1, proves the 15-minute skin
+│  ├─ aircond.json     Air-cond.my (Klang) — T2 reference skin
+│  ├─ ituition.json    i-Tuition (Cheras) — T3 reference skin
+│  └─ <slug>/          each skin's web-size images (originals live in madebykites/assets/<slug>/)
 ├─ bespoke/<slug>/     one-off builds with their own HTML/CSS/JS (anyara-hills) — listed on the gallery via `href`
 └─ demo/<slug>/        short-link redirect per prospect: demo/printngo/ → t1-quote/index.html?skin=printngo
 ```

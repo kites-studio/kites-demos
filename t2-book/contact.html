@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-skin-base="../skins/" data-default-skin="aircond">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b7fd6">
+<meta name="robots" content="noindex">
+<title>Contact & areas | {business}</title>
+<meta name="description" content="" data-skin-attr="content:business.description">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml" data-skin-attr="href:business.favicon">
+<link rel="preload" href="../shared/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/extra.css">
+<link rel="stylesheet" href="book.css">
+<script src="../shared/skin.js"></script>
+<script type="module" src="../shared/site.js"></script>
+</head>
+<body id="top" class="inner">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+<a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a>
+<nav id="main-nav" aria-label="Main navigation">
+<a href="services.html" data-skin="nav.services"></a>
+<a href="contact.html" data-skin="nav.contact"></a>
+<a href="index.html#faq" data-skin="nav.faq"></a>
+</nav>
+<a class="header-cta" href="#book"><span data-skin="nav.headerCta"></span> →</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+</div></header>
+
+<main id="main">
+<section class="page-head"><div class="wrap"><span class="label" data-skin="contactPage.label"></span><h1 data-skin-html="contactPage.title"></h1><p data-skin="contactPage.text"></p></div></section>
+<section class="section" style="padding-top:24px"><div class="wrap">
+ <div class="contact-grid">
+  <div class="card reveal">
+   <h3 data-skin="contactPage.formTitle"></h3><p data-skin="contactPage.formText"></p>
+   <form id="contact-form" novalidate>
+    <div class="fields">
+     <label><span data-skin="booking.nameLabel"></span><input name="name" autocomplete="name" required></label>
+     <label><span data-skin="booking.phoneLabel"></span><input name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
+     <label class="full"><span>Email</span><input name="email" type="email" autocomplete="email"></label>
+     <label class="full"><span data-skin="contactPage.serviceLabel"></span><select name="service"></select></label>
+     <label class="full"><span data-skin="contactPage.messageLabel"></span><textarea name="message" data-skin-attr="placeholder:contactPage.messagePlaceholder"></textarea></label>
+     <label class="full" style="position:absolute;left:-9999px" aria-hidden="true">Company fax<input name="companyFax" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <div class="book-foot"><span class="sum" data-skin="contactPage.note"></span><button class="button" type="submit"><span data-skin="contactPage.submit"></span> →</button></div>
+    <div id="form-feedback" hidden tabindex="-1" role="status"></div>
+   </form>
+  </div>
+  <div style="display:grid;gap:16px;align-content:start">
+   <div class="card reveal"><span class="label" data-skin="contactPage.directTitle"></span><template data-skin-list="contact.phones"><a class="big" data-skin-attr="href:tel:{tel}" data-skin="label"></a></template><p data-skin="contact.email"></p><div class="row"><a class="button whatsapp-button" data-wa><span data-skin="contactPage.whatsappLine"></span> ↗</a></div></div>
+   <div class="card reveal"><span class="label" data-skin="contactPage.hoursTitle"></span><ul class="hours"><template data-skin-list="contact.hours"><li><span data-skin="day"></span><span data-skin="time"></span></li></template></ul></div>
+   <div class="card reveal"><span class="label" data-skin="areas.label"></span><p data-skin-html="contact.addressHtml"></p><div class="chips"><template data-skin-list="areas.list"><span data-skin="."></span></template></div><div class="row"><a class="button ghost" data-skin-attr="href:contact.mapUrl" target="_blank" rel="noopener"><span data-skin="contactPage.directions"></span> ↗</a></div></div>
+  </div>
+ </div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+ <div><h2 data-skin-html="footer.title"></h2><p data-skin-html="footer.blurb"></p><a class="button" href="#book"><span data-skin="footer.cta"></span> →</a></div>
+ <div><h4 data-skin="footer.contactTitle"></h4><ul><template data-skin-list="contact.phones"><li><a data-skin-attr="href:tel:{tel}" data-skin="label"></a></li></template><li><a data-skin-attr="href:mailto:{contact.email}" data-skin="contact.email"></a></li><li><a data-wa data-skin="footer.whatsappLink" data-skin-if="contact.whatsapp"></a></li></ul></div>
+ <div><h4 data-skin="footer.visitTitle"></h4><p style="color:#c9d3dc" data-skin-html="contact.addressHtml"></p><ul style="margin-top:10px"><li><a data-skin-attr="href:contact.mapUrl" target="_blank" rel="noopener" data-skin="footer.directionsLink"></a></li><li data-skin="contact.hoursNote"></li></ul></div>
+ <div class="bottom"><span>© <span data-skin="business.name"></span> · <span data-skin="business.tagline"></span></span><span data-skin="business.ssm"></span></div>
+</div></footer>
+
+<div class="sticky-bar"><div class="sp"><span data-skin="business.short"></span><strong data-skin="booking.stickyFallback"></strong></div><a class="button" href="index.html#book"><span data-skin="nav.headerCta"></span> →</a></div>
+</body>
+</html>

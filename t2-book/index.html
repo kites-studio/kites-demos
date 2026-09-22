@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-skin-base="../skins/" data-default-skin="aircond">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b7fd6">
+<meta name="robots" content="noindex">
+<title>Book a slot | {business}</title>
+<meta name="description" content="" data-skin-attr="content:business.description">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml" data-skin-attr="href:business.favicon">
+<link rel="preload" href="../shared/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/extra.css">
+<link rel="stylesheet" href="book.css">
+<script src="../shared/skin.js"></script>
+<script type="module" src="../shared/site.js"></script>
+<script type="module" src="../shared/book.js"></script>
+</head>
+<body id="top" class="t2 home-book">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+<a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a>
+<nav id="main-nav" aria-label="Main navigation">
+<a href="services.html" data-skin="nav.services"></a>
+<a href="contact.html" data-skin="nav.contact"></a>
+<a href="index.html#faq" data-skin="nav.faq"></a>
+</nav>
+<a class="header-cta" href="#book"><span data-skin="nav.headerCta"></span> →</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+</div></header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+ <div class="wrap">
+  <div>
+   <span class="label" data-skin="hero.eyebrow"></span>
+   <h1 id="hero-title" data-skin-html="hero.title"></h1>
+   <p class="hero-description" data-skin-html="hero.description"></p>
+   <ul class="hero-bullets"><template data-skin-list="hero.bullets"><li data-skin="."></li></template></ul>
+   <a class="hero-wa" data-wa data-skin="hero.waText" data-skin-if="contact.whatsapp"></a>
+   <div class="hero-photo"><img src="" alt="" fetchpriority="high" width="1600" height="1000" data-skin-attr="src:hero.image,alt:hero.imageAlt"><div class="badge" data-skin-if="hero.badge"><strong data-skin="hero.badge.big"></strong><span data-skin="hero.badge.small"></span></div></div>
+  </div>
+
+  <div class="book" id="book" data-book>
+   <div class="book-head"><strong data-skin="booking.title"></strong><span class="pill" data-skin="booking.pill"></span></div>
+   <form novalidate>
+    <div class="step"><div class="step-title"><span class="n">1</span><span data-skin="booking.serviceLabel"></span></div><div class="svc-list" data-service-list></div></div>
+    <div class="step"><div class="step-title"><span class="n">2</span><span data-skin="booking.sizingLabel"></span></div>
+     <div class="sizing"><div class="stepper"><button type="button" data-step="-1" aria-label="Fewer">−</button><input type="number" name="sizing" value="1" min="1" max="20" inputmode="numeric" aria-label="Quantity" data-skin-attr="value:booking.sizingDefault,min:booking.sizingMin,max:booking.sizingMax"><button type="button" data-step="1" aria-label="More">+</button></div><span class="unit" data-unit-label>units</span><span class="hint" data-skin="booking.sizingHint"></span></div>
+     <div class="pkg" style="margin-top:12px"><div style="flex:1"><strong data-price hidden></strong><div class="dur" data-duration></div><ul data-includes></ul><div class="pnote" data-price-note></div></div></div>
+    </div>
+    <div class="step"><div class="step-title"><span class="n">3</span><span data-skin="booking.dateLabel"></span></div><div class="date-strip" data-date-strip></div><div class="win-list" data-window-list></div></div>
+    <div class="step"><div class="step-title"><span class="n">4</span><span data-skin="booking.contactLabel"></span></div>
+     <div class="fields">
+      <label><span data-skin="booking.nameLabel"></span><input name="name" autocomplete="name" required></label>
+      <label><span data-skin="booking.phoneLabel"></span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+      <label class="full"><span data-skin="booking.addressLabel"></span><input name="address" autocomplete="street-address" data-skin-attr="placeholder:booking.addressPlaceholder"></label>
+      <label class="full"><span data-skin="booking.notesLabel"></span><textarea name="notes" data-skin-attr="placeholder:booking.notesPlaceholder"></textarea></label>
+     </div>
+    </div>
+    <div class="book-foot"><div class="sum"><strong data-summary></strong><span data-skin="booking.summaryNote"></span></div><button class="button" type="submit"><span data-skin="booking.submit"></span> <span class="arrow">→</span></button></div>
+    <p class="form-note" data-skin-html="booking.formNote"></p>
+   </form>
+   <div class="book-ready" hidden tabindex="-1">
+    <span class="label" data-skin="booking.readyLabel"></span>
+    <h3 data-skin="booking.readyTitle"></h3>
+    <div class="ready-summary" data-ready-summary></div>
+    <p class="ref">Reference <code data-reference></code></p>
+    <div class="ready-actions"><a class="button whatsapp-button" data-whatsapp target="_blank" rel="noopener"><span data-skin="booking.whatsappCta"></span> ↗</a><a class="button ghost" data-email><span data-skin="booking.emailCta"></span> ↗</a></div>
+    <p class="form-note" data-skin="booking.readyNote"></p>
+    <div class="ready-links"><button type="button" data-edit>Change details</button><button type="button" data-copy>Copy message</button></div>
+   </div>
+  </div>
+ </div>
+ <div class="wrap"><div class="trust reveal"><template data-skin-list="trust"><div><strong data-skin="big"></strong><span data-skin="small"></span></div></template></div></div>
+</section>
+
+<section class="section" id="how"><div class="wrap">
+ <div class="reveal"><span class="label" data-skin="how.label"></span><h2 data-skin-html="how.title"></h2></div>
+ <div class="how-grid"><template data-skin-list="how.steps"><article class="reveal"><span class="n" data-skin-index></span><h3 data-skin="title"></h3><p data-skin="text"></p></article></template></div>
+</div></section>
+
+<section class="section" id="services" style="padding-top:0"><div class="wrap">
+ <div class="reveal"><span class="label" data-skin="servicesHome.label"></span><h2 data-skin-html="servicesHome.title"></h2><p style="max-width:560px;margin-top:10px" data-skin="servicesHome.text"></p></div>
+ <div class="svc-grid"><template data-skin-list="services"><a class="svc-tile reveal" data-skin-attr="href:index.html?service={id}#book"><img src="" loading="lazy" alt="" width="800" height="600" data-skin-attr="src:image,alt:imageAlt"><div class="body"><h3 data-skin="name"></h3><p data-skin="blurb"></p><span class="from" data-skin-if="fromPrice">from <span data-skin="$.currency"></span><span data-skin="fromPrice"></span> <small data-skin-if="unit">/ <span data-skin="unit"></span></small></span><span class="dur" data-skin="duration"></span><span class="book-link"><span data-skin="$.servicesHome.tileCta"></span> →</span></div></a></template></div>
+</div></section>
+
+<section class="section" id="areas" style="padding-top:0"><div class="wrap">
+ <div class="areas reveal"><div><span class="label" data-skin="areas.label"></span><h2 data-skin-html="areas.title"></h2><p style="margin-top:10px" data-skin="areas.text"></p><div class="chips"><template data-skin-list="areas.list"><span data-skin="."></span></template></div><p style="margin-top:14px;font-size:.88rem" data-skin="areas.note"></p></div><div class="photo"><img src="" loading="lazy" alt="" width="800" height="600" data-skin-attr="src:areas.image,alt:areas.imageAlt"></div></div>
+</div></section>
+
+<section class="section" id="faq" style="padding-top:0" data-skin-if="faq.items"><div class="wrap">
+ <div class="reveal"><span class="label" data-skin="faq.label"></span><h2 data-skin-html="faq.title"></h2></div>
+ <div class="faq"><template data-skin-list="faq.items"><details class="reveal"><summary data-skin="q"></summary><p data-skin="a"></p></details></template></div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+ <div><h2 data-skin-html="footer.title"></h2><p data-skin-html="footer.blurb"></p><a class="button" href="#book"><span data-skin="footer.cta"></span> →</a></div>
+ <div><h4 data-skin="footer.contactTitle"></h4><ul><template data-skin-list="contact.phones"><li><a data-skin-attr="href:tel:{tel}" data-skin="label"></a></li></template><li><a data-skin-attr="href:mailto:{contact.email}" data-skin="contact.email"></a></li><li><a data-wa data-skin="footer.whatsappLink" data-skin-if="contact.whatsapp"></a></li></ul></div>
+ <div><h4 data-skin="footer.visitTitle"></h4><p style="color:#c9d3dc" data-skin-html="contact.addressHtml"></p><ul style="margin-top:10px"><li><a data-skin-attr="href:contact.mapUrl" target="_blank" rel="noopener" data-skin="footer.directionsLink"></a></li><li data-skin="contact.hoursNote"></li></ul></div>
+ <div class="bottom"><span>© <span data-skin="business.name"></span> · <span data-skin="business.tagline"></span></span><span data-skin="business.ssm"></span></div>
+</div></footer>
+
+<div class="sticky-bar"><div class="sp"><span data-skin="booking.stickyLabel"></span><strong data-sticky-price></strong></div><a class="button" href="#book"><span data-skin="nav.headerCta"></span> →</a></div>
+</body>
+</html>

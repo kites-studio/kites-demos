@@ -32,7 +32,7 @@
   <h1>Prospect demos.</h1>
   <p class="lead">Each card is a real business, either skinned onto a shared template or built bespoke. Open one, click through, and try the enquiry — on the template demos it ends in a filled-in WhatsApp message.</p>
   <div class="grid" id="grid"></div>
-  <p class="foot">Templates: <code>t1-quote</code> (quote &amp; WhatsApp handoff) · <code>t2-book</code> and <code>t3-register</code> next. Bespoke builds live in <code>bespoke/</code>.<br>New template demo = one JSON file in <code>skins/</code>. See <code>skins/_schema.md</code>.</p>
+  <p class="foot">Templates: <code>t1-quote</code> (quote brief) · <code>t2-book</code> (book a slot) · <code>t3-register</code> (register / trial) — three different layouts on one engine. Bespoke builds live in <code>bespoke/</code>.<br>New template demo = one JSON file in <code>skins/</code>. See <code>skins/_schema.md</code>.</p>
 </main>
 <script>
   fetch("skins/index.json", { cache: "no-cache" }).then(r => r.json()).then(list => {

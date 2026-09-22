@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-skin-base="../skins/" data-default-skin="aircond">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b7fd6">
+<meta name="robots" content="noindex">
+<title>Services & prices | {business}</title>
+<meta name="description" content="" data-skin-attr="content:business.description">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml" data-skin-attr="href:business.favicon">
+<link rel="preload" href="../shared/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/extra.css">
+<link rel="stylesheet" href="book.css">
+<script src="../shared/skin.js"></script>
+<script type="module" src="../shared/site.js"></script>
+</head>
+<body id="top" class="inner">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+<a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a>
+<nav id="main-nav" aria-label="Main navigation">
+<a href="services.html" data-skin="nav.services"></a>
+<a href="contact.html" data-skin="nav.contact"></a>
+<a href="index.html#faq" data-skin="nav.faq"></a>
+</nav>
+<a class="header-cta" href="#book"><span data-skin="nav.headerCta"></span> →</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+</div></header>
+
+<main id="main">
+<section class="page-head"><div class="wrap"><span class="label" data-skin="servicesPage.label"></span><h1 data-skin-html="servicesPage.title"></h1><p data-skin="servicesPage.text"></p></div></section>
+<section class="section" style="padding-top:24px"><div class="wrap">
+ <div class="svc-grid"><template data-skin-list="services"><article class="svc-tile reveal" data-skin-attr="id:id"><img src="" loading="lazy" alt="" width="800" height="600" data-skin-attr="src:image,alt:imageAlt"><div class="body"><h3 data-skin="name"></h3><p data-skin="blurb"></p><span class="from" data-skin-if="fromPrice">from <span data-skin="$.currency"></span><span data-skin="fromPrice"></span> <small data-skin-if="unit">/ <span data-skin="unit"></span></small></span><span class="dur" data-skin="duration"></span><ul><template data-skin-list="includes"><li data-skin="."></li></template></ul><p style="font-size:.8rem;margin-top:8px" data-skin="note"></p><a class="book-link" data-skin-attr="href:index.html?service={id}#book"><span data-skin="$.servicesHome.tileCta"></span> →</a></div></article></template></div>
+</div></section>
+<section class="section" style="padding-top:0" data-skin-if="pricingNotes"><div class="wrap"><div class="card reveal"><span class="label" data-skin="pricingNotes.label"></span><h3 data-skin="pricingNotes.title"></h3><ul style="margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:.92rem;display:grid;gap:6px"><template data-skin-list="pricingNotes.items"><li data-skin="."></li></template></ul></div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+ <div><h2 data-skin-html="footer.title"></h2><p data-skin-html="footer.blurb"></p><a class="button" href="#book"><span data-skin="footer.cta"></span> →</a></div>
+ <div><h4 data-skin="footer.contactTitle"></h4><ul><template data-skin-list="contact.phones"><li><a data-skin-attr="href:tel:{tel}" data-skin="label"></a></li></template><li><a data-skin-attr="href:mailto:{contact.email}" data-skin="contact.email"></a></li><li><a data-wa data-skin="footer.whatsappLink" data-skin-if="contact.whatsapp"></a></li></ul></div>
+ <div><h4 data-skin="footer.visitTitle"></h4><p style="color:#c9d3dc" data-skin-html="contact.addressHtml"></p><ul style="margin-top:10px"><li><a data-skin-attr="href:contact.mapUrl" target="_blank" rel="noopener" data-skin="footer.directionsLink"></a></li><li data-skin="contact.hoursNote"></li></ul></div>
+ <div class="bottom"><span>© <span data-skin="business.name"></span> · <span data-skin="business.tagline"></span></span><span data-skin="business.ssm"></span></div>
+</div></footer>
+
+<div class="sticky-bar"><div class="sp"><span data-skin="business.short"></span><strong data-skin="booking.stickyFallback"></strong></div><a class="button" href="index.html#book"><span data-skin="nav.headerCta"></span> →</a></div>
+</body>
+</html>

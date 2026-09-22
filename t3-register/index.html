@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-skin-base="../skins/" data-default-skin="ituition">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1e4d3a">
+<meta name="robots" content="noindex">
+<title>Home | {business}</title>
+<meta name="description" content="" data-skin-attr="content:business.description">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml" data-skin-attr="href:business.favicon">
+<link rel="preload" href="../shared/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/extra.css">
+<link rel="stylesheet" href="register.css">
+<script src="../shared/skin.js"></script>
+<script type="module" src="../shared/site.js"></script>
+</head>
+<body id="top" class="t3">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+<a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a>
+<nav id="main-nav" aria-label="Main navigation">
+<a href="programmes.html" data-skin="nav.programmes"></a>
+<a href="index.html#why" data-skin="nav.why"></a>
+<a href="index.html#branches" data-skin="nav.branches"></a>
+</nav>
+<a class="header-cta" href="register.html"><span data-skin="nav.headerCta"></span> →</a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+</div></header>
+
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+ <div class="wrap">
+  <div>
+   <span class="label" data-skin="hero.eyebrow"></span>
+   <h1 id="hero-title" data-skin-html="hero.title"></h1>
+   <p class="hero-description" data-skin-html="hero.description"></p>
+   <div class="hero-actions"><a class="button" href="register.html"><span data-skin="hero.cta"></span> →</a><a class="wa-line" data-wa data-skin="hero.waText" data-skin-if="contact.whatsapp"></a></div>
+   <div class="hero-langs" data-skin-if="hero.tags"><template data-skin-list="hero.tags"><span data-skin="."></span></template></div>
+  </div>
+  <div class="hero-photo"><img src="" alt="" fetchpriority="high" width="800" height="1000" data-skin-attr="src:hero.image,alt:hero.imageAlt"><div class="intake" data-skin-if="intake"><span class="label" data-skin="intake.label"></span><strong data-skin="intake.title"></strong><span data-skin="intake.text"></span></div></div>
+ </div>
+</section>
+
+<section class="band" data-skin-if="results"><div class="wrap"><template data-skin-list="results"><div class="reveal"><strong data-skin-html="big"></strong><span data-skin="small"></span></div></template></div></section>
+
+<section class="section" id="programmes"><div class="wrap">
+ <div class="reveal"><span class="label" data-skin="programmesHome.label"></span><h2 data-skin-html="programmesHome.title"></h2><p style="max-width:560px;margin-top:12px" data-skin="programmesHome.text"></p></div>
+ <div class="prog-grid"><template data-skin-list="programmes"><a class="prog reveal" data-skin-attr="href:register.html?programme={id}"><h3 data-skin="name"></h3><p data-skin="blurb"></p><span class="lv"><template data-skin-list="levels"><span data-skin="."></span></template></span><span class="fee" data-skin-if="fromPrice">from <span data-skin="$.currency"></span><span data-skin="fromPrice"></span> <small data-skin="feeUnit"></small></span><span class="go"><span data-skin="$.programmesHome.cardCta"></span> →</span></a></template></div>
+</div></section>
+
+<section class="section" id="why" style="padding-top:0"><div class="wrap two">
+ <img src="" loading="lazy" alt="" width="800" height="600" class="reveal" data-skin-attr="src:why.image,alt:why.imageAlt">
+ <div class="reveal"><span class="label" data-skin="why.label"></span><h2 data-skin-html="why.title"></h2><p style="margin-top:12px" data-skin="why.text"></p>
+  <ul class="feat"><template data-skin-list="why.points"><li><span class="n" data-skin-index></span><div><strong data-skin="title"></strong><p data-skin="text"></p></div></li></template></ul></div>
+</div></section>
+
+<section class="section" id="stories" style="padding-top:0" data-skin-if="testimonials.items"><div class="wrap">
+ <div class="reveal"><span class="label" data-skin="testimonials.label"></span><h2 data-skin-html="testimonials.title"></h2></div>
+ <div class="quotes"><template data-skin-list="testimonials.items"><blockquote class="quote reveal" style="margin:0"><p data-skin="quote"></p><footer><strong data-skin="who"></strong> · <span data-skin="detail"></span></footer></blockquote></template></div>
+</div></section>
+
+<section class="section" id="teachers" style="padding-top:0" data-skin-if="teachers.items"><div class="wrap">
+ <div class="reveal"><span class="label" data-skin="teachers.label"></span><h2 data-skin-html="teachers.title"></h2></div>
+ <div class="people"><template data-skin-list="teachers.items"><div class="person reveal"><img src="" loading="lazy" alt="" width="64" height="64" data-skin-attr="src:image,alt:name"><div><strong data-skin="name"></strong><span data-skin="role"></span></div></div></template></div>
+</div></section>
+
+<section class="section" id="branches" style="padding-top:0"><div class="wrap">
+ <div class="reveal"><span class="label" data-skin="branchesHome.label"></span><h2 data-skin-html="branchesHome.title"></h2></div>
+ <div class="branches"><template data-skin-list="branches"><div class="branch reveal"><strong data-skin="name"></strong><p data-skin-html="addressHtml"></p><p style="margin-top:6px" data-skin="hours"></p><div class="links"><a data-skin-attr="href:mapUrl" target="_blank" rel="noopener" data-skin="$.branchesHome.mapLink"></a><a data-skin-attr="href:tel:{tel}" data-skin="phone"></a></div></div></template></div>
+</div></section>
+
+<section class="section" id="faq" style="padding-top:0" data-skin-if="faq.items"><div class="wrap">
+ <div class="reveal"><span class="label" data-skin="faq.label"></span><h2 data-skin-html="faq.title"></h2></div>
+ <div class="faq"><template data-skin-list="faq.items"><details class="reveal"><summary data-skin="q"></summary><p data-skin="a"></p></details></template></div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+ <div><h2 data-skin-html="footer.title"></h2><p data-skin-html="footer.blurb"></p><a class="button" href="register.html"><span data-skin="footer.cta"></span> →</a></div>
+ <div><h4 data-skin="footer.contactTitle"></h4><ul><template data-skin-list="contact.phones"><li><a data-skin-attr="href:tel:{tel}" data-skin="label"></a></li></template><li><a data-skin-attr="href:mailto:{contact.email}" data-skin="contact.email"></a></li><li><a data-wa data-skin="footer.whatsappLink" data-skin-if="contact.whatsapp"></a></li></ul></div>
+ <div><h4 data-skin="footer.branchesTitle"></h4><ul><template data-skin-list="branches"><li><a data-skin-attr="href:mapUrl" target="_blank" rel="noopener" data-skin="name"></a></li></template></ul></div>
+ <div class="bottom"><span>© <span data-skin="business.name"></span> · <span data-skin="business.tagline"></span></span><span data-skin="business.ssm"></span></div>
+</div></footer>
+</body>
+</html>

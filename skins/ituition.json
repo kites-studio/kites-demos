@@ -1,0 +1,225 @@
+{
+  "slug": "ituition",
+  "template": "t3-register",
+  "concept": true,
+  "currency": "RM",
+  "refPrefix": "ITC",
+  "_note": "Prospect: i-Tuition, Bandar Mahkota Cheras / Sg Long (call sheet row 30). Fees, results, testimonials and teacher names are ILLUSTRATIVE placeholders — replace with the client's real figures before sending; never present as fact. WhatsApp/phone/email route to Kites until confirmed.",
+  "colors": { "deep": "#1e4d3a", "deepSoft": "#e3ede7", "accent": "#c98a24", "accentSoft": "#f6e7c9", "paper": "#f7f2e8", "ink": "#1f2a24", "muted": "#66706a", "line": "#e4dccf" },
+
+  "business": {
+    "name": "i-Tuition Cheras",
+    "short": "i-Tuition",
+    "initials": "iT",
+    "tagline": "Tuition centre, Cheras & Sungai Long",
+    "since": "2014",
+    "ssm": "Concept preview — company details to be confirmed",
+    "description": "Primary, secondary and SPM tuition in Bandar Mahkota Cheras and Sungai Long. Register for the January intake in two minutes — we confirm on WhatsApp."
+  },
+
+  "contact": {
+    "whatsapp": "60102156826",
+    "phones": [{ "label": "010-215 6826", "tel": "+60102156826" }],
+    "email": "kites.stdio@gmail.com",
+    "hoursNote": "Mon–Fri 2pm–9pm · Sat 9am–5pm"
+  },
+
+  "branches": [
+    { "id": "mahkota", "name": "Bandar Mahkota Cheras", "area": "Main centre", "addressHtml": "Jalan Temenggung, Bandar Mahkota Cheras<br>43200 Cheras, Selangor", "hours": "Mon–Fri 2pm–9pm · Sat 9am–5pm", "phone": "010-215 6826", "tel": "+60102156826", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bandar+Mahkota+Cheras" },
+    { "id": "sglong", "name": "Sungai Long", "area": "Branch", "addressHtml": "Persiaran Sungai Long, Bandar Sungai Long<br>43000 Kajang, Selangor", "hours": "Mon–Fri 3pm–9pm · Sat 9am–1pm", "phone": "010-215 6826", "tel": "+60102156826", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bandar+Sungai+Long" }
+  ],
+
+  "nav": { "programmes": "Programmes & fees", "why": "Why us", "branches": "Branches", "headerCta": "Register" },
+
+  "hero": {
+    "eyebrow": "January 2027 intake · Cheras & Sungai Long",
+    "title": "Small classes. <em>Real</em> results.",
+    "description": "Primary, secondary and SPM tuition in English, Bahasa Malaysia and Chinese, taught by teachers who mark every exercise book. Register in two minutes; the first class is a free trial.",
+    "cta": "Register for a trial",
+    "waText": "or ask a question on WhatsApp",
+    "image": "ituition/classroom.jpg",
+    "imageAlt": "Teacher explaining a maths problem to a small class",
+    "tags": ["Max 8 per class", "EN · BM · 中文", "KSSR & KSSM", "IGCSE"]
+  },
+
+  "intake": {
+    "label": "Next intake",
+    "title": "5 January 2027",
+    "text": "Registration open · trial classes from 1 December",
+    "detail": "Places are confirmed in order of registration. Trial class is free; no deposit until you decide."
+  },
+
+  "results": [
+    { "big": "<em>92</em>%", "small": "of 2025 SPM students improved by at least one grade" },
+    { "big": "8", "small": "students per class, maximum" },
+    { "big": "11 <em>yrs</em>", "small": "teaching in Cheras" },
+    { "big": "2", "small": "branches, same teachers" }
+  ],
+
+  "programmesHome": {
+    "label": "Programmes",
+    "title": "Pick a programme, <em>then a level.</em>",
+    "text": "Fees are per subject per month. Sibling and multi-subject discounts on the fees page.",
+    "cardCta": "Register"
+  },
+
+  "programmes": [
+    {
+      "id": "primary", "name": "Primary (Std 1–6)",
+      "blurb": "KSSR syllabus, homework support and UASA preparation. Small groups by standard.",
+      "levels": ["Std 1", "Std 2", "Std 3", "Std 4", "Std 5", "Std 6"],
+      "subjects": ["Bahasa Malaysia", "English", "Mathematics", "Science", "Chinese"],
+      "fromPrice": 120, "feeUnit": "per subject / month", "feePerSubject": true,
+      "note": "Two subjects RM220, three RM300. Books included."
+    },
+    {
+      "id": "secondary", "name": "Secondary (Form 1–3)",
+      "blurb": "KSSM core subjects with weekly topical tests and a monthly progress note to parents.",
+      "levels": ["Form 1", "Form 2", "Form 3"],
+      "subjects": ["Bahasa Malaysia", "English", "Mathematics", "Science", "Sejarah", "Chinese"],
+      "fromPrice": 150, "feeUnit": "per subject / month", "feePerSubject": true,
+      "note": "Two subjects RM280, three RM390."
+    },
+    {
+      "id": "spm", "name": "SPM (Form 4–5)",
+      "blurb": "Exam-focused classes with past-year drilling, marked essays and a mock exam every term.",
+      "levels": ["Form 4", "Form 5"],
+      "subjects": ["Bahasa Malaysia", "English", "Mathematics", "Add Maths", "Physics", "Chemistry", "Biology", "Sejarah", "Chinese"],
+      "fromPrice": 180, "feeUnit": "per subject / month", "feePerSubject": true,
+      "note": "Intensive revision programme (Aug–Oct) priced separately."
+    },
+    {
+      "id": "igcse", "name": "IGCSE",
+      "blurb": "Cambridge IGCSE core and extended, taught in English, for private candidates and international-school students.",
+      "levels": ["Year 9", "Year 10", "Year 11"],
+      "subjects": ["English", "Mathematics", "Physics", "Chemistry", "Biology", "Chinese"],
+      "fromPrice": 220, "feeUnit": "per subject / month", "feePerSubject": true,
+      "note": "Small groups of 4–6. Exam registration guidance included."
+    }
+  ],
+
+  "programmesPage": {
+    "label": "Programmes & fees",
+    "title": "Every programme, <em>every fee.</em>",
+    "text": "Fees are per subject per month, books included. Illustrative for this preview — the centre's actual fee schedule replaces these on launch."
+  },
+
+  "feesNotes": {
+    "label": "Good to know",
+    "title": "How fees work",
+    "items": [
+      "First class is a free trial — no payment until you decide to continue.",
+      "Sibling discount: 10% off the second child's fees.",
+      "Fees are paid monthly by transfer or DuitNow; no registration fee, no long contract.",
+      "Missed classes can be replaced at the other branch in the same week."
+    ]
+  },
+
+  "why": {
+    "label": "Why parents choose us",
+    "title": "Every book marked, <em>every parent told.</em>",
+    "text": "Big centres put thirty students in a room and hope. We cap classes at eight, so the teacher knows exactly where each child is stuck.",
+    "image": "ituition/writing.jpg",
+    "imageAlt": "Student writing neatly in an exercise book",
+    "points": [
+      { "title": "Maximum 8 per class", "text": "Small enough that no one hides at the back." },
+      { "title": "Monthly progress note", "text": "A short WhatsApp to parents after every monthly test — what improved, what to watch." },
+      { "title": "Same teachers, both branches", "text": "Cheras and Sungai Long share one team, so replacements are easy." },
+      { "title": "Three languages", "text": "Classes in English, Bahasa Malaysia or Chinese, matched to the school." }
+    ]
+  },
+
+  "testimonials": {
+    "label": "From parents",
+    "title": "What they <em>say.</em>",
+    "items": [
+      { "quote": "My son went from a D to a B in Add Maths in one term. The monthly note tells me more than his school does.", "who": "Mrs Lim", "detail": "parent, Form 5 · illustrative" },
+      { "quote": "Eight students in the class. The teacher actually knows my daughter's name and her weak topics.", "who": "En. Rashid", "detail": "parent, Std 5 · illustrative" },
+      { "quote": "We moved from Sg Long to Cheras and kept the same teacher. That mattered.", "who": "Ms Wong", "detail": "parent, Form 2 · illustrative" }
+    ]
+  },
+
+  "teachers": {
+    "label": "The team",
+    "title": "Teachers who <em>stay.</em>",
+    "items": [
+      { "name": "Ms Cheong", "role": "Principal · Mathematics & Add Maths · illustrative", "image": "ituition/principal.jpg" },
+      { "name": "Cikgu Farah", "role": "Bahasa Malaysia & Sejarah · illustrative", "image": "ituition/reception.jpg" },
+      { "name": "Mr Tan", "role": "Physics & Chemistry · illustrative", "image": "ituition/classroom.jpg" }
+    ]
+  },
+
+  "branchesHome": { "label": "Branches", "title": "Two centres, <em>one team.</em>", "mapLink": "Open in Maps" },
+
+  "register": {
+    "pageLabel": "Register",
+    "pageTitle": "Two minutes. <em>Free trial.</em>",
+    "pageText": "Pick the programme, level and subjects, tell us which branch and days suit you, and it lands in our WhatsApp with a reference. We reply with the trial class time.",
+    "title": "Register for the January intake",
+    "pill": "Free trial class",
+    "programmeLabel": "Programme",
+    "levelLabel": "Level",
+    "subjectsLabel": "Subjects",
+    "subjectsHint": "Pick one or more. You can change after the trial.",
+    "branchLabel": "Branch",
+    "modeLabel": "Mode",
+    "modes": [
+      { "id": "centre", "label": "At the centre", "sub": "recommended" },
+      { "id": "online", "label": "Online", "sub": "Google Meet" },
+      { "id": "hybrid", "label": "Mix", "sub": "we'll advise" }
+    ],
+    "daysLabel": "Preferred days",
+    "daysHint": "Pick all that could work — we'll match to the timetable.",
+    "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "contactLabel": "Student and parent",
+    "studentLabel": "Student's name",
+    "parentLabel": "Parent / guardian",
+    "phoneLabel": "Parent's WhatsApp number",
+    "notesLabel": "Anything we should know? (optional)",
+    "notesPlaceholder": "Current school, weak topics, or a question for the teacher…",
+    "summaryNote": "· confirmed on WhatsApp",
+    "submit": "Review registration",
+    "formNote": "No payment now. The trial class is free; fees start only if you continue.",
+    "readyLabel": "One tap left",
+    "readyTitle": "Send your registration",
+    "whatsappCta": "Confirm on WhatsApp",
+    "emailCta": "Send by email instead",
+    "readyNote": "WhatsApp opens with everything filled in. We reply with the trial class date and time.",
+    "opener": "I'd like to register for the January intake.",
+    "closer": "Please confirm the trial class time. Thank you.",
+    "studentField": "Student",
+    "parentField": "Parent",
+    "intakeField": "Intake",
+    "intakeLine": "January 2027 (trial from 1 Dec)",
+    "nextLabel": "What happens next",
+    "nextTitle": "After you send",
+    "nextSteps": [
+      "We reply on WhatsApp within a working day with a trial class slot.",
+      "Student attends one free class at the branch you picked.",
+      "If it fits, fees start from the following month. If not, no charge."
+    ],
+    "askLabel": "Rather ask first?",
+    "askText": "Message us with the level and subjects and we'll suggest a programme.",
+    "askWhatsapp": "WhatsApp us"
+  },
+
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions parents <em>ask.</em>",
+    "items": [
+      { "q": "Can we start mid-term?", "a": "Yes. Fees are pro-rated for the first month and the trial class is still free." },
+      { "q": "Which language is the class in?", "a": "Matched to the school — SK/SMK classes in BM, SJKC in Chinese, international in English. Tell us in the notes." },
+      { "q": "What if my child misses a class?", "a": "Replace it at either branch the same week, or get the notes and homework on WhatsApp." },
+      { "q": "Is there a registration fee or contract?", "a": "No. Monthly fees only, one month's notice to stop." }
+    ]
+  },
+
+  "footer": {
+    "title": "Small classes. <em>Real results.</em>",
+    "blurb": "Register in two minutes. The first class is free.",
+    "cta": "Register for a trial",
+    "contactTitle": "Contact",
+    "whatsappLink": "WhatsApp us",
+    "branchesTitle": "Branches"
+  }
+}

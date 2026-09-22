@@ -1,5 +1,38 @@
 [
-  { "slug": "printngo", "name": "Print & Go Fast Print", "industry": "Print shop · Wisma Central, KL", "template": "t1-quote", "status": "prospect demo" },
-  { "slug": "jibuild", "name": "Ji Build Custom Cabinets", "industry": "Custom cabinets · Klang Valley", "template": "t1-quote", "status": "prospect demo · WhatsApp → Kites until confirmed" },
-  { "slug": "anyara-hills", "name": "Anyara Hills", "industry": "Land developer · Hulu Langat", "template": "bespoke", "href": "bespoke/anyara-hills/index.html", "status": "speculative one-pager · press A for annotations" }
+  {
+    "slug": "printngo",
+    "name": "Print & Go Fast Print",
+    "industry": "Print shop · Wisma Central, KL",
+    "template": "t1-quote",
+    "status": "prospect demo"
+  },
+  {
+    "slug": "jibuild",
+    "name": "Ji Build Custom Cabinets",
+    "industry": "Custom cabinets · Klang Valley",
+    "template": "t1-quote",
+    "status": "prospect demo · WhatsApp → Kites until confirmed"
+  },
+  {
+    "slug": "aircond",
+    "name": "Air-cond.my",
+    "industry": "Aircond servicing · Klang, Shah Alam, PJ",
+    "template": "t2-book",
+    "status": "prospect demo · book a slot → WhatsApp"
+  },
+  {
+    "slug": "ituition",
+    "name": "i-Tuition Cheras",
+    "industry": "Tuition centre · Cheras & Sungai Long",
+    "template": "t3-register",
+    "status": "prospect demo · register → WhatsApp"
+  },
+  {
+    "slug": "anyara-hills",
+    "name": "Anyara Hills",
+    "industry": "Land developer · Hulu Langat",
+    "template": "bespoke",
+    "href": "bespoke/anyara-hills/index.html",
+    "status": "speculative one-pager · press A for annotations"
+  }
 ]

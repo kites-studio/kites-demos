@@ -1,0 +1,215 @@
+{
+  "slug": "aircond",
+  "template": "t2-book",
+  "concept": true,
+  "currency": "RM",
+  "refPrefix": "ACM",
+  "_note": "Prospect: Air-cond.my, Bukit Kuda, Klang (call sheet row 24). Prices are illustrative market rates (Tradespan publishes RM80/unit) — confirm with the client before quoting. WhatsApp/phone/email route to Kites until confirmed.",
+  "colors": { "accent": "#0b7fd6", "accentDeep": "#075ea0", "accentSoft": "#dbeeff", "wash": "#f3f7fb", "ink": "#12232f", "muted": "#5f6f7b" },
+
+  "business": {
+    "name": "Air-cond.my",
+    "short": "Air-cond.my",
+    "initials": "AC",
+    "tagline": "Aircond servicing, Klang Valley",
+    "since": "2012",
+    "ssm": "Concept preview — company details to be confirmed",
+    "description": "Book an aircond service in Klang, Shah Alam and PJ in under a minute. Pick your service, number of units and a time slot — we confirm on WhatsApp."
+  },
+
+  "contact": {
+    "whatsapp": "60102156826",
+    "phones": [{ "label": "010-215 6826", "tel": "+60102156826" }],
+    "email": "kites.stdio@gmail.com",
+    "addressHtml": "Bukit Kuda, 41300 Klang<br>Selangor",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bukit+Kuda+Klang",
+    "hoursNote": "Mon–Sat 9am–6pm · Sun by arrangement",
+    "hours": [
+      { "day": "Monday – Friday", "time": "9:00am – 6:00pm" },
+      { "day": "Saturday", "time": "9:00am – 4:00pm" },
+      { "day": "Sunday & public holidays", "time": "Emergency only" }
+    ]
+  },
+
+  "nav": { "services": "Services & prices", "contact": "Contact & areas", "faq": "FAQ", "headerCta": "Book a slot" },
+
+  "hero": {
+    "eyebrow": "Klang · Shah Alam · Petaling Jaya",
+    "title": "Cold again by <em>tomorrow.</em>",
+    "description": "Pick a service, tell us how many units, choose a morning or afternoon. Your booking lands in our WhatsApp with a reference — no phone tag.",
+    "bullets": [
+      "Same-week slots, usually next day",
+      "Price per unit shown before you book",
+      "Technicians with 10+ years on split units"
+    ],
+    "waText": "Prefer to chat? WhatsApp us",
+    "image": "aircond/technician.jpg",
+    "imageAlt": "Technician servicing a wall-mounted split unit in a bright living room",
+    "badge": { "big": "45 min", "small": "per unit, normal service" }
+  },
+
+  "booking": {
+    "title": "Book a slot",
+    "pill": "Confirmed on WhatsApp",
+    "serviceLabel": "What do you need?",
+    "sizingLabel": "How many units?",
+    "sizingUnit": "unit",
+    "sizingField": "Units",
+    "sizingDefault": "2",
+    "sizingMin": "1",
+    "sizingMax": "12",
+    "sizingHint": "Count every indoor unit. Ceiling cassettes count as one.",
+    "estimateNote": "Estimate for wall-mounted units up to 2.5HP. Final price confirmed before we start.",
+    "dateLabel": "When?",
+    "daysAhead": 14,
+    "closedDays": [0],
+    "windows": [
+      { "id": "am", "label": "Morning", "sub": "9am – 12pm" },
+      { "id": "pm", "label": "Afternoon", "sub": "1pm – 4pm" },
+      { "id": "eve", "label": "Late", "sub": "4pm – 6pm" }
+    ],
+    "contactLabel": "Where and who?",
+    "nameLabel": "Your name",
+    "phoneLabel": "WhatsApp number",
+    "addressLabel": "Address or area",
+    "addressPlaceholder": "e.g. Taman Sentosa, Klang — condo or landed",
+    "notesLabel": "Anything we should know? (optional)",
+    "notesPlaceholder": "Unit not cooling, water dripping, brand and HP if you know it…",
+    "summaryNote": "You'll confirm everything on WhatsApp before it's final.",
+    "submit": "Review booking",
+    "formNote": "No payment now. We reply within 30 minutes during working hours.",
+    "readyLabel": "One tap left",
+    "readyTitle": "Send your booking",
+    "whatsappCta": "Confirm on WhatsApp",
+    "emailCta": "Send by email instead",
+    "readyNote": "WhatsApp opens with everything filled in. We reply with the exact time and the technician's name.",
+    "opener": "I'd like to book an aircond service.",
+    "closer": "Please confirm the slot and price. Thank you.",
+    "stickyLabel": "Your estimate",
+    "stickyFallback": "Book in under a minute"
+  },
+
+  "trust": [
+    { "big": "12 yrs", "small": "servicing Klang Valley homes" },
+    { "big": "8,400+", "small": "units serviced" },
+    { "big": "30 min", "small": "typical reply time" },
+    { "big": "4.8 ★", "small": "customer rating (illustrative)" }
+  ],
+
+  "how": {
+    "label": "How it works",
+    "title": "Three taps. One <em>WhatsApp.</em>",
+    "steps": [
+      { "title": "Pick and price", "text": "Choose the service and number of units — the estimate updates as you go." },
+      { "title": "Choose a slot", "text": "Any day in the next two weeks, morning, afternoon or late. We hold it once you confirm." },
+      { "title": "Confirm on WhatsApp", "text": "Your booking opens in WhatsApp with a reference. We reply with the exact arrival time." }
+    ]
+  },
+
+  "servicesHome": {
+    "label": "Services",
+    "title": "Priced per unit, <em>no surprises.</em>",
+    "text": "Every price below is the starting rate for a wall-mounted unit up to 2.5HP. Bigger units and cassettes are quoted before we start.",
+    "tileCta": "Book this"
+  },
+
+  "services": [
+    {
+      "id": "normal", "name": "Normal service", "popular": true,
+      "blurb": "Filter, blower and coil wash, drainage check, gas pressure check.",
+      "fromPrice": 80, "unit": "unit", "duration": "About 45 min per unit",
+      "includes": ["Filter & cover wash", "Blower & coil clean", "Drain flush", "Gas pressure check"],
+      "note": "Recommended every 3–4 months for daily-use units.",
+      "image": "aircond/filter-wash.jpg", "imageAlt": "Hands washing a removed aircond filter"
+    },
+    {
+      "id": "chemical", "name": "Chemical wash",
+      "blurb": "Full strip-down chemical clean for units that smell, drip or barely cool.",
+      "fromPrice": 150, "unit": "unit", "duration": "About 90 min per unit",
+      "includes": ["Indoor unit dismantled", "Chemical coil & blower wash", "Drain pipe flush", "Reassembly & test"],
+      "note": "Once a year keeps a normal service enough the rest of the time.",
+      "image": "aircond/technician.jpg", "imageAlt": "Technician cleaning an aircond coil"
+    },
+    {
+      "id": "gas", "name": "Gas top-up",
+      "blurb": "R22 or R410A top-up with leak check. Priced per unit, gas included.",
+      "fromPrice": 120, "unit": "unit", "duration": "About 30 min per unit",
+      "includes": ["Pressure test", "Leak check at joints", "Top-up to spec", "Cooling test"],
+      "note": "If it needs gas every few months there's a leak — we'll tell you.",
+      "image": "aircond/van-tools.jpg", "imageAlt": "Refrigerant cylinder and gauges in a technician's van"
+    },
+    {
+      "id": "install", "name": "New installation",
+      "blurb": "Wall-mounted split unit installation, labour and standard piping up to 3 m.",
+      "fromPrice": 250, "unit": "unit", "duration": "Half a day for 1–2 units",
+      "includes": ["Bracket & piping", "Vacuum & charge", "Wall drilling & trunking", "Old unit removal (optional)"],
+      "note": "Unit not included. We can supply Daikin, Panasonic or Midea on request.",
+      "image": "aircond/family.jpg", "imageAlt": "Family relaxing in a cool living room"
+    }
+  ],
+
+  "servicesPage": {
+    "label": "Services & prices",
+    "title": "What we do, and what it <em>costs.</em>",
+    "text": "Starting prices per wall-mounted unit up to 2.5HP. Cassette, ceiling and 3HP+ units quoted after a quick photo on WhatsApp."
+  },
+
+  "pricingNotes": {
+    "label": "Good to know",
+    "title": "How pricing works",
+    "items": [
+      "Prices are per indoor unit. Outdoor units are checked as part of every service.",
+      "Multi-unit discount: 4 or more units on one visit, RM10 off each.",
+      "No call-out fee within Klang, Shah Alam and PJ. Other areas: RM30.",
+      "Cash, bank transfer or DuitNow after the job. No deposit."
+    ]
+  },
+
+  "areas": {
+    "label": "Where we go",
+    "title": "Klang to PJ, <em>no call-out fee.</em>",
+    "text": "Based in Bukit Kuda, Klang. Two vans cover the areas below daily; anywhere else in Selangor by arrangement.",
+    "list": ["Klang", "Bukit Tinggi", "Bandar Botanic", "Setia Alam", "Shah Alam", "Subang Jaya", "USJ", "Puchong", "Petaling Jaya", "Kota Kemuning"],
+    "note": "Not on the list? Book anyway and tell us the area — we'll confirm on WhatsApp.",
+    "image": "aircond/van-tools.jpg",
+    "imageAlt": "Service van packed with aircond tools outside a terrace house"
+  },
+
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions people <em>ask.</em>",
+    "items": [
+      { "q": "How often should I service my aircond?", "a": "Every 3–4 months for bedrooms and living rooms used daily; every 6 months for guest rooms. A chemical wash once a year." },
+      { "q": "Do I need to be home?", "a": "Someone needs to let us in and switch on the units. The work itself takes about 45 minutes per unit." },
+      { "q": "What if the unit needs a part?", "a": "We'll show you the problem, quote the part on the spot, and only proceed if you agree. No surprise charges." },
+      { "q": "Is the estimate the final price?", "a": "For wall-mounted units up to 2.5HP, yes. Bigger units or extra work are confirmed on WhatsApp before we start." }
+    ]
+  },
+
+  "contactPage": {
+    "label": "Contact & areas",
+    "title": "Talk to a <em>person.</em>",
+    "text": "Booking is fastest on the home page, but if you'd rather ask something first, use the form or WhatsApp.",
+    "formTitle": "Send a message",
+    "formText": "We reply on WhatsApp or email within 30 minutes during working hours.",
+    "serviceLabel": "About which service?",
+    "messageLabel": "Your message",
+    "messagePlaceholder": "Tell us the problem, the brand and how many units.",
+    "note": "Your message opens in WhatsApp with a reference.",
+    "submit": "Prepare message",
+    "directTitle": "Direct",
+    "whatsappLine": "WhatsApp us",
+    "hoursTitle": "Hours",
+    "directions": "Open in Maps"
+  },
+
+  "footer": {
+    "title": "Cold again by tomorrow.",
+    "blurb": "Book a slot in under a minute. We confirm on WhatsApp with the exact time.",
+    "cta": "Book a slot",
+    "contactTitle": "Contact",
+    "whatsappLink": "WhatsApp us",
+    "visitTitle": "Based in",
+    "directionsLink": "Get directions"
+  }
+}

@@ -91,11 +91,11 @@ function onSkin(skin) {
   /* Contact page form: name, phone/email, what, message → WhatsApp / email */
   const form = document.querySelector("#contact-form");
   if (form) {
-    const what = form.elements.service;
-    if (what && skin.products) {
-      what.replaceChildren(...skin.products.map((p) => { const o = document.createElement("option"); o.value = p.id; o.textContent = p.name; return o; }));
+    const what = form.elements.service, items = skin.products || skin.services || skin.programmes || [];
+    if (what && items.length) {
+      what.replaceChildren(...items.map((p) => { const o = document.createElement("option"); o.value = p.id; o.textContent = p.name; return o; }));
       const pre = new URLSearchParams(location.search).get("service");
-      if (pre && skin.products.some((p) => p.id === pre)) what.value = pre;
+      if (pre && items.some((p) => p.id === pre)) what.value = pre;
     }
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -118,7 +118,7 @@ function onSkin(skin) {
         else form.elements[first]?.focus();
         return;
       }
-      const p = (skin.products || []).find((x) => x.id === (what && what.value));
+      const p = items.find((x) => x.id === (what && what.value));
       const ref = createReference(skin.refPrefix || "KQ");
       const text = formatBrief(skin, { ...parsed.data, productLabel: p ? p.name : "", quantity: raw.quantity, deadline: raw.deadline }, ref);
       feedback.replaceChildren();

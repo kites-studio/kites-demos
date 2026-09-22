@@ -76,3 +76,39 @@ export function validate(input) {
   if (data.companyFax) errors.companyFax = "We could not verify this enquiry.";
   return { ok: Object.keys(errors).length === 0, data, errors };
 }
+
+/** Generic message for T2/T3: opener, "Label: value" lines (empty values dropped), closer. */
+export function formatLines(skin, { opener, closer, fields = [], message = "" }, reference) {
+  const b = skin.business || {};
+  const lines = [
+    `Hello ${b.name || ""},`,
+    opener || "I'd like to make a booking.",
+    "",
+    reference ? `Reference: ${reference}` : "",
+    ...fields.filter(([, v]) => v != null && String(v).trim() !== "").map(([k, v]) => `${k}: ${v}`),
+    "",
+    message || "",
+    "",
+    closer || "Please confirm. Thank you.",
+  ];
+  return lines.filter((x, i, a) => x !== "" || a[i - 1] !== "").join("\n").trim();
+}
+
+/** Next N dates from tomorrow as {value:"YYYY-MM-DD", day:"Tue", date:"23", month:"Sep", weekend:bool}. */
+export function upcomingDays(n = 14, skipDays = []) {
+  const out = [];
+  const d = new Date(); d.setHours(12, 0, 0, 0);
+  for (let i = 1; out.length < n && i < n * 2; i++) {
+    const x = new Date(d); x.setDate(d.getDate() + i);
+    if (skipDays.includes(x.getDay())) continue;
+    out.push({
+      value: x.toISOString().slice(0, 10),
+      day: x.toLocaleDateString("en-MY", { weekday: "short" }),
+      date: String(x.getDate()),
+      month: x.toLocaleDateString("en-MY", { month: "short" }),
+      weekend: x.getDay() === 0 || x.getDay() === 6,
+      label: x.toLocaleDateString("en-MY", { weekday: "short", day: "numeric", month: "short" }),
+    });
+  }
+  return out;
+}
