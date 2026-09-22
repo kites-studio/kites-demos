@@ -22,6 +22,9 @@ Open it with `t1-quote/index.html?skin=<slug>` (or `demo/<slug>/`). Links betwee
 ## `contact`
 
 `whatsapp` — digits with country code (`60167003007`); a local `016-700 3007` also works. Drives every WhatsApp handoff; omit and the site falls back to email.
+  **Unconfirmed prospect? Use the Kites demo number `60102156826` (010-215 6826) and the studio email**, never a made-up
+  number — the brief must land in a real WhatsApp when the prospect tries it. Swap to the client's own number
+  (one line) the day they confirm. Only Print & Go carries its real number, because that build was agreed with them.
 `phones[]` — `{label, tel}`. `email`. `addressHtml` (may use `<br>`). `mapUrl` (Google Maps link). `hoursNote`.
 
 ## Copy blocks (all plain strings unless marked *html*)
