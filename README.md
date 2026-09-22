@@ -37,31 +37,18 @@ Browsers block `fetch()` from `file://`, so the folder has to be served, not dou
 
 ## Publish
 
-Push this folder to a GitHub repo with Pages enabled (root). Prospect links become
-`https://<org>.github.io/kites-demos/demo/<slug>/`. The existing `kites-studio/printngo-demo` repo can stay as-is or be replaced by the redirect.
+Live at **https://kites-studio.github.io/kites-demos/** (GitHub Pages, repo `kites-studio/kites-demos`).
+Prospect links: `https://kites-studio.github.io/kites-demos/demo/<slug>/` — e.g. `demo/printngo/`,
+`demo/jibuild/`, `demo/anyara-hills/`. Pages takes ~1 minute after a push.
 
-## Make a new demo (target ≤ 15 min)
+The source of truth is the `kites-demos/` folder inside the private `madebykites` repo; the public
+repo is a subtree of it. To publish, from the `madebykites` root:
 
-1. `cp skins/printngo.json skins/<slug>.json` — set `slug`, `refPrefix`, `colors`.
-2. Fill `business` and `contact` (WhatsApp number with country code — this drives every handoff).
-3. Rewrite the copy blocks (`hero`, `intro`, `services`, `process`, `brief`, 3–5 `products`, `faq`, `about`).
-4. Drop 3–4 photos into `skins/<slug>/` or paste public image URLs.
-5. `cp -r demo/printngo demo/<slug>` and change the slug inside; add the slug to `skins/index.json`.
-6. Open `t1-quote/index.html?skin=<slug>`, click all four pages and send yourself a test brief.
+```bash
+git subtree push --prefix=kites-demos demos main
+```
 
-Full key reference: `skins/_schema.md`.
-
-## What the template does that a brochure site doesn't
-
-- **Quote brief → WhatsApp** — product, quantity, deadline, notes become a filled-in `wa.me` message with a reference number (`PNG-20260922-3E41`). Email fallback and copy-to-clipboard included.
-- **Live estimate** — any product with `fromPrice` shows "Estimate from RM …" as the customer types (Ji Build kitchen: from RM19,888).
-- **Contact form** with validation and honeypot, same handoff.
-- **Concept ribbon** — "Concept preview · Made by Kites · not live" so a prospect never mistakes it for a live site. Set `"concept": false` when it goes live.
-- **Reveal-at-rest fix** — sections are visible even if scripts stall; motion is layered on top.
-- **Per-skin colours** — a cabinet maker gets warm oak, a print shop stays blue, same CSS.
-
-## Conventions
-
-- Skins: `skins/<kebab-slug>.json`, images in `skins/<slug>/`, WhatsApp numbers as digits with country code.
-- Templates: `t1-quote`, `t2-booking`, `t3-catalogue`. A template never contains business words — everything comes from the skin.
-- Stable IDs from `docs/FEATURE-LIBRARY.md` apply (L-xx look, W-xx work). The brief module is W-04 + W-07; the kinetic headline is L-09.
+(`demos` = https://github.com/kites-studio/kites-demos.git; HTTP/1.1 is pinned in this repo's git
+config because HTTP/2 pushes were being dropped.) Never commit directly in the public repo.
+`.nojekyll` is required so `skins/_schema.md` is served. The existing `kites-studio/printngo-demo`
+repo can now be replaced by a redirect to `demo/printngo/`.
