@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-skin-base="../skins/" data-default-skin="printngo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#091d2e">
+<meta name="robots" content="noindex">
+<title>About | {business}</title>
+<meta name="description" content="" data-skin-attr="content:business.description">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml" data-skin-attr="href:business.favicon">
+<link rel="preload" href="../shared/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/style.css">
+<link rel="stylesheet" href="../shared/kinetic.css">
+<link rel="stylesheet" href="../shared/extra.css">
+<script src="../shared/skin.js"></script>
+<script type="module" src="../shared/site.js"></script>
+</head>
+<body id="top" class="interior">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+<a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" width="990" height="100" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a>
+<nav id="main-nav" aria-label="Main navigation">
+<a href="services.html" data-skin="nav.services"></a>
+<a href="about.html" aria-current="page" data-skin="nav.about"></a>
+<a href="contact.html" data-skin="nav.contact"></a>
+</nav>
+<a class="button header-cta" href="contact.html"><span data-skin="nav.headerCta"></span> <span class="arrow">↗</span></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section class="page-intro section">
+ <span class="label" data-skin="about.label"></span>
+ <h1 class="kinetic"><span data-skin="about.title"></span><br><span data-skin="about.title2"></span></h1>
+ <p data-skin="about.text"></p>
+</section>
+<section class="section story-layout">
+ <div class="story-picture reveal"><img src="" alt="" width="800" height="600" data-skin-attr="src:about.image,alt:about.imageAlt"><span class="floating-label" data-skin="about.imageLabel"></span></div>
+ <div class="reveal">
+  <span class="label" data-skin="about.storyLabel"></span>
+  <h2 data-skin-html="about.storyTitle"></h2>
+  <template data-skin-list="about.paragraphs"><p data-skin="."></p></template>
+  <a class="button dark-button" href="contact.html"><span data-skin="about.cta"></span> <span class="arrow">↗</span></a>
+ </div>
+</section>
+<section class="section values">
+ <span class="label" data-skin="about.valuesLabel"></span>
+ <div class="process-grid"><template data-skin-list="about.values"><article><span class="step-no"><span data-skin-index></span> /</span><h3 data-skin="title"></h3><p data-skin="text"></p></article></template></div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-cta"><div><span class="label inverse" data-skin="footer.label"></span><h2 data-skin-html="footer.title"></h2></div><a class="button light-button magnetic" href="contact.html"><span data-skin="footer.cta"></span> <span class="arrow">↗</span></a></div>
+<div class="footer-grid">
+<div><a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" width="990" height="100" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a><p data-skin-html="footer.blurb"></p></div>
+<div><h3 data-skin="footer.exploreTitle"></h3><a href="services.html" data-skin="nav.services"></a><a href="about.html" data-skin="nav.about"></a><a href="contact.html" data-skin="nav.contact"></a><a href="index.html#brief" data-skin="footer.briefLink"></a></div>
+<div><h3 data-skin="footer.visitTitle"></h3><p data-skin-html="contact.addressHtml"></p><a href="contact.html"><span data-skin="footer.directionsLink"></span> ↗</a></div>
+<div><h3 data-skin="footer.contactTitle"></h3><template data-skin-list="contact.phones"><a data-skin-attr="href:tel:{tel}" data-skin="label"></a></template><a data-skin-attr="href:mailto:{contact.email}" data-skin="contact.email" data-skin-if="contact.email"></a><a data-wa data-skin="footer.whatsappLink" data-skin-if="contact.whatsapp"></a></div>
+</div>
+<div class="footer-bottom"><span>© <span data-skin="business.name"></span></span><span data-skin="business.tagline"></span><a href="#top">Back to top ↑</a></div>
+</footer>
+</body>
+</html>

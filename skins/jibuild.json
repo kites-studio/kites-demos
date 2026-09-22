@@ -1,0 +1,189 @@
+{
+  "slug": "jibuild",
+  "template": "t1-quote",
+  "concept": true,
+  "currency": "RM",
+  "refPrefix": "JIB",
+  "_todo": "Prospect demo. Contact block is a placeholder — confirm WhatsApp, phone and showroom address from their Google/Facebook page before sharing. Images are Higgsfield renders hosted on the Higgsfield CDN; download into skins/jibuild/ before the client goes live.",
+  "colors": {
+    "navy": "#1f2a24",
+    "navyDeep": "#2c3a32",
+    "blue": "#a8602b",
+    "blueBright": "#d08a4e",
+    "accentSoft": "#ecc9a3",
+    "ink": "#1d2420",
+    "muted": "#6b716c",
+    "paper": "#f6f3ee",
+    "line": "#e6e0d7"
+  },
+  "business": {
+    "name": "Ji Build Custom Cabinets",
+    "short": "Ji Build",
+    "initials": "JB",
+    "tagline": "Made to measure. Built to last.",
+    "since": "2015",
+    "description": "Ji Build, Klang Valley. Custom kitchen cabinets, wardrobes and TV consoles, made to measure and installed by our own team. Kitchens from RM19,888. Build your brief and send it on WhatsApp."
+  },
+  "contact": {
+    "whatsapp": "60120000000",
+    "phones": [
+      { "label": "012-000 0000", "tel": "+60120000000" }
+    ],
+    "email": "hello@jibuild.example",
+    "addressHtml": "Showroom & workshop<br>Kota Damansara, Petaling Jaya<br>Selangor",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ji+Build+Kota+Damansara",
+    "hoursNote": "Site visits by appointment, Monday to Saturday."
+  },
+  "nav": { "services": "What we build", "about": "Our workshop", "contact": "Get a quote", "headerCta": "Plan my kitchen" },
+  "hero": {
+    "eyebrow": "CUSTOM CABINETS, KLANG VALLEY",
+    "line1": "Your space.",
+    "line2": "Built for",
+    "cycle": ["real life.", "cooking.", "years."],
+    "description": "Kitchens, wardrobes and feature walls, measured and made by our own carpenters.<br> Kitchens from RM19,888, installed.",
+    "cta": "Get a kitchen estimate",
+    "waText": "or WhatsApp a photo of your space",
+    "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_d38723d2-1ef3-4c5b-82ca-169fc7e55fee_min.webp",
+    "imageAlt": "Concept render of a custom kitchen with sage-green lower cabinets and oak uppers",
+    "scrollCue": "SEE WHAT WE BUILD",
+    "caption": "Measured on site.<br>Made in our workshop.",
+    "glass": {
+      "label": "MOST REQUESTED",
+      "title": "The 10-foot<br>L-shape kitchen.",
+      "href": "services.html#kitchen",
+      "linkLabel": "See kitchen cabinets",
+      "tags": "KITCHEN / WARDROBE / TV CONSOLE"
+    }
+  },
+  "intro": {
+    "label": "Why homeowners call us",
+    "title": "No middlemen.<br>Just the <span class=\"muted\">people who build it.</span>",
+    "navy": { "label": "OUR OWN WORKSHOP", "title": "Measured, made<br>and installed<br>by one team.", "text": "The carpenter who measures your kitchen is the one who fits it.", "link": "See how we work" },
+    "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_ecdfca7d-eaf4-4227-866c-ef0d320ae855_min.webp",
+    "imageAlt": "Concept render of a fluted-panel TV feature wall with floating oak console",
+    "imageLabel": "TV feature walls",
+    "paper": { "label": "HONEST PRICING", "title": "A price you can<br>plan around.", "text": "Kitchens from RM19,888 installed. Full quote after a free site measurement.", "link": "About Ji Build" },
+    "facts": [
+      { "big": "From RM19,888", "small": "Installed L-shape kitchen" },
+      { "big": "Free", "small": "Site measurement in Klang Valley" },
+      { "big": "3–4 weeks", "small": "Typical build and install" },
+      { "big": "5 years", "small": "Workmanship warranty" }
+    ]
+  },
+  "services": {
+    "label": "What we build",
+    "title": "Kitchens first.<br>Then every<br><span class=\"muted\">other room.</span>",
+    "text": "Plywood carcasses, soft-close hardware and finishes you pick from real samples, not a screen.",
+    "cta": "See all cabinet work",
+    "feature": { "href": "services.html#kitchen", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_d38723d2-1ef3-4c5b-82ca-169fc7e55fee_min.webp", "imageAlt": "Custom kitchen with sage-green and oak cabinets", "label": "KITCHEN CABINETS", "title": "The room that<br>earns its keep." },
+    "side": { "href": "services.html#wardrobe", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_624b61b4-a21a-4d15-b4d2-90811890d702_min.webp", "imageAlt": "Oak wardrobe interior with soft-close drawers and LED strip lighting", "label": "Wardrobes", "title": "Storage that fits the wall, not the catalogue.", "text": "Walk-in or built-in, with drawers and lighting where you actually need them.", "link": "TV consoles & feature walls", "linkHref": "services.html#tv-console" }
+  },
+  "servicesPage": {
+    "label": "CABINET WORK",
+    "title": "Every room,",
+    "title2": "made to measure.",
+    "text": "Pick a starting point below. Every job begins with a free site measurement and a fixed quote."
+  },
+  "process": {
+    "label": "How a job runs",
+    "title": "From WhatsApp<br><span class=\"muted\">to installed.</span>",
+    "steps": [
+      { "title": "Send us your space.", "text": "A photo and rough size on WhatsApp is enough to start. We reply with a ballpark the same day." },
+      { "title": "We measure and quote.", "text": "Free site visit in the Klang Valley. You pick finishes from real samples and get one fixed price." },
+      { "title": "We build and install.", "text": "Made in our workshop, installed by the same team, usually within 3–4 weeks." }
+    ]
+  },
+  "brief": {
+    "label": "Get a ballpark now",
+    "title": "Know the number<br><span class=\"muted\">before the site visit.</span>",
+    "text": "Choose what you need and see a starting estimate straight away. Send it on WhatsApp and we'll confirm after measuring.",
+    "checklist": ["Starting price shown instantly", "Opens WhatsApp with your details filled in", "Fixed quote after a free site measurement"],
+    "moduleTitle": "YOUR CABINET BRIEF",
+    "productLabel": "What are we building?",
+    "quantityLabel": "Length (feet)",
+    "quantityDefault": 10,
+    "deadlineLabel": "When would you like it done?",
+    "detailsLabel": "Tell us about the space",
+    "detailsPlaceholder": "Condo or landed, existing cabinets to remove, finish you like…",
+    "summaryLabel": "Your starting point",
+    "note": "Final price confirmed after site measurement.",
+    "submit": "Prepare my enquiry",
+    "formNote": "Nothing is sent until you choose WhatsApp or email.",
+    "readyLabel": "BRIEF PREPARED",
+    "readyTitle": "Let's measure it up.",
+    "whatsappCta": "Send on WhatsApp",
+    "emailCta": "Open email instead",
+    "readyNote": "This reference labels your enquiry; it is not a booking. Attach a photo of the space in the chat if you have one.",
+    "opener": "I'd like an estimate for cabinet work.",
+    "closer": "Please let me know the next available site visit. Thank you."
+  },
+  "products": [
+    { "id": "kitchen", "name": "Kitchen cabinets", "fromPrice": 19888, "perUnit": false, "unit": "ft", "note": "Starting price for a 10 ft L-shape kitchen, installed. Site measurement before final quote.", "priceLine": "From RM19,888 installed", "group": "Kitchens", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_d38723d2-1ef3-4c5b-82ca-169fc7e55fee_min.webp", "imageAlt": "Custom kitchen cabinets in sage green and oak", "specs": "Plywood carcass · Soft-close · Quartz top optional", "headline": "Built around how you cook.", "description": "Top and bottom cabinets, tall units and islands, with the drawers and pull-outs planned around your routine. Quartz or solid-surface tops available.", "cta": "Plan my kitchen" },
+    { "id": "wardrobe", "name": "Wardrobes", "fromPrice": 680, "unit": "ft", "minQty": 6, "note": "Per running foot, built-in with doors. Walk-in and sliding-door options quoted after measurement.", "priceLine": "From RM680 per foot", "group": "Bedrooms", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_624b61b4-a21a-4d15-b4d2-90811890d702_min.webp", "imageAlt": "Oak wardrobe interior with drawers and lighting", "specs": "Built-in · Sliding or swing doors · LED strips", "headline": "Storage that fits the wall.", "description": "Floor-to-ceiling wardrobes with internal drawers, hanging space and lighting, sized to your room instead of the nearest catalogue module.", "cta": "Plan my wardrobe" },
+    { "id": "tv-console", "name": "TV consoles & feature walls", "fromPrice": 3200, "perUnit": false, "unit": "wall", "note": "Starting price for a floating console with a fluted or laminate panel wall.", "priceLine": "From RM3,200", "group": "Living rooms", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_ecdfca7d-eaf4-4227-866c-ef0d320ae855_min.webp", "imageAlt": "Fluted panel TV feature wall with floating console", "specs": "Floating console · Fluted panels · Hidden lighting", "headline": "The wall everyone looks at.", "description": "Floating consoles, fluted panel walls and concealed cable runs, with lighting built in from the start.", "cta": "Plan my feature wall" },
+    { "id": "other", "name": "Shoe cabinets, study & vanity", "unit": "ft", "group": "Everything else", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_02ba3293-43b3-4e30-be32-896c38a09246_min.webp", "imageAlt": "Carpenter measuring a plywood cabinet carcass in the workshop", "specs": "Shoe cabinets · Study desks · Bathroom vanities", "headline": "Small jobs, same care.", "description": "Entryway shoe cabinets, study desks with storage and bathroom vanities, all made in the same workshop by the same team.", "cta": "Ask about a small job" }
+  ],
+  "faq": {
+    "label": "Good to know",
+    "title": "Before you<br><span class=\"muted\">book a measurement.</span>",
+    "items": [
+      { "q": "What's included in the RM19,888 kitchen?", "a": "A 10 ft L-shape kitchen with top and bottom cabinets, plywood carcass, laminate doors, soft-close hinges and installation. Countertops, sinks and appliances are quoted separately." },
+      { "q": "How long does a kitchen take?", "a": "Usually 3–4 weeks from confirmed design to installation. Installation itself takes 1–2 days." },
+      { "q": "Do you work in condos?", "a": "Yes. We handle the management office paperwork and work within renovation hours." },
+      { "q": "Is the site measurement really free?", "a": "Yes, anywhere in the Klang Valley. You get a fixed written quote after the visit with no obligation." }
+    ]
+  },
+  "about": {
+    "label": "OUR WORKSHOP",
+    "title": "Cabinet makers,",
+    "title2": "not salespeople.",
+    "text": "Ji Build is a small workshop team in Petaling Jaya that measures, builds and installs every job ourselves.",
+    "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_02ba3293-43b3-4e30-be32-896c38a09246_min.webp",
+    "imageAlt": "Carpenter measuring a cabinet carcass in the Ji Build workshop",
+    "imageLabel": "MADE IN OUR OWN WORKSHOP",
+    "storyLabel": "Our story",
+    "storyTitle": "Started with one<br>kitchen for a friend.",
+    "paragraphs": [
+      "Ji Build began in 2015 with a single kitchen built for a friend's new condo. Word spread the way it does in the Klang Valley: one finished kitchen at a time.",
+      "Today we run our own workshop and a small install team. No showroom markups, no subcontracted fitters, and the same people from measurement to final wipe-down.",
+      "We keep the range simple so we can do it well: kitchens, wardrobes, feature walls and the smaller pieces that finish a home."
+    ],
+    "cta": "Book a site measurement",
+    "valuesLabel": "How we work",
+    "values": [
+      { "title": "One fixed price.", "text": "Quoted in writing after measuring. No surprises on install day." },
+      { "title": "Real samples.", "text": "Pick laminates, handles and tops from samples we bring to your home." },
+      { "title": "Our own team.", "text": "Built in our workshop and installed by the people who made it." }
+    ]
+  },
+  "contactPage": {
+    "label": "BOOK A MEASUREMENT",
+    "title": "Tell us about",
+    "title2": "your space.",
+    "text": "A rough size, a photo and your area are enough to start. We'll reply with a ballpark and a site visit slot.",
+    "formLabel": "Your cabinet enquiry",
+    "channel": "WHATSAPP OR EMAIL",
+    "serviceLabel": "What are we building?",
+    "messageLabel": "Tell us about the space",
+    "messagePlaceholder": "Condo or landed, room size, existing cabinets, finishes you like and your area.",
+    "note": "This prepares a WhatsApp message (or an email) with your details filled in. Nothing is stored on this website.",
+    "submit": "Prepare my enquiry",
+    "cardLabel": "VISIT THE WORKSHOP",
+    "cardTitle": "Come see the<br>samples in person.",
+    "directions": "Get directions",
+    "directTitle": "Prefer to talk?",
+    "whatsappLine": "WhatsApp us a photo"
+  },
+  "footer": {
+    "label": "MEASURED, MADE, INSTALLED",
+    "title": "Let's build<br>your <span>space.</span>",
+    "cta": "Book a free site measurement",
+    "blurb": "Custom cabinets for the Klang Valley.<br>Kitchens from RM19,888 installed.",
+    "exploreTitle": "Explore",
+    "briefLink": "Get a ballpark",
+    "visitTitle": "Workshop",
+    "directionsLink": "Contact & directions",
+    "contactTitle": "Talk to us",
+    "whatsappLink": "WhatsApp us ↗"
+  }
+}

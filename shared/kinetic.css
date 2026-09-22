@@ -1,0 +1,14 @@
+/* Adapted from madebykites/docs/feature-bench.html, L-09, lines 570–573.
+   Same translate/skew cycle, slowed from 4.5s to 9s for a customer-facing headline.
+   One semantic heading, aria-hidden visual variants; static "print." fallback. */
+.kin-cycle{display:inline-block;position:relative;width:var(--kin-width,3.12em);height:1.12em;vertical-align:bottom;overflow:hidden;margin-bottom:-.015em;text-align:left}
+.kin-cycle>span{position:absolute;inset:0;display:block;opacity:0;white-space:nowrap}
+.kin-cycle>span:first-child{opacity:1}
+.motion-active .kin-cycle>span{animation:kites-kin-cycle 9s infinite}
+.motion-active .kin-cycle>span:nth-child(2){animation-delay:3s}
+.motion-active .kin-cycle>span:nth-child(3){animation-delay:6s}
+@keyframes kites-kin-cycle{0%{opacity:0;transform:translateY(60%) skewY(4deg)}6%,28%{opacity:1;transform:none}36%,100%{opacity:0;transform:translateY(-60%) skewY(-4deg)}}
+.hero-out-of-view .kin-cycle>span,.motion-idle .kin-cycle>span{animation-play-state:paused!important}
+.motion-paused .kin-cycle>span{animation:none!important;transform:none;opacity:0}.motion-paused .kin-cycle>span:first-child{opacity:1}
+@media(prefers-reduced-motion:reduce){.kin-cycle>span{animation:none!important;transform:none;opacity:0}.kin-cycle>span:first-child{opacity:1}}
+@media(max-width:380px){.hero h1{font-size:2.4rem}}

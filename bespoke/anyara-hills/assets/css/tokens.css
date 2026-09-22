@@ -1,0 +1,141 @@
+/* ============================================================
+   Made by Kites — token layer
+   Prototype 001 · Anyara Hills (speculative)
+
+   This file is the reusable part. Swap the values, keep the
+   structure: two bases with opacity ramps, one restrained
+   accent, three durations, three easing curves, one scale.
+   ============================================================ */
+
+:root {
+  /* --- base colours ------------------------------------------
+     Two bases only. Every "grey" on this site is one of these
+     two at a stated opacity — that is why none of them look
+     accidental. Ramps mirror the base names.                  */
+
+  --ink-100: #0d1411;   /* rainforest ink — primary ground */
+  --ink-90:  #0d1411e6;
+  --ink-60:  #0d141199;
+  --ink-30:  #0d14114d;
+  --ink-10:  #0d14111a;
+  --ink-05:  #0d14110d;
+  --ink-00:  #0d141100;
+
+  --mist-100: #e7eae3;  /* canopy mist — primary ink on dark */
+  --mist-60:  #e7eae399;
+  --mist-40:  #e7eae366;
+  --mist-20:  #e7eae333;
+  --mist-12:  #e7eae31f;
+  --mist-08:  #e7eae314;
+  --mist-00:  #e7eae300;
+
+  /* elevated ground, for banding sections without a border */
+  --ink-raise: #141d18;
+
+  /* --- accent -------------------------------------------------
+     One accent, spent on hairlines, micro-labels and the
+     active state. Never on a large fill. A second is held in
+     reserve and currently unused — that restraint is the point. */
+
+  --brass: #a98455;
+  --brass-60: #a9845599;
+  --brass-20: #a9845533;
+  --moss: #5b7a68;      /* reserve — do not spend without reason */
+
+  /* --- semantic, separate from the accent -------------------- */
+  --ok:   #4c8c62;
+  --warn: #c08a3e;
+  --err:  #b4544b;
+
+  /* --- role aliases ------------------------------------------
+     Components reference these, never the raw ramp. Retheming
+     a section means reassigning five variables.               */
+
+  --bg:        var(--ink-100);
+  --bg-raise:  var(--ink-raise);
+  --fg:        var(--mist-100);
+  --fg-quiet:  var(--mist-60);
+  --fg-faint:  var(--mist-40);
+  --line:      var(--mist-12);
+  --line-firm: var(--mist-20);
+
+  /* --- type --------------------------------------------------
+     Display runs very large and optically tight. Body stays
+     small and precise, but not so small it fails a 55-year-old
+     buyer — 15px, not the 13px the reference site uses.
+     Micro-labels are tiny and very wide-tracked. The tension
+     between the extremes is the luxury register.              */
+
+  --font-display: "Cormorant Garamond", "Hoefler Text", Georgia, serif;
+  --font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+  --t-display: clamp(2.75rem, 10.5vw, 10rem);      /*  44 → 160 */
+  --t-h2:      clamp(2rem, 7.2vw, 7.5rem);         /*  32 → 120 */
+  --t-h3:      clamp(1.5rem, 4vw, 3.5rem);         /*  24 →  56 */
+  --t-h4:      clamp(1.125rem, 2.1vw, 1.75rem);    /*  18 →  28 */
+  --t-lead:    clamp(1.0625rem, 1.5vw, 1.3125rem); /*  17 →  21 */
+  --t-body:    0.9375rem;                          /*  15 */
+  --t-small:   0.8125rem;                          /*  13 */
+  --t-label:   0.625rem;                           /*  10 */
+
+  --lh-display: 0.88;
+  --lh-h2: 0.9;
+  --lh-h3: 1.02;
+  --lh-body: 1.62;
+
+  --tr-display: -0.022em;   /* negative tracking at size */
+  --tr-label: 0.28em;       /* very wide at 10px */
+  --tr-label-wide: 0.42em;
+
+  /* --- space + grid ------------------------------------------
+     One ladder. Nothing off-ladder.                            */
+
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-12: 3rem;
+  --s-16: 4rem;
+  --s-24: 6rem;
+  --s-32: 8rem;
+  --s-48: 12rem;
+
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --grid-gap: clamp(1rem, 2vw, 1.5rem);
+  --measure: 34rem;          /* ~65 characters */
+  --max: 96rem;
+
+  --section-y: clamp(4rem, 12vh, 11rem);
+
+  /* --- motion ------------------------------------------------
+     Three durations, three curves, for the whole site. Budget
+     as infrastructure rather than as discipline.              */
+
+  --dur-s: 0.4s;
+  --dur-m: 0.8s;
+  --dur-l: 1.2s;
+
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-in: cubic-bezier(0.5, 0, 0.75, 0);
+
+  /* --- misc -------------------------------------------------- */
+  --hair: 1px;
+  --z-nav: 60;
+  --z-cta: 70;
+  --z-preload: 100;
+}
+
+/* A section can flip to the light ground by reassigning roles.
+   No component CSS changes. */
+.theme-mist {
+  --bg: var(--mist-100);
+  --bg-raise: #dde1d9;
+  --fg: var(--ink-100);
+  --fg-quiet: var(--ink-60);
+  --fg-faint: var(--ink-30);
+  --line: var(--ink-10);
+  --line-firm: var(--ink-30);
+}

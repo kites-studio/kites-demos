@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kites demos</title>
+<link rel="icon" href="shared/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="shared/tokens.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+  main{max-width:960px;margin:0 auto;padding:64px 22px 96px}
+  .label{display:inline-block;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 12px;margin-bottom:22px}
+  h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:450;letter-spacing:-.02em;line-height:1.05;margin:0 0 14px}
+  p.lead{color:var(--muted);max-width:560px;line-height:1.6;margin:0 0 44px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+  .card{display:block;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;text-decoration:none;color:inherit;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px #0c1b2c14}
+  .card .mini{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;display:block}
+  .card h2{font-size:1.25rem;margin:0 0 6px;font-weight:500}
+  .card .ind{color:var(--muted);font-size:.9rem;margin:0 0 18px}
+  .card .go{font-size:.85rem;font-weight:500}
+  .card .status{font-size:.72rem;color:var(--muted);margin-top:14px;display:block}
+  .foot{margin-top:56px;font-size:.8rem;color:var(--muted);line-height:1.7}
+  code{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.8em}
+</style>
+</head>
+<body>
+<main>
+  <span class="label">Made by Kites · demo kit</span>
+  <h1>Prospect demos.</h1>
+  <p class="lead">Each card is a real business, either skinned onto a shared template or built bespoke. Open one, click through, and try the enquiry — on the template demos it ends in a filled-in WhatsApp message.</p>
+  <div class="grid" id="grid"></div>
+  <p class="foot">Templates: <code>t1-quote</code> (quote &amp; WhatsApp handoff) · <code>t2-book</code> and <code>t3-register</code> next. Bespoke builds live in <code>bespoke/</code>.<br>New template demo = one JSON file in <code>skins/</code>. See <code>skins/_schema.md</code>.</p>
+</main>
+<script>
+  fetch("skins/index.json", { cache: "no-cache" }).then(r => r.json()).then(list => {
+    const grid = document.getElementById("grid");
+    list.forEach(s => {
+      const a = document.createElement("a");
+      a.className = "card";
+      a.href = s.href || `${s.template}/index.html?skin=${encodeURIComponent(s.slug)}`;
+      a.innerHTML = `<span class="mini">${s.template}</span><h2>${s.name}</h2><p class="ind">${s.industry || ""}</p><span class="go">Open demo ↗</span><span class="status">${s.status || ""}</span>`;
+      grid.appendChild(a);
+    });
+  }).catch(() => { document.getElementById("grid").innerHTML = "<p>Serve this folder over http (e.g. <code>python3 -m http.server</code>) — the gallery reads skins/index.json.</p>"; });
+</script>
+</body>
+</html>

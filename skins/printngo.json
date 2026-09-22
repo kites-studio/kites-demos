@@ -1,0 +1,191 @@
+{
+  "slug": "printngo",
+  "template": "t1-quote",
+  "concept": true,
+  "currency": "RM",
+  "refPrefix": "PNG",
+  "colors": {
+    "navy": "#091d2e",
+    "navyDeep": "#14334b",
+    "blue": "#0873c3",
+    "blueBright": "#188bea",
+    "accentSoft": "#8dcaff",
+    "ink": "#112636",
+    "muted": "#65747f",
+    "paper": "#f4f6f8",
+    "line": "#dfe5e9"
+  },
+  "business": {
+    "name": "Print & Go Fast Print",
+    "short": "Print & Go",
+    "initials": "P&G",
+    "tagline": "Ideas in mind. Impact in print.",
+    "since": "2004",
+    "description": "Print & Go Fast Print, Wisma Central, Kuala Lumpur. Digital and offset printing, business cards, banners and finishing. Build your print brief and send it on WhatsApp.",
+    "logo": "printngo/brand-header.jpg"
+  },
+  "contact": {
+    "whatsapp": "60167003007",
+    "phones": [
+      { "label": "03-2166 3235", "tel": "+60321663235" },
+      { "label": "016-700 3007", "tel": "+60167003007" }
+    ],
+    "email": "printngo@gmail.com",
+    "addressHtml": "Lot 1.44 & 1.45, Ground Floor<br>Wisma Central, Jalan Ampang<br>50450 Kuala Lumpur",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Print+%26+Go+Fast+Print+Wisma+Central+Kuala+Lumpur",
+    "hoursNote": "Please call ahead to confirm opening hours."
+  },
+  "nav": { "services": "Printing", "about": "Our story", "contact": "Find us", "headerCta": "Start your print" },
+  "hero": {
+    "eyebrow": "YOUR IDEAS, BEAUTIFULLY PRINTED.",
+    "line1": "Ideas in mind.",
+    "line2": "Impact in",
+    "cycle": ["print.", "colour.", "detail."],
+    "description": "From a single business card to your next big campaign.<br> Good print. A friendly team. Right here in KL.",
+    "cta": "Build my print brief",
+    "waText": "or WhatsApp us now",
+    "image": "printngo/hero-print.webp",
+    "imageAlt": "Concept visual of hands sharing a blue business card above freshly printed stationery",
+    "scrollCue": "DISCOVER THE POSSIBILITIES",
+    "caption": "Small quantities.<br>Endless possibilities.",
+    "glass": {
+      "label": "FROM SCREEN TO SOMETHING REAL",
+      "title": "Make your<br>next impression.",
+      "href": "services.html#business-cards",
+      "linkLabel": "Explore business card printing",
+      "tags": "BUSINESS CARDS / BROCHURES / MORE"
+    }
+  },
+  "intro": {
+    "label": "A little about us",
+    "title": "For the everyday essentials.<br>And the <span class=\"muted\">anything-but-ordinary.</span>",
+    "navy": { "label": "PRINT ON YOUR TERMS", "title": "One copy?<br>One big idea?<br>We’re here for both.", "text": "Print what you need, with options that fit the job.", "link": "Why Print & Go" },
+    "image": "printngo/stationery.webp",
+    "imageAlt": "Concept arrangement of blue business cards, brochures and envelopes",
+    "imageLabel": "Made to make an impression",
+    "paper": { "label": "YOUR LOCAL PRINT PARTNER", "title": "Rooted in KL.<br>Ready for your next idea.", "text": "Find our team at Wisma Central, Jalan Ampang.", "link": "Meet Print & Go" },
+    "facts": [
+      { "big": "A4 / A3", "small": "Everyday digital print" },
+      { "big": "Small runs", "small": "Print only what you need" },
+      { "big": "Big formats", "small": "Banners, posters & more" },
+      { "big": "One stop", "small": "Printing through to finishing" }
+    ]
+  },
+  "services": {
+    "label": "What we do",
+    "title": "From the palm<br>of your hand.<br>To the <span class=\"muted\">bigger picture.</span>",
+    "text": "Business essentials, everyday documents and print that makes people look twice.",
+    "cta": "Explore all services",
+    "feature": { "href": "services.html#business-cards", "image": "printngo/stationery.webp", "imageAlt": "Tactile blue and white printed stationery", "label": "BUSINESS ESSENTIALS", "title": "Small format.<br>Lasting impression." },
+    "side": { "href": "services.html#large-format", "image": "printngo/production.webp", "imageAlt": "Concept close-up of a large-format printer producing vibrant graphics", "label": "Make it big", "title": "More room for your message.", "text": "Banners, buntings, posters and stickers, ready to stand out.", "link": "Finishing touches", "linkHref": "services.html#binding" }
+  },
+  "servicesPage": {
+    "label": "THE POSSIBILITIES IN PRINT",
+    "title": "Your next idea.",
+    "title2": "In every format.",
+    "text": "The everyday essentials. The big announcements. And everything in between."
+  },
+  "process": {
+    "label": "A simpler way to print",
+    "title": "Your idea.<br><span class=\"muted\">A clear next step.</span>",
+    "steps": [
+      { "title": "Tell us the plan.", "text": "Choose your format, quantity and timing. We’ll help with the details." },
+      { "title": "Get it just right.", "text": "Confirm your artwork, materials, price and turnaround with our team." },
+      { "title": "Bring it to life.", "text": "We print and finish your job, ready for the next thing on your list." }
+    ]
+  },
+  "brief": {
+    "label": "Start with the details",
+    "title": "Less back-and-forth.<br><span class=\"muted\">More getting it done.</span>",
+    "text": "A few details now make the next conversation easier. Build a print brief, then send it straight to our WhatsApp.",
+    "checklist": ["Your specifications, in one place", "Opens WhatsApp with everything filled in", "Final pricing confirmed by our team"],
+    "moduleTitle": "YOUR PRINT BRIEF",
+    "productLabel": "What are we making?",
+    "quantityLabel": "Quantity",
+    "quantityDefault": 100,
+    "deadlineLabel": "When do you need it?",
+    "detailsLabel": "Anything else?",
+    "detailsPlaceholder": "Size, paper, finish, or a question for us…",
+    "summaryLabel": "Your starting point",
+    "note": "Price and turnaround confirmed after review.",
+    "submit": "Prepare my enquiry",
+    "formNote": "Nothing is sent until you choose WhatsApp or email.",
+    "readyLabel": "BRIEF PREPARED",
+    "readyTitle": "A better starting point.",
+    "whatsappCta": "Send on WhatsApp",
+    "emailCta": "Open email instead",
+    "readyNote": "This reference labels your draft; it is not an order confirmation. Attach artwork in the chat before sending.",
+    "opener": "I'd like a quote for the following print job.",
+    "closer": "Please confirm the price and turnaround. Thank you."
+  },
+  "products": [
+    { "id": "business-cards", "name": "Business cards", "unit": "pcs", "minQty": 100, "group": "Everyday essentials", "image": "printngo/stationery.webp", "imageAlt": "Concept visual for business cards", "specs": "Name cards · Matt / gloss · Spot UV", "headline": "First impressions. Made tangible.", "description": "A crisp introduction to you and your business. Explore instant name cards or offset cards with matt, gloss and spot UV finishes.", "cta": "Let’s talk business cards" },
+    { "id": "digital", "name": "Digital print — A4 / A3", "unit": "pages", "group": "Everyday essentials", "image": "printngo/hero-print.webp", "imageAlt": "Concept visual for digital printing", "specs": "A4 & A3 · Colour · Short runs", "headline": "Small runs. Big possibilities.", "description": "Presentations, reports, brochures and leaflets in A4 or A3. A practical choice when you need a smaller quantity.", "cta": "Let’s talk digital printing" },
+    { "id": "offset", "name": "Brochures & offset print", "unit": "pcs", "minQty": 500, "group": "Bigger runs", "image": "printngo/printing.jpg", "imageAlt": "Concept visual for offset printing", "specs": "Brochures · Letterheads · Company profiles", "headline": "Consistent colour. Larger quantities.", "description": "When the numbers go up, offset keeps the quality and unit price where you want them. Brochures, letterheads, envelopes and more.", "cta": "Let’s talk offset print" },
+    { "id": "large-format", "name": "Banners, posters & stickers", "unit": "pcs", "group": "Make it big", "image": "printngo/production.webp", "imageAlt": "Concept visual for large-format printing", "specs": "Banners · Buntings · Posters · Stickers", "headline": "More room for your message.", "description": "Shopfront banners, event buntings, posters and stickers, printed to stand out and made to last.", "cta": "Let’s talk large format" },
+    { "id": "binding", "name": "Binding & finishing", "unit": "sets", "group": "Finishing touches", "image": "printngo/paper.jpg", "imageAlt": "Concept visual for binding and finishing", "specs": "Binding · Lamination · Rubber stamps · Scanning", "headline": "The details that finish the job.", "description": "Comb, tape and wire binding, lamination, rubber stamps, photocopying and scanning, all under one roof.", "cta": "Let’s talk finishing" }
+  ],
+  "faq": {
+    "label": "Good to know",
+    "title": "A few answers.<br><span class=\"muted\">Before you print.</span>",
+    "items": [
+      { "q": "Can I print a small quantity?", "a": "Yes. Print & Go offers print-on-demand services. Tell us what you need and we’ll confirm the suitable process and quantity for your product." },
+      { "q": "How soon can my order be ready?", "a": "Timing depends on the product, quantity, artwork and finish. Share your deadline when you enquire so our team can confirm what’s possible." },
+      { "q": "What if I’m not sure about the specifications?", "a": "Start with the purpose and quantity. Our team can discuss the size, material and finish with you before confirming the job." },
+      { "q": "Where can I find you?", "a": "We’re at Lot 1.44 & 1.45, Ground Floor, Wisma Central, Jalan Ampang, Kuala Lumpur. Please call ahead to confirm opening hours." }
+    ]
+  },
+  "about": {
+    "label": "YOUR LOCAL PRINT PARTNER",
+    "title": "Big on ideas.",
+    "title2": "Here for yours.",
+    "text": "Print & Go Fast Print. Part of everyday business in Kuala Lumpur since 2004.",
+    "image": "printngo/stationery.webp",
+    "imageAlt": "Concept arrangement of printed business stationery",
+    "imageLabel": "SMALL RUNS. BIG POSSIBILITIES.",
+    "storyLabel": "Our story",
+    "storyTitle": "Small jobs deserve<br>great attention, too.",
+    "paragraphs": [
+      "Established in May 2004 by Jay Kok, Print & Go was built around instant printing and print-on-demand services.",
+      "From our shop at Wisma Central on Jalan Ampang, we help with the everyday materials that keep businesses moving: name cards, letterheads, envelopes, company profiles, brochures and leaflets.",
+      "Whether it’s a small quantity or a larger run, we’re here to work through the format, finish and timing with you."
+    ],
+    "cta": "Come say hello",
+    "valuesLabel": "The way we work",
+    "values": [
+      { "title": "Practical options.", "text": "Printing and finishing for the job you actually need." },
+      { "title": "A human conversation.", "text": "Talk to our team about what matters for your project." },
+      { "title": "Room for small runs.", "text": "Print-on-demand services, with small quantities welcome." }
+    ]
+  },
+  "contactPage": {
+    "label": "LET’S MAKE IT HAPPEN",
+    "title": "Your idea starts",
+    "title2": "with a hello.",
+    "text": "A few details are all we need to start the conversation. Share the plan and we’ll help with the print.",
+    "formLabel": "Your print enquiry",
+    "channel": "WHATSAPP OR EMAIL",
+    "serviceLabel": "What are we printing?",
+    "messageLabel": "Tell us about your project",
+    "messagePlaceholder": "Size, paper, finish, artwork and anything else we should know.",
+    "note": "This prepares a WhatsApp message (or an email) with your details filled in. Nothing is stored on this website.",
+    "submit": "Prepare my enquiry",
+    "cardLabel": "COME SAY HELLO",
+    "cardTitle": "Right here.<br>In the heart of KL.",
+    "directions": "Get directions",
+    "directTitle": "Prefer a conversation?",
+    "whatsappLine": "WhatsApp 016-700 3007"
+  },
+  "footer": {
+    "label": "FROM IDEA TO IN YOUR HANDS",
+    "title": "Let’s make<br>something <span>real.</span>",
+    "cta": "Tell us what you have in mind",
+    "blurb": "Your one-stop print shop.<br>Wisma Central, Kuala Lumpur.",
+    "exploreTitle": "Explore",
+    "briefLink": "Build a print brief",
+    "visitTitle": "Come say hello",
+    "directionsLink": "Contact & directions",
+    "contactTitle": "Let’s talk print",
+    "whatsappLink": "WhatsApp us ↗"
+  }
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-skin-base="../skins/" data-default-skin="printngo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#091d2e">
+<meta name="robots" content="noindex">
+<title>Home | {business}</title>
+<meta name="description" content="" data-skin-attr="content:business.description">
+<link rel="icon" href="../shared/favicon.svg" type="image/svg+xml" data-skin-attr="href:business.favicon">
+<link rel="preload" href="../shared/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/style.css">
+<link rel="stylesheet" href="../shared/kinetic.css">
+<link rel="stylesheet" href="../shared/extra.css">
+<script src="../shared/skin.js"></script>
+<script type="module" src="../shared/site.js"></script>
+</head>
+<body id="top" class="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+<a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" width="990" height="100" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a>
+<nav id="main-nav" aria-label="Main navigation">
+<a href="services.html" data-skin="nav.services"></a>
+<a href="about.html" data-skin="nav.about"></a>
+<a href="contact.html" data-skin="nav.contact"></a>
+</nav>
+<a class="button header-cta" href="contact.html"><span data-skin="nav.headerCta"></span> <span class="arrow">↗</span></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <picture class="hero-image"><img src="" alt="" fetchpriority="high" width="1600" height="900" data-skin-attr="src:hero.image,alt:hero.imageAlt"></picture>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <p class="eyebrow light"><span class="small-cross">+</span> <span data-skin="hero.eyebrow"></span></p>
+    <h1 id="hero-title" class="kinetic" data-skin-attr="aria-label:{hero.line1} {hero.line2} {hero.cycle.0}"><span class="line" aria-hidden="true"><span data-skin="hero.line1"></span></span><span class="line" aria-hidden="true"><span><span data-skin="hero.line2"></span> <em class="kin-cycle"><template data-skin-list="hero.cycle"><span data-skin="."></span></template></em></span></span></h1>
+    <p class="hero-description" data-skin-html="hero.description"></p>
+    <div class="hero-actions">
+      <a class="button light-button magnetic" href="#brief"><span data-skin="hero.cta"></span> <span class="arrow">↗</span></a>
+      <a class="wa-line" data-wa data-skin="hero.waText" data-skin-if="contact.whatsapp"></a>
+    </div>
+  </div>
+  <div class="hero-bottom"><a class="scroll-cue" href="#intro"><span>↓</span> <span data-skin="hero.scrollCue"></span></a><div class="hero-caption"><span class="caption-mark">✳</span><p data-skin-html="hero.caption"></p></div><button class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause motion">Ⅱ <span>Motion on</span></button></div>
+  <div class="hero-glass" data-skin-if="hero.glass"><span class="mini-label" data-skin="hero.glass.label"></span><div><strong data-skin-html="hero.glass.title"></strong><a data-skin-attr="href:hero.glass.href,aria-label:hero.glass.linkLabel">↗</a></div><div class="glass-rule"></div><span data-skin="hero.glass.tags"></span></div>
+</section>
+
+<section id="intro" class="section intro-section">
+ <div class="editorial-head reveal"><span class="label" data-skin="intro.label"></span><h2 data-skin-html="intro.title"></h2></div>
+ <div class="about-grid">
+  <article class="panel navy reveal"><span class="mini-label" data-skin="intro.navy.label"></span><span class="panel-symbol" aria-hidden="true">↗</span><h3 data-skin-html="intro.navy.title"></h3><p data-skin="intro.navy.text"></p><a class="inline-link light" href="about.html"><span data-skin="intro.navy.link"></span> <span>↗</span></a></article>
+  <a class="panel image-panel reveal" href="services.html"><img src="" loading="lazy" alt="" width="800" height="600" data-skin-attr="src:intro.image,alt:intro.imageAlt"><span class="floating-label"><span data-skin="intro.imageLabel"></span> ↗</span></a>
+  <article class="panel paper-panel reveal"><span class="mini-label" data-skin="intro.paper.label"></span><strong class="year" data-skin-if="business.since"><span class="yr" data-skin="business.since"></span><span>EST.</span></strong><h3 data-skin-html="intro.paper.title"></h3><p data-skin="intro.paper.text"></p><a class="inline-link" href="about.html"><span data-skin="intro.paper.link"></span> <span>↗</span></a></article>
+ </div>
+ <div class="fact-row reveal"><template data-skin-list="intro.facts"><div><strong data-skin="big"></strong><span data-skin="small"></span></div></template></div>
+</section>
+
+<section class="section services-section" id="services">
+ <div class="service-layout">
+  <div class="service-intro reveal"><span class="label" data-skin="services.label"></span><h2 data-skin-html="services.title"></h2><p data-skin="services.text"></p><a class="button dark-button" href="services.html"><span data-skin="services.cta"></span> <span class="arrow">↗</span></a></div>
+  <a class="feature-service reveal" data-skin-attr="href:services.feature.href"><img src="" loading="lazy" alt="" width="800" height="600" data-skin-attr="src:services.feature.image,alt:services.feature.imageAlt"><span class="floating-label top" data-skin="services.feature.label"></span><div class="service-image-caption"><h3 data-skin-html="services.feature.title"></h3><span class="round-arrow">↗</span></div></a>
+  <div class="side-service reveal"><a data-skin-attr="href:services.side.href"><div class="small-service-image"><img src="" loading="lazy" alt="" width="800" height="600" data-skin-attr="src:services.side.image,alt:services.side.imageAlt"><span class="floating-label"><span data-skin="services.side.label"></span> ↗</span></div><h3 data-skin="services.side.title"></h3><p data-skin="services.side.text"></p></a><a class="inline-link" data-skin-attr="href:services.side.linkHref"><span data-skin="services.side.link"></span> <span>↗</span></a></div>
+ </div>
+</section>
+
+<section class="process-section section">
+ <div class="editorial-head reveal"><span class="label" data-skin="process.label"></span><h2 data-skin-html="process.title"></h2></div>
+ <div class="process-grid"><template data-skin-list="process.steps"><article class="reveal"><span class="step-no"><span data-skin-index></span> /</span><h3 data-skin="title"></h3><p data-skin="text"></p></article></template></div>
+</section>
+
+<section class="brief-section section" id="brief">
+ <div class="brief-copy reveal"><span class="label" data-skin="brief.label"></span><h2 data-skin-html="brief.title"></h2><p data-skin="brief.text"></p><ul class="checklist"><template data-skin-list="brief.checklist"><li data-skin="."></li></template></ul></div>
+ <div class="brief-module reveal" data-brief>
+  <div class="module-top"><span data-skin="brief.moduleTitle"></span><span class="draft-state">Draft</span></div>
+  <form class="brief-form">
+   <label><span data-skin="brief.productLabel"></span><select name="product"></select></label>
+   <div class="field-row"><label><span data-skin="brief.quantityLabel"></span><input name="quantity" type="number" value="1" min="1" max="100000" required inputmode="numeric" data-skin-attr="value:brief.quantityDefault"></label><label><span data-skin="brief.deadlineLabel"></span><input name="deadline" type="date"></label></div>
+   <label><span data-skin="brief.detailsLabel"></span><textarea name="details" maxlength="1500" rows="2" data-skin-attr="placeholder:brief.detailsPlaceholder"></textarea></label>
+   <div class="brief-summary" aria-live="polite"><span data-skin="brief.summaryLabel"></span><strong data-summary></strong><span data-estimate hidden></span><small data-estimate-note></small></div>
+   <button class="button dark-button" type="submit"><span data-skin="brief.submit"></span> <span class="arrow">↗</span></button>
+   <p class="form-note" data-skin="brief.formNote"></p>
+  </form>
+  <div class="brief-ready" hidden tabindex="-1">
+   <span class="label" data-skin="brief.readyLabel"></span><h3 data-skin="brief.readyTitle"></h3>
+   <p data-ready-summary style="white-space:pre-line"></p><code data-reference></code>
+   <div class="ready-actions">
+    <a data-whatsapp class="button whatsapp-button" href="#" target="_blank" rel="noopener"><span data-skin="brief.whatsappCta"></span> <span class="arrow">↗</span></a>
+    <a data-email class="button email-button" href="#"><span data-skin="brief.emailCta"></span> <span class="arrow">↗</span></a>
+    <button type="button" class="inline-link" data-copy>Copy the brief ↗</button>
+    <button type="button" class="plain-button" data-edit>Edit details</button>
+   </div>
+   <p class="form-note" data-skin="brief.readyNote"></p>
+  </div>
+ </div>
+</section>
+
+<section class="section faq-section" data-skin-if="faq.items">
+ <div class="reveal"><span class="label" data-skin="faq.label"></span><h2 data-skin-html="faq.title"></h2></div>
+ <div class="faq-list reveal"><template data-skin-list="faq.items"><details><summary><span data-skin="q"></span><span>+</span></summary><p data-skin="a"></p></details></template></div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-cta"><div><span class="label inverse" data-skin="footer.label"></span><h2 data-skin-html="footer.title"></h2></div><a class="button light-button magnetic" href="contact.html"><span data-skin="footer.cta"></span> <span class="arrow">↗</span></a></div>
+<div class="footer-grid">
+<div><a class="brand img-brand" href="index.html" data-skin-if="business.logo" data-skin-attr="aria-label:{business.short} home"><img src="" alt="" width="990" height="100" data-skin-attr="src:business.logo,alt:business.name"></a>
+<a class="brand text-brand" href="index.html" data-skin-if="!business.logo" data-skin-attr="aria-label:{business.short} home"><span class="mark" data-skin="business.initials"></span><span data-skin="business.short"></span></a><p data-skin-html="footer.blurb"></p></div>
+<div><h3 data-skin="footer.exploreTitle"></h3><a href="services.html" data-skin="nav.services"></a><a href="about.html" data-skin="nav.about"></a><a href="contact.html" data-skin="nav.contact"></a><a href="index.html#brief" data-skin="footer.briefLink"></a></div>
+<div><h3 data-skin="footer.visitTitle"></h3><p data-skin-html="contact.addressHtml"></p><a href="contact.html"><span data-skin="footer.directionsLink"></span> ↗</a></div>
+<div><h3 data-skin="footer.contactTitle"></h3><template data-skin-list="contact.phones"><a data-skin-attr="href:tel:{tel}" data-skin="label"></a></template><a data-skin-attr="href:mailto:{contact.email}" data-skin="contact.email" data-skin-if="contact.email"></a><a data-wa data-skin="footer.whatsappLink" data-skin-if="contact.whatsapp"></a></div>
+</div>
+<div class="footer-bottom"><span>© <span data-skin="business.name"></span></span><span data-skin="business.tagline"></span><a href="#top">Back to top ↑</a></div>
+</footer>
+</body>
+</html>
