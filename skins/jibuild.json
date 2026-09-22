@@ -43,7 +43,7 @@
     "description": "Kitchens, wardrobes and feature walls, measured and made by our own carpenters.<br> Kitchens from RM19,888, installed.",
     "cta": "Get a kitchen estimate",
     "waText": "or WhatsApp a photo of your space",
-    "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_d38723d2-1ef3-4c5b-82ca-169fc7e55fee_min.webp",
+    "image": "jibuild/kitchen.jpg",
     "imageAlt": "Concept render of a custom kitchen with sage-green lower cabinets and oak uppers",
     "scrollCue": "SEE WHAT WE BUILD",
     "caption": "Measured on site.<br>Made in our workshop.",
@@ -59,7 +59,7 @@
     "label": "Why homeowners call us",
     "title": "No middlemen.<br>Just the <span class=\"muted\">people who build it.</span>",
     "navy": { "label": "OUR OWN WORKSHOP", "title": "Measured, made<br>and installed<br>by one team.", "text": "The carpenter who measures your kitchen is the one who fits it.", "link": "See how we work" },
-    "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_ecdfca7d-eaf4-4227-866c-ef0d320ae855_min.webp",
+    "image": "jibuild/tv-console.jpg",
     "imageAlt": "Concept render of a fluted-panel TV feature wall with floating oak console",
     "imageLabel": "TV feature walls",
     "paper": { "label": "HONEST PRICING", "title": "A price you can<br>plan around.", "text": "Kitchens from RM19,888 installed. Full quote after a free site measurement.", "link": "About Ji Build" },
@@ -75,8 +75,8 @@
     "title": "Kitchens first.<br>Then every<br><span class=\"muted\">other room.</span>",
     "text": "Plywood carcasses, soft-close hardware and finishes you pick from real samples, not a screen.",
     "cta": "See all cabinet work",
-    "feature": { "href": "services.html#kitchen", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_d38723d2-1ef3-4c5b-82ca-169fc7e55fee_min.webp", "imageAlt": "Custom kitchen with sage-green and oak cabinets", "label": "KITCHEN CABINETS", "title": "The room that<br>earns its keep." },
-    "side": { "href": "services.html#wardrobe", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_624b61b4-a21a-4d15-b4d2-90811890d702_min.webp", "imageAlt": "Oak wardrobe interior with soft-close drawers and LED strip lighting", "label": "Wardrobes", "title": "Storage that fits the wall, not the catalogue.", "text": "Walk-in or built-in, with drawers and lighting where you actually need them.", "link": "TV consoles & feature walls", "linkHref": "services.html#tv-console" }
+    "feature": { "href": "services.html#kitchen", "image": "jibuild/kitchen.jpg", "imageAlt": "Custom kitchen with sage-green and oak cabinets", "label": "KITCHEN CABINETS", "title": "The room that<br>earns its keep." },
+    "side": { "href": "services.html#wardrobe", "image": "jibuild/wardrobe.jpg", "imageAlt": "Oak wardrobe interior with soft-close drawers and LED strip lighting", "label": "Wardrobes", "title": "Storage that fits the wall, not the catalogue.", "text": "Walk-in or built-in, with drawers and lighting where you actually need them.", "link": "TV consoles & feature walls", "linkHref": "services.html#tv-console" }
   },
   "servicesPage": {
     "label": "CABINET WORK",
@@ -118,10 +118,10 @@
     "closer": "Please let me know the next available site visit. Thank you."
   },
   "products": [
-    { "id": "kitchen", "name": "Kitchen cabinets", "fromPrice": 19888, "perUnit": false, "unit": "ft", "note": "Starting price for a 10 ft L-shape kitchen, installed. Site measurement before final quote.", "priceLine": "From RM19,888 installed", "group": "Kitchens", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_d38723d2-1ef3-4c5b-82ca-169fc7e55fee_min.webp", "imageAlt": "Custom kitchen cabinets in sage green and oak", "specs": "Plywood carcass · Soft-close · Quartz top optional", "headline": "Built around how you cook.", "description": "Top and bottom cabinets, tall units and islands, with the drawers and pull-outs planned around your routine. Quartz or solid-surface tops available.", "cta": "Plan my kitchen" },
-    { "id": "wardrobe", "name": "Wardrobes", "fromPrice": 680, "unit": "ft", "minQty": 6, "note": "Per running foot, built-in with doors. Walk-in and sliding-door options quoted after measurement.", "priceLine": "From RM680 per foot", "group": "Bedrooms", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_624b61b4-a21a-4d15-b4d2-90811890d702_min.webp", "imageAlt": "Oak wardrobe interior with drawers and lighting", "specs": "Built-in · Sliding or swing doors · LED strips", "headline": "Storage that fits the wall.", "description": "Floor-to-ceiling wardrobes with internal drawers, hanging space and lighting, sized to your room instead of the nearest catalogue module.", "cta": "Plan my wardrobe" },
-    { "id": "tv-console", "name": "TV consoles & feature walls", "fromPrice": 3200, "perUnit": false, "unit": "wall", "note": "Starting price for a floating console with a fluted or laminate panel wall.", "priceLine": "From RM3,200", "group": "Living rooms", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_ecdfca7d-eaf4-4227-866c-ef0d320ae855_min.webp", "imageAlt": "Fluted panel TV feature wall with floating console", "specs": "Floating console · Fluted panels · Hidden lighting", "headline": "The wall everyone looks at.", "description": "Floating consoles, fluted panel walls and concealed cable runs, with lighting built in from the start.", "cta": "Plan my feature wall" },
-    { "id": "other", "name": "Shoe cabinets, study & vanity", "unit": "ft", "group": "Everything else", "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_02ba3293-43b3-4e30-be32-896c38a09246_min.webp", "imageAlt": "Carpenter measuring a plywood cabinet carcass in the workshop", "specs": "Shoe cabinets · Study desks · Bathroom vanities", "headline": "Small jobs, same care.", "description": "Entryway shoe cabinets, study desks with storage and bathroom vanities, all made in the same workshop by the same team.", "cta": "Ask about a small job" }
+    { "id": "kitchen", "name": "Kitchen cabinets", "fromPrice": 19888, "perUnit": false, "unit": "ft", "note": "Starting price for a 10 ft L-shape kitchen, installed. Site measurement before final quote.", "priceLine": "From RM19,888 installed", "group": "Kitchens", "image": "jibuild/kitchen.jpg", "imageAlt": "Custom kitchen cabinets in sage green and oak", "specs": "Plywood carcass · Soft-close · Quartz top optional", "headline": "Built around how you cook.", "description": "Top and bottom cabinets, tall units and islands, with the drawers and pull-outs planned around your routine. Quartz or solid-surface tops available.", "cta": "Plan my kitchen" },
+    { "id": "wardrobe", "name": "Wardrobes", "fromPrice": 680, "unit": "ft", "minQty": 6, "note": "Per running foot, built-in with doors. Walk-in and sliding-door options quoted after measurement.", "priceLine": "From RM680 per foot", "group": "Bedrooms", "image": "jibuild/wardrobe.jpg", "imageAlt": "Oak wardrobe interior with drawers and lighting", "specs": "Built-in · Sliding or swing doors · LED strips", "headline": "Storage that fits the wall.", "description": "Floor-to-ceiling wardrobes with internal drawers, hanging space and lighting, sized to your room instead of the nearest catalogue module.", "cta": "Plan my wardrobe" },
+    { "id": "tv-console", "name": "TV consoles & feature walls", "fromPrice": 3200, "perUnit": false, "unit": "wall", "note": "Starting price for a floating console with a fluted or laminate panel wall.", "priceLine": "From RM3,200", "group": "Living rooms", "image": "jibuild/tv-console.jpg", "imageAlt": "Fluted panel TV feature wall with floating console", "specs": "Floating console · Fluted panels · Hidden lighting", "headline": "The wall everyone looks at.", "description": "Floating consoles, fluted panel walls and concealed cable runs, with lighting built in from the start.", "cta": "Plan my feature wall" },
+    { "id": "other", "name": "Shoe cabinets, study & vanity", "unit": "ft", "group": "Everything else", "image": "jibuild/workshop.jpg", "imageAlt": "Carpenter measuring a plywood cabinet carcass in the workshop", "specs": "Shoe cabinets · Study desks · Bathroom vanities", "headline": "Small jobs, same care.", "description": "Entryway shoe cabinets, study desks with storage and bathroom vanities, all made in the same workshop by the same team.", "cta": "Ask about a small job" }
   ],
   "faq": {
     "label": "Good to know",
@@ -138,7 +138,7 @@
     "title": "Cabinet makers,",
     "title2": "not salespeople.",
     "text": "Ji Build is a small workshop team in Petaling Jaya that measures, builds and installs every job ourselves.",
-    "image": "https://d8j0ntlcm91z4.cloudfront.net/user_3HArE9AtXM2OGS5YsogD9wmzQ4a/hf_20260922_085735_02ba3293-43b3-4e30-be32-896c38a09246_min.webp",
+    "image": "jibuild/workshop.jpg",
     "imageAlt": "Carpenter measuring a cabinet carcass in the Ji Build workshop",
     "imageLabel": "MADE IN OUR OWN WORKSHOP",
     "storyLabel": "Our story",
