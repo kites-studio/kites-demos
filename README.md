@@ -50,5 +50,5 @@ git subtree push --prefix=kites-demos demos main
 
 (`demos` = https://github.com/kites-studio/kites-demos.git; HTTP/1.1 is pinned in this repo's git
 config because HTTP/2 pushes were being dropped.) Never commit directly in the public repo.
-`.nojekyll` is required so `skins/_schema.md` is served. The existing `kites-studio/printngo-demo`
-repo can now be replaced by a redirect to `demo/printngo/`.
+`.nojekyll` is required so `skins/_schema.md` is served. `kites-studio/printngo-demo` (the link
+already with the client) is redirect-only and forwards here.
