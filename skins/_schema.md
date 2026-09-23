@@ -17,7 +17,11 @@ Open it with `<template>/index.html?skin=<slug>` (or `demo/<slug>/`). Links betw
 
 ## `business`
 
-`name`, `short` (nav/wordmark), `initials` (text wordmark badge), `tagline` (footer bottom), `since` (year; omit to hide the EST. block), `description` (meta description), `logo` (path under `skins/`, e.g. `printngo/brand-header.jpg`, or a full URL; omit for a text wordmark), `favicon` (optional).
+`name`, `short` (nav/wordmark), `initials` (text wordmark badge), `tagline` (footer bottom), `since` (year; omit to hide the EST. block), `description` (meta description), `logo` (path under `skins/`, e.g. `jibuild/logo.png`, or a full URL; omit for a text wordmark), `favicon` (path under `skins/`, resolved the same way).
+
+  `logoFit` — leave unset for any normal logo image: the brand element sizes to the image's own aspect at a fixed height, with no background plate. Set `false` only for a wide pre-cropped strip that relies on the legacy `.brand` crop (`printngo` is the one skin that does).
+
+  **Use the client's real logo whenever they have one** — it is the first thing they look for, and a demo in their own branding is what makes it feel like their site rather than a template. Download it into `assets/<slug>/brand/` with a `SOURCES.md` recording where it came from; never hot-link it. If the logo's own type is unusable at small sizes, rebuild the lockup around their icon in their sampled colour rather than inventing a new mark (see `assets/jibuild/`).
 
 ## `contact`
 

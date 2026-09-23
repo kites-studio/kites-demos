@@ -5,7 +5,7 @@
  *   data-skin="business.name"            → textContent (dot path into the skin)
  *   data-skin-html="hero.title"          → innerHTML (skin strings may contain <br> and <em>)
  *   data-skin-attr="href:contact.mapUrl" → attribute (comma-separate several: "src:hero.image,alt:hero.alt")
- *                                          src/poster values without a scheme are resolved from skins/ (e.g. "printngo/hero.webp");
+ *                                          src/poster values (and a favicon href) without a scheme are resolved from skins/ (e.g. "printngo/hero.webp");
  *                                          braces interpolate: data-skin-attr="href:contact.html?service={id}"
  *   data-skin-if="proof.reviews"         → element removed when the value is empty/false ("!path" inverts)
  *   <template data-skin-list="services"> → cloned once per item; inside, paths are relative
@@ -49,7 +49,7 @@
         let v = path.includes("{")
           ? path.replace(/\{([^}]+)\}/g, (_, p) => { const r = resolve(ctx, skin, p); return r == null ? "" : r; })
           : resolve(ctx, skin, path);
-        if (attr === "src" || attr === "poster") v = asset(v);
+        if (attr === "src" || attr === "poster" || (attr === "href" && el.matches('link[rel*="icon"]'))) v = asset(v);
         if (v != null && v !== "") el.setAttribute(attr, v);
         else if (attr === "href" || attr === "src") el.removeAttribute(attr);
       });
@@ -97,6 +97,14 @@
     });
   }
 
+  /* A normal logo image needs sane sizing; Print & Go's wide strip keeps the legacy crop
+     (opt out with business.logoFit:false). */
+  function logoFit(skin) {
+    const b = skin.business || {};
+    if (!b.logo || b.logoFit === false) return;
+    document.querySelectorAll(".brand.img-brand").forEach((el) => el.classList.add("fit"));
+  }
+
   function ribbon(skin) {
     if (skin.concept === false) return;
     const r = document.createElement("a");
@@ -122,6 +130,7 @@
         document.title = document.title.replace("{business}", skin.business.name);
       }
       keepSkinInLinks();
+      logoFit(skin);
       ribbon(skin);
       document.documentElement.classList.add("skin-ready");
       document.dispatchEvent(new CustomEvent("skin:ready", { detail: skin }));

@@ -32,3 +32,12 @@ html.skin-ready [data-skin],html.skin-ready [data-skin-html]{color:inherit}
 
 /* Contact form: phone + email row */
 #contact-form .field-row label{min-width:0}
+
+/* Logo that is a normal image rather than Print & Go's wide strip.
+   skin.js adds .fit unless a skin sets business.logoFit:false (printngo keeps the strip crop). */
+.brand.img-brand.fit{width:auto;height:46px;background:none;box-shadow:none;border-radius:0;display:inline-flex;align-items:center}
+.brand.img-brand.fit img{position:static;width:auto;height:100%;max-width:none}
+.home .brand.img-brand.fit{height:46px;box-shadow:none}
+.footer-grid .brand.img-brand.fit{height:42px;width:auto;opacity:1}
+@media(max-width:1100px){.brand.img-brand.fit{height:42px}}
+@media(max-width:760px){.site-header .brand.img-brand.fit,.home .brand.img-brand.fit{width:auto;height:36px}}
