@@ -40,7 +40,9 @@
     });
     each("[data-skin-html]", (el) => {
       const v = resolve(ctx, skin, el.dataset.skinHtml);
-      if (v != null && typeof v !== "object") el.innerHTML = v;
+      // Templates hide <br> at phone widths; without a space either side the words weld
+      // together ("Kitchens first.Then every"). Guarantee one.
+      if (v != null && typeof v !== "object") el.innerHTML = String(v).replace(/\s*<br\s*\/?>/gi, " <br>");
     });
     each("[data-skin-attr]", (el) => {
       el.dataset.skinAttr.split(",").forEach((pair) => {
@@ -112,8 +114,23 @@
     r.href = "https://madebykites.kitesprints-site.workers.dev/";
     r.target = "_blank";
     r.rel = "noopener";
-    r.innerHTML = '<span class="dot"></span>Concept preview · <strong>Made by Kites</strong> · not live';
+    r.innerHTML = '<span class="dot"></span><span class="rib-full">Concept preview · <strong>Made by Kites</strong> · not live</span><span class="rib-mini">Concept</span>';
+    r.title = "This is a concept preview by Made by Kites — tap to expand";
     document.body.appendChild(r);
+    // On a phone the ribbon is fixed over the content, so shrink it to a small pill once the
+    // visitor starts reading. Tapping toggles it back; it never disappears.
+    if (matchMedia("(max-width:760px)").matches) {
+      const mini = () => r.classList.add("mini");
+      let t = setTimeout(mini, 4000);
+      addEventListener("scroll", () => { clearTimeout(t); mini(); }, { once: true, passive: true });
+      r.addEventListener("click", (e) => {
+        if (!r.classList.contains("mini")) return;   // expanded: let the link through
+        e.preventDefault();
+        clearTimeout(t);
+        r.classList.remove("mini");
+        t = setTimeout(mini, 6000);
+      });
+    }
   }
 
   fetch(base + slug + ".json", { cache: "no-cache" })

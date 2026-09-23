@@ -41,3 +41,84 @@ html.skin-ready [data-skin],html.skin-ready [data-skin-html]{color:inherit}
 .footer-grid .brand.img-brand.fit{height:42px;width:auto;opacity:1}
 @media(max-width:1100px){.brand.img-brand.fit{height:42px}}
 @media(max-width:760px){.site-header .brand.img-brand.fit,.home .brand.img-brand.fit{width:auto;height:36px}}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Phone pass, 24 Sep 2026. Loaded after style.css, so these win.
+   Fixes found by walking T1 at 390 px and 320 px on both skins.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* Ribbon: it is fixed, so on a phone it parks on top of whatever is bottom-left
+   (form fields, section labels, "Back to top"). Collapse it to a small pill —
+   skin.js adds .mini once the visitor scrolls; tapping it expands again. */
+.concept-ribbon .rib-mini{display:none}
+.concept-ribbon.mini .rib-full{display:none}
+.concept-ribbon.mini .rib-mini{display:inline}
+@media(max-width:760px){
+  .concept-ribbon{max-width:calc(100vw - 20px);transition:padding .25s var(--ease),background .25s}
+  .concept-ribbon.mini{padding:7px 12px 7px 10px;background:#0c1b2cd9}
+  .concept-ribbon.mini .dot{width:7px;height:7px}
+}
+
+/* The last footer row sits under the ribbon at rest. Give it room. */
+@media(max-width:760px){
+  .t1 .footer-bottom{padding-bottom:34px}
+  .t1 .site-footer{padding-bottom:18px}
+}
+
+/* Intro panel: the 760 px rule puts this dark panel into two columns, which at
+   390 px squeezes the heading to one word per line ("Measured, / made / and /
+   installed"). One column below 560 px. */
+@media(max-width:560px){
+  .t1 .about-grid>.panel:first-child{display:block}
+  .t1 .about-grid>.panel:first-child h3{font-size:1.6rem;margin-bottom:14px}
+  .t1 .about-grid>.panel:first-child>.panel-symbol{margin:18px 0 12px}
+  .t1 .about-grid>.panel:first-child p{margin:0 0 4px}
+  .t1 .about-grid>.panel:first-child .inline-link{margin-top:18px}
+}
+
+/* Two-up form rows are too tight for a phone: "Length (feet)" and a native date
+   picker cannot share 390 px without both labels wrapping. Stack them. */
+@media(max-width:560px){
+  .t1 .field-row{grid-template-columns:1fr;gap:0}
+  .t1 .form-heading{flex-wrap:wrap;gap:8px}
+  .t1 .form-channel{width:100%}
+}
+
+/* The brief textarea was short enough to clip its own placeholder mid-word. */
+@media(max-width:760px){
+  .t1 .brief-form textarea,.t1 #contact-form textarea{min-height:104px}
+}
+
+/* Long headings: stop a single short word stranding on its own line. The forced
+   <br> is a desktop composition; on a phone it leaves orphans ("…who build / it."),
+   so drop it and let the browser balance the lines instead. skin.js keeps a space
+   around every <br>, so hiding it never welds two words together. */
+@media(max-width:760px){
+  .t1 .editorial-head h2,.t1 .service-intro h2,.t1 .brief-copy h2,.t1 .faq-section h2,
+  .t1 .page-intro h1,.t1 .catalogue-copy h2,.t1 .story-layout h2{text-wrap:balance}
+}
+@media(max-width:560px){
+  .t1 .editorial-head h2 br,.t1 .brief-copy h2 br,.t1 .faq-section h2 br{display:none}
+}
+
+/* Hero on small phones: the glass card is absolutely positioned and collides with
+   the WhatsApp line whenever a skin's copy runs long (Print & Go overlapped it by
+   38×18 px at 390). Pixel-nudging is fragile across skins, so below 560 px the hero
+   stops being a fixed-height stage and simply stacks. Nothing can overlap. */
+@media(max-width:560px){
+  .t1 .hero{height:auto;min-height:0;max-height:none;padding-bottom:26px;
+            display:flex;flex-direction:column}
+  .t1 .hero-content{order:1;padding:124px var(--gutter) 0}
+  .t1 .hero-actions{gap:16px 20px}
+  /* both were absolutely positioned; in flow they need the gutter back, and the
+     scroll cue has to stay last or it reads before the card it sits under */
+  .t1 .hero-glass{order:2;position:static;width:auto;max-width:330px;
+              margin:28px var(--gutter) 0;bottom:auto;right:auto}
+  .t1 .hero-bottom{order:3;position:static;margin:24px var(--gutter) 0;
+               left:auto;right:auto;bottom:auto;max-width:none}
+  .t1 .hero-shade{background:linear-gradient(180deg,
+      color-mix(in srgb,var(--navy) 78%,transparent) 0%,
+      color-mix(in srgb,var(--navy) 84%,transparent) 26%,
+      color-mix(in srgb,var(--navy) 72%,transparent) 62%,
+      color-mix(in srgb,var(--navy) 88%,transparent) 100%)}
+}
