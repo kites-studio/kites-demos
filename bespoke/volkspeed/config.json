@@ -1,0 +1,216 @@
+{
+  "slug": "volkspeed",
+  "business": {
+    "name": "Volkspeed Motorsport"
+  },
+  "currency": "RM",
+  "refPrefix": "VSM",
+  "contact": {
+    "whatsapp": "60102156826",
+    "email": "kites.stdio@gmail.com"
+  },
+  "branches": [
+    {
+      "id": "hq",
+      "name": "Bukit Raja HQ",
+      "area": "Klang",
+      "whatsapp": "60102156826"
+    },
+    {
+      "id": "glenmarie",
+      "name": "Glenmarie",
+      "area": "Shah Alam",
+      "whatsapp": "60102156826"
+    }
+  ],
+  "services": [
+    {
+      "id": "diagnostics",
+      "name": "Diagnostics & repair",
+      "blurb": "Get to the source of a warning light, unusual noise or change in performance.",
+      "includes": [
+        "Share the symptoms and warning lights",
+        "Vehicle-specific assessment",
+        "Repair scope and quotation after review"
+      ],
+      "note": "Tell us what you have noticed. The workshop will confirm the diagnostic scope.",
+      "image": "brakes.webp",
+      "type": "01 / FIND THE CAUSE",
+      "perUnit": false,
+      "unit": "car"
+    },
+    {
+      "id": "servicing",
+      "name": "Servicing & lubricants",
+      "blurb": "The right attention for your engine, your mileage and your next journey.",
+      "includes": [
+        "Engine oil and lubricant requirements",
+        "Service history and mileage review",
+        "Parts and service scope confirmed for your model"
+      ],
+      "note": "Oil specification and cost depend on your vehicle. Request a tailored quotation.",
+      "image": "oil-service.webp",
+      "type": "02 / KEEP IT RUNNING",
+      "perUnit": false,
+      "unit": "car"
+    },
+    {
+      "id": "hybrid-ev",
+      "name": "Hybrid & EV care",
+      "blurb": "Specialist attention for the technology behind your drive.",
+      "includes": [
+        "Hybrid or electric vehicle enquiry",
+        "Fault and charging concern assessment",
+        "Model-specific workshop advice"
+      ],
+      "note": "Share your model and symptoms so the team can advise on the next step.",
+      "image": "porsche-front.webp",
+      "type": "03 / THE NEXT GENERATION",
+      "perUnit": false,
+      "unit": "car"
+    },
+    {
+      "id": "performance",
+      "name": "Performance upgrades",
+      "blurb": "Explore a more responsive drive with advice tailored to your car.",
+      "includes": [
+        "Discuss your goals and current setup",
+        "Vehicle and upgrade suitability review",
+        "Scope and quotation before proceeding"
+      ],
+      "note": "Compatibility, availability and any warranty implications require workshop review.",
+      "image": "porsche-hero.webp",
+      "type": "04 / REFINE THE DRIVE",
+      "perUnit": false,
+      "unit": "car"
+    },
+    {
+      "id": "parts",
+      "name": "Parts & replacements",
+      "blurb": "Find the components your vehicle needs, with fitment checked first.",
+      "includes": [
+        "Vehicle and part identification",
+        "Availability and fitment enquiry",
+        "Replacement scope and quotation"
+      ],
+      "note": "Add your model, year and the part you need. Do not send sensitive documents.",
+      "image": "car-aircond.webp",
+      "type": "05 / EVERY DETAIL MATTERS",
+      "perUnit": false,
+      "unit": "car"
+    }
+  ],
+  "booking": {
+    "vehicle": {
+      "label": "Your vehicle",
+      "hint": "Choose your make and model. For an unlisted model, add it in your notes.",
+      "oldestYear": 1995,
+      "defaultSize": "m",
+      "sizes": {},
+      "makes": {
+        "Porsche": {
+          "m": [
+            "911",
+            "718 Boxster / Cayman",
+            "Cayenne",
+            "Macan",
+            "Panamera",
+            "Taycan",
+            "Other Porsche"
+          ]
+        },
+        "Volkswagen": {
+          "m": [
+            "Golf",
+            "Passat",
+            "Polo",
+            "Tiguan",
+            "Touareg",
+            "Other Volkswagen"
+          ]
+        },
+        "Audi": {
+          "m": [
+            "A3",
+            "A4",
+            "A6",
+            "Q3",
+            "Q5",
+            "Q7",
+            "e-tron",
+            "Other Audi"
+          ]
+        },
+        "BMW": {
+          "m": [
+            "1 Series",
+            "3 Series",
+            "5 Series",
+            "X1",
+            "X3",
+            "X5",
+            "i4",
+            "iX",
+            "Other BMW"
+          ]
+        },
+        "Mercedes-Benz": {
+          "m": [
+            "A-Class",
+            "C-Class",
+            "E-Class",
+            "GLC",
+            "GLE",
+            "EQ range",
+            "Other Mercedes-Benz"
+          ]
+        },
+        "Tesla": {
+          "m": [
+            "Model 3",
+            "Model Y",
+            "Model S",
+            "Model X"
+          ]
+        },
+        "Volvo": {
+          "m": [
+            "XC40",
+            "XC60",
+            "XC90",
+            "S60",
+            "EX30",
+            "Other Volvo"
+          ]
+        },
+        "Ferrari": {
+          "m": [
+            "Other \u2014 add model in notes"
+          ]
+        },
+        "Lamborghini": {
+          "m": [
+            "Other \u2014 add model in notes"
+          ]
+        }
+      }
+    },
+    "hideSizing": true,
+    "daysAhead": 10,
+    "closedDays": [],
+    "windows": [
+      {
+        "id": "am",
+        "label": "Morning",
+        "sub": "Preferred arrival"
+      },
+      {
+        "id": "pm",
+        "label": "Afternoon",
+        "sub": "Preferred arrival"
+      }
+    ],
+    "opener": "DEMO ENQUIRY for Volkspeed \u2014 sent to Made by Kites, not the workshop. I would like to request a service appointment.",
+    "closer": "Please review the vehicle, service, preferred branch and time. This is a request, not a confirmed appointment."
+  }
+}

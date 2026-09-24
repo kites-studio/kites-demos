@@ -2,51 +2,59 @@
   {
     "slug": "printngo",
     "name": "Print & Go Fast Print",
-    "industry": "Print shop · Wisma Central, KL",
+    "industry": "Print shop \u00b7 Wisma Central, KL",
     "template": "t1-quote",
     "status": "prospect demo"
   },
   {
     "slug": "jibuild",
     "name": "Ji Build Custom Cabinets",
-    "industry": "Custom cabinets · Klang Valley",
+    "industry": "Custom cabinets \u00b7 Klang Valley",
     "template": "t1-quote",
-    "status": "prospect demo · WhatsApp → Kites until confirmed"
+    "status": "prospect demo \u00b7 WhatsApp \u2192 Kites until confirmed"
   },
   {
     "slug": "aircond",
     "name": "Air-cond.my",
-    "industry": "Aircond servicing · Klang, Shah Alam, PJ",
+    "industry": "Aircond servicing \u00b7 Klang, Shah Alam, PJ",
     "template": "t2-book",
-    "status": "prospect demo · book a slot → WhatsApp"
+    "status": "prospect demo \u00b7 book a slot \u2192 WhatsApp"
   },
   {
     "slug": "ituition",
     "name": "i-Tuition Cheras",
-    "industry": "Tuition centre · Cheras & Sungai Long",
+    "industry": "Tuition centre \u00b7 Cheras & Sungai Long",
     "template": "t3-register",
-    "status": "prospect demo · register → WhatsApp"
+    "status": "prospect demo \u00b7 register \u2192 WhatsApp"
   },
   {
     "slug": "auto",
     "name": "Kites Auto Care",
-    "industry": "Industry demo · car workshop / tint / service",
+    "industry": "Industry demo \u00b7 car workshop / tint / service",
     "template": "t2-book",
-    "status": "industry demo · pick car → price by size → branch → WhatsApp"
+    "status": "industry demo \u00b7 pick car \u2192 price by size \u2192 branch \u2192 WhatsApp"
   },
   {
     "slug": "catering",
     "name": "Dapur Kites Catering",
-    "industry": "Industry demo · kenduri & corporate catering",
+    "industry": "Industry demo \u00b7 kenduri & corporate catering",
     "template": "t1-quote",
-    "status": "industry demo · pax × package + add-ons + deposit → WhatsApp"
+    "status": "industry demo \u00b7 pax \u00d7 package + add-ons + deposit \u2192 WhatsApp"
   },
   {
     "slug": "anyara-hills",
     "name": "Anyara Hills",
-    "industry": "Land developer · Hulu Langat",
+    "industry": "Land developer \u00b7 Hulu Langat",
     "template": "bespoke",
     "href": "bespoke/anyara-hills/index.html",
-    "status": "speculative one-pager · press A for annotations"
+    "status": "speculative one-pager \u00b7 press A for annotations"
+  },
+  {
+    "slug": "volkspeed",
+    "name": "Volkspeed Motorsport",
+    "industry": "Continental, hybrid & EV \u00b7 Klang / Glenmarie",
+    "template": "bespoke",
+    "href": "bespoke/volkspeed/index.html",
+    "status": "warm-lead concept \u00b7 shared T2 service enquiry \u2192 Kites"
   }
 ]

@@ -1,0 +1,127 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "route": "index.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "services.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "expertise.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "book.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "index.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "services.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "expertise.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "book.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "index.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "services.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "expertise.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "book.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "index.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "services.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "expertise.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 320,
+      "route": "book.html",
+      "overflow": false,
+      "broken": []
+    }
+  ],
+  "errors": [],
+  "flow": "service, car, branch, preferred date/time, review, edit, WhatsApp draft encoding",
+  "noMessagesSent": true
+}
