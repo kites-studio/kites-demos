@@ -1,0 +1,298 @@
+{
+  "slug": "catering",
+  "template": "t1-quote",
+  "type": "warm",
+  "concept": true,
+  "currency": "RM",
+  "refPrefix": "DKC",
+  "_note": "INDUSTRY demo, not one prospect: send to any caterer on the call sheet (rows with 'Catering'). 'Dapur Kites Catering' is a sample name — swap business, logo and colours for a warm lead (one skin copy, ~15 min). Per-pax prices, minimums and add-on rates are illustrative, set inside the ranges seen on 2026-09-24 (Lynn's RM28–38 local / min 20 pax; Tasty Touch RM26–58 / min 30; katering.my canopy RM90 per 10 pax; cateringservice.my RM35/49/60). JAKIM cert number is a placeholder slot — never show a real-looking number. WhatsApp routes to Kites until a client confirms.",
+  "colors": {
+    "navy": "#2b1d14",
+    "navyDeep": "#3d2a1d",
+    "blue": "#b5541c",
+    "blueBright": "#d9772f",
+    "accentSoft": "#f3c98f",
+    "ink": "#241a13",
+    "muted": "#74675c",
+    "paper": "#f8f3ec",
+    "line": "#e9dfd2"
+  },
+  "business": {
+    "name": "Dapur Kites Catering",
+    "short": "Dapur Kites",
+    "initials": "DK",
+    "tagline": "Kenduri, corporate and event catering — Klang Valley",
+    "since": "2012",
+    "description": "Halal catering for kenduri, office events and family functions in the Klang Valley. Choose a package, enter your guest count and see the price per head, add-ons and deposit instantly."
+  },
+  "contact": {
+    "whatsapp": "60102156826",
+    "phones": [{ "label": "010-215 6826", "tel": "+60102156826" }],
+    "email": "kites.stdio@gmail.com",
+    "addressHtml": "Central kitchen<br>Shah Alam, Selangor",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=catering+Shah+Alam",
+    "hoursNote": "Enquiries daily 9am–9pm. Tastings by appointment."
+  },
+  "nav": {
+    "services": "Menus & packages",
+    "about": "Our kitchen",
+    "contact": "Contact",
+    "headerCta": "Price my event"
+  },
+  "hero": {
+    "eyebrow": "HALAL CATERING, KLANG VALLEY",
+    "line1": "Good food,",
+    "line2": "served for",
+    "cycle": ["your kenduri.", "the office.", "every guest."],
+    "description": "Packages from RM28 per head, delivered, set up and cleared by our own team.<br> See your total and deposit before you ask.",
+    "cta": "Price my event",
+    "waText": "or WhatsApp us your date",
+    "image": "catering/kenduri-buffet.jpg",
+    "imageAlt": "Kenduri buffet line under a white canopy with nasi minyak and ayam masak merah",
+    "scrollCue": "SEE THE MENUS",
+    "caption": "Cooked the same morning.<br>Served by our own crew.",
+    "glass": {
+      "label": "MOST BOOKED",
+      "title": "Kenduri buffet<br>for 300 guests.",
+      "href": "services.html#kenduri",
+      "linkLabel": "See the kenduri menu",
+      "tags": "KENDURI / CORPORATE / BENTO / DOME"
+    }
+  },
+  "intro": {
+    "label": "Why families and offices book us",
+    "title": "The price, the date<br>and the menu — <span class=\"muted\">before you pick up the phone.</span>",
+    "navy": {
+      "label": "INSTANT QUOTE",
+      "title": "Guests × package.<br>Plus what you add.<br>That's the total.",
+      "text": "Canopy, waiters and delivery are priced in the form, not in a PDF you have to ask for.",
+      "link": "Price my event"
+    },
+    "image": "catering/malay-spread.jpg",
+    "imageAlt": "Nasi minyak, ayam masak merah, rendang, acar and papadom",
+    "imageLabel": "Kenduri classics",
+    "paper": {
+      "label": "HALAL, SHOWN PROPERLY",
+      "title": "Our JAKIM cert,<br>not just a logo.",
+      "text": "Certificate number and expiry date on the site, so your guests' first question is already answered.",
+      "link": "About our kitchen"
+    },
+    "facts": [
+      { "big": "From RM28", "small": "Per head, kenduri buffet" },
+      { "big": "30 pax", "small": "Minimum for buffets" },
+      { "big": "3 days", "small": "Notice for most events" },
+      { "big": "JAKIM", "small": "Cert no. & expiry shown (placeholder)" }
+    ]
+  },
+  "services": {
+    "label": "Menus & packages",
+    "title": "Kenduri first.<br>Then the office,<br><span class=\"muted\">the tahlil, the birthday.</span>",
+    "text": "Set packages with a price per head, or mix and match from the menu. Every package includes chafing dishes, set-up and clear-down.",
+    "cta": "See all packages",
+    "feature": {
+      "href": "services.html#kenduri",
+      "image": "catering/kenduri-buffet.jpg",
+      "imageAlt": "Kenduri buffet under a canopy",
+      "label": "KENDURI BUFFET",
+      "title": "The whole kampung,<br>fed properly."
+    },
+    "side": {
+      "href": "services.html#corporate",
+      "image": "catering/corporate-buffet.jpg",
+      "imageAlt": "Office lunch buffet with fried rice, curry chicken and kuih",
+      "label": "Corporate",
+      "title": "Meetings, seminars and town halls.",
+      "text": "Hot buffet or packed lunch boxes, delivered on time with an e-invoice for your finance team.",
+      "link": "Bento & packed meals",
+      "linkHref": "services.html#bento"
+    }
+  },
+  "servicesPage": {
+    "label": "MENUS & PACKAGES",
+    "title": "Every event,",
+    "title2": "priced per head.",
+    "text": "Pick a package below. Prices are per guest; minimums apply. Add canopy, waiters and delivery in the quote form."
+  },
+  "process": {
+    "label": "How a booking runs",
+    "title": "From WhatsApp<br><span class=\"muted\">to the last plate.</span>",
+    "steps": [
+      { "title": "Price it yourself.", "text": "Choose a package, enter your guest count and add-ons. The total and deposit update as you type." },
+      { "title": "Lock the date.", "text": "Send it on WhatsApp. We confirm the menu, and a deposit holds your date." },
+      { "title": "We cook, serve and clear.", "text": "Cooked the same morning, set up an hour before, cleared after the last guest." }
+    ]
+  },
+  "brief": {
+    "label": "Price your event",
+    "title": "Your total,<br><span class=\"muted\">before you ask.</span>",
+    "text": "Choose a package, enter your guests and tick what you need. The estimate and deposit update instantly; send it on WhatsApp to lock the date.",
+    "checklist": [
+      "Price per head × guests, minimums applied",
+      "Canopy, waiters and delivery priced in",
+      "Deposit shown upfront — no surprises"
+    ],
+    "moduleTitle": "YOUR EVENT",
+    "productLabel": "Which package?",
+    "quantityLabel": "Guests (pax)",
+    "quantityDefault": 200,
+    "deadlineLabel": "Event date",
+    "productField": "Package",
+    "quantityField": "Guests",
+    "deadlineField": "Event date",
+    "fields": [
+      { "name": "style", "label": "Serving style", "options": ["Buffet line", "Dome (plated to table)", "Drop-off, self-serve", "Packed boxes"] },
+      { "name": "venue", "label": "Venue / area", "placeholder": "e.g. Dewan Seksyen 7, Shah Alam" }
+    ],
+    "addonsLabel": "Add to your event",
+    "addons": [
+      { "id": "canopy", "label": "Canopy, tables & chairs", "price": 90, "per": "10pax" },
+      { "id": "waiters", "label": "Serving crew", "price": 120, "per": "50pax" },
+      { "id": "drinks", "label": "Air sirap & teh tarik", "price": 3, "per": "pax" },
+      { "id": "delivery", "label": "Delivery & set-up outside Shah Alam", "price": 100, "per": "flat" }
+    ],
+    "deposit": 0.3,
+    "detailsLabel": "Anything else?",
+    "detailsPlaceholder": "Dishes you'd like, dietary needs, time of the event, parking at the venue…",
+    "summaryLabel": "Your estimate",
+    "note": "Illustrative prices. Final quote confirmed on WhatsApp; SST where applicable.",
+    "submit": "Prepare my quote",
+    "formNote": "Nothing is sent until you choose WhatsApp or email.",
+    "readyLabel": "QUOTE PREPARED",
+    "readyTitle": "Let's lock your date.",
+    "whatsappCta": "Send on WhatsApp",
+    "emailCta": "Open email instead",
+    "readyNote": "This reference labels your enquiry; the date is held once the deposit is in.",
+    "opener": "I'd like a catering quote for my event.",
+    "closer": "Please confirm the date is available and the final price. Thank you."
+  },
+  "products": [
+    {
+      "id": "kenduri",
+      "name": "Kenduri buffet",
+      "fromPrice": 28,
+      "unit": "pax",
+      "minQty": 30,
+      "note": "Nasi minyak, 2 lauk, acar, dessert. Minimum 30 pax.",
+      "priceLine": "From RM28 per head · min 30 pax",
+      "group": "Weddings & kenduri",
+      "image": "catering/malay-spread.jpg",
+      "imageAlt": "Nasi minyak with ayam masak merah, rendang and acar",
+      "specs": "Nasi minyak · 2 lauk · Acar · Dessert",
+      "headline": "The kenduri classics, done right.",
+      "description": "Nasi minyak or nasi beriyani with ayam masak merah, daging rendang or kurma, dalca, acar and a dessert. Chafing dishes, set-up and clear-down included.",
+      "cta": "Price a kenduri"
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate buffet",
+      "fromPrice": 35,
+      "unit": "pax",
+      "minQty": 20,
+      "note": "Rice, 3 dishes, vegetables, kuih and drinks. Minimum 20 pax. E-invoice on request.",
+      "priceLine": "From RM35 per head · min 20 pax",
+      "group": "Office & seminars",
+      "image": "catering/corporate-buffet.jpg",
+      "imageAlt": "Office buffet with fried rice, curry chicken and vegetables",
+      "specs": "Rice · 3 dishes · Kuih · Drinks",
+      "headline": "Lunch that arrives before the meeting ends.",
+      "description": "Hot buffet for meetings, trainings and town halls, delivered and set up 30 minutes before your break. E-invoice for your finance team.",
+      "cta": "Price an office event"
+    },
+    {
+      "id": "dome",
+      "name": "Dome / plated dinner",
+      "fromPrice": 60,
+      "unit": "pax",
+      "minQty": 50,
+      "note": "Served to table by our crew. Minimum 50 pax; crew included.",
+      "priceLine": "From RM60 per head · min 50 pax",
+      "group": "Receptions & dinners",
+      "image": "catering/dome-dinner.jpg",
+      "imageAlt": "Dome-covered plated dinner at a banquet hall",
+      "specs": "Served to table · Crew included · 5 courses",
+      "headline": "For the nights that need a little more.",
+      "description": "Plated, dome-served dinners for weddings, annual dinners and VIP tables, with our serving crew in uniform.",
+      "cta": "Price a dinner"
+    },
+    {
+      "id": "bento",
+      "name": "Packed meals & bento",
+      "fromPrice": 12,
+      "unit": "pax",
+      "minQty": 30,
+      "note": "Individually packed, labelled, delivered. Minimum 30 boxes.",
+      "priceLine": "From RM12 per box · min 30",
+      "group": "Tahlil, trips & seminars",
+      "image": "catering/lunch-boxes.jpg",
+      "imageAlt": "Rows of packed nasi lemak and chicken rice boxes",
+      "specs": "Nasi lemak · Chicken rice · Nasi ayam",
+      "headline": "One box each, no queue.",
+      "description": "Packed meals for tahlil, school trips, seminars and site crews. Labelled, delivered on time, no chafing dishes to return.",
+      "cta": "Price packed meals"
+    }
+  ],
+  "faq": {
+    "label": "Good to know",
+    "title": "Before you<br><span class=\"muted\">lock the date.</span>",
+    "items": [
+      { "q": "Are you halal certified?", "a": "Yes — our kitchen's JAKIM certificate number and expiry date are shown on this site and on every quote. (Placeholder in this concept.)" },
+      { "q": "How much notice do you need?", "a": "Three days for most events under 200 guests. Weddings and kenduri over 300: book 4–6 weeks ahead, especially in school holidays." },
+      { "q": "How does the deposit work?", "a": "30% by bank transfer or DuitNow holds your date. The balance is due on the day, after set-up." },
+      { "q": "Can I change the menu?", "a": "Yes. Swap any lauk within the same package, or tell us what you'd like and we'll price it." },
+      { "q": "Do you do tasting?", "a": "For weddings and dinners over 200 guests, yes — at our kitchen, by appointment." }
+    ]
+  },
+  "about": {
+    "label": "OUR KITCHEN",
+    "title": "Cooks first,",
+    "title2": "caterers second.",
+    "text": "A family kitchen in Shah Alam that cooks every event the same morning and serves it with our own crew.",
+    "image": "catering/kitchen-team.jpg",
+    "imageAlt": "Catering team plating food in a commercial kitchen",
+    "imageLabel": "COOKED THE SAME MORNING",
+    "storyLabel": "Our story",
+    "storyTitle": "Started with one<br>kenduri in the family.",
+    "paragraphs": [
+      "This is a sample story for the concept. Your own goes here: who started the kitchen, the first event you cooked, and why families keep calling you back.",
+      "Keep it short and true. Customers choosing a caterer want to know who is cooking, whether the kitchen is halal, and whether you'll turn up on time.",
+      "Photos of your real team and kitchen replace these images before launch."
+    ],
+    "cta": "Price my event",
+    "valuesLabel": "How we work",
+    "values": [
+      { "title": "Price upfront.", "text": "Per head, add-ons and deposit shown before you ask." },
+      { "title": "Cooked on the day.", "text": "Every dish cooked the same morning, never reheated from yesterday." },
+      { "title": "Our own crew.", "text": "Set up, served and cleared by our team, not casual hires." }
+    ]
+  },
+  "contactPage": {
+    "label": "CONTACT",
+    "title": "Tell us about",
+    "title2": "your event.",
+    "text": "Your date, guest count and area are enough to start. We'll reply with availability and a quote.",
+    "formLabel": "Your catering enquiry",
+    "channel": "WHATSAPP OR EMAIL",
+    "serviceLabel": "Which package?",
+    "messageLabel": "About the event",
+    "messagePlaceholder": "Date, number of guests, venue and any dishes you have in mind.",
+    "note": "This prepares a WhatsApp message (or an email) with your details filled in. Nothing is stored on this website.",
+    "submit": "Prepare my enquiry",
+    "cardLabel": "VISIT THE KITCHEN",
+    "cardTitle": "Book a tasting<br>for your wedding.",
+    "directions": "Get directions",
+    "directTitle": "Prefer to talk?",
+    "whatsappLine": "WhatsApp us your date"
+  },
+  "footer": {
+    "label": "COOKED, SERVED, CLEARED",
+    "title": "Let's feed<br>your <span>guests.</span>",
+    "cta": "Price my event",
+    "blurb": "Halal catering for the Klang Valley.<br>Kenduri buffets from RM28 per head.",
+    "exploreTitle": "Explore",
+    "briefLink": "Price my event",
+    "visitTitle": "Kitchen",
+    "directionsLink": "Contact & directions",
+    "contactTitle": "Talk to us",
+    "whatsappLink": "WhatsApp us ↗"
+  }
+}

@@ -33,6 +33,8 @@ kites-demos/            ← the folder here; publishes to the PUBLIC repo `kites
 │  ├─ jibuild.json     Ji Build Sdn Bhd (custom cabinets, Puchong) — T1, carries their real logo
 │  ├─ aircond.json     Air-cond.my (Klang) — T2 reference skin
 │  ├─ ituition.json    i-Tuition (Cheras) — T3 reference skin
+│  ├─ auto.json        Kites Auto Care — INDUSTRY demo (any workshop), T2 + vehicle/branch/add-ons, `bold` type
+│  ├─ catering.json    Dapur Kites Catering — INDUSTRY demo (any caterer), T1 + per-head add-ons/deposit, `warm` type
 │  └─ <slug>/          each skin's web-size images (originals live in madebykites/assets/<slug>/)
 └─ bespoke/<slug>/     one-off builds with their own HTML/CSS/JS (anyara-hills)
 ```

@@ -1,3 +1,9 @@
+Fonts in this folder, all SIL Open Font License 1.1 (text below):
+- dm-sans.woff2 — DM Sans, Copyright 2014 The DM Sans Project Authors
+- barlow-condensed-600/700.woff2 — Barlow Condensed, Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
+- dm-serif-display.woff2 — DM Serif Display, Copyright 2014 The DM Serif Display Project Authors (https://github.com/googlefonts/dm-fonts)
+Latin subsets downloaded from Google Fonts on 2026-09-24.
+
 Copyright 2014 The DM Sans Project Authors (https://github.com/googlefonts/dm-fonts) DMSans-Italic[opsz,wght].ttf: Copyright 2014 The DM Sans Project Authors (https://github.com/googlefonts/dm-fonts)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.

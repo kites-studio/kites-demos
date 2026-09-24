@@ -194,3 +194,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   body{padding-bottom:78px}
   .concept-ribbon{bottom:88px}
 }
+
+/* optional booking steps: vehicle (booking.vehicle), branches (skin.branches), add-ons (booking.extras) */
+.fields select{border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;font-size:.95rem;color:var(--ink);background:#fff;min-width:0}
+.fields select:disabled{background:var(--wash);color:var(--muted)}
+.size-note{grid-column:1/-1;font-size:.8rem;color:var(--muted)}.size-note strong{color:var(--accent-deep)}
+.branch-list{margin:0 0 12px}
+.extra-list{grid-template-columns:1fr 1fr;margin-top:12px}
+.extra-list .win strong:before{content:"+ ";color:var(--accent)}.extra-list .win.is-on strong:before{content:"✓ "}
+@media (max-width:560px){.branch-list,.extra-list{grid-template-columns:1fr}}
+[hidden]{display:none!important}
+.brands{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+@media (max-width:760px){.brands{grid-template-columns:1fr;padding:22px}}

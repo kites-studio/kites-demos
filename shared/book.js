@@ -1,6 +1,11 @@
 /** T2 Book a Slot — booking module.
  * service (cards) → sizing (stepper) → package price → date strip + time window → contact → WhatsApp.
  * Reads skin.services[] and skin.booking; writes nothing anywhere except the wa.me / mailto links.
+ * Optional, all off unless the skin sets them:
+ *   booking.vehicle  → make / model / year / plate step; each model's size class (s|m|l) picks service.sizePrices
+ *   booking.hideSizing → drop the quantity stepper (one car per booking)
+ *   booking.extras[] → add-on chips {id,label,sub,price} added to the estimate
+ *   skin.branches[]  → branch chips; the booking goes to that branch's whatsapp (falls back to contact.whatsapp)
  * Markup contract: one [data-book] element containing a <form> and a .book-ready block (see t2-book/index.html).
  */
 import { createReference, money, whatsappLink, emailLink, formatLines, upcomingDays } from "./enquiry.js";
@@ -30,6 +35,66 @@ function init(skin) {
     return l;
   }));
   const service = () => services.find((s) => s.id === form.elements.service.value) || services[0];
+  const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+
+  /* optional · vehicle: make → model → year → plate */
+  const veh = cfg.vehicle, vStep = q("[data-vehicle-step]");
+  let vehicle = () => null;
+  if (veh && vStep) {
+    vStep.hidden = false;
+    const makes = veh.makes || {}, sizes = veh.sizes || {};
+    const years = [];
+    for (let y = new Date().getFullYear(); y >= (veh.oldestYear || 2005); y--) years.push(y);
+    q("[data-vehicle-fields]").innerHTML = `
+      <label><span>${esc(veh.makeLabel || "Make")}</span><select name="make" required><option value="">Choose…</option>${Object.keys(makes).map((m) => `<option>${esc(m)}</option>`).join("")}<option>Other</option></select></label>
+      <label><span>${esc(veh.modelLabel || "Model")}</span><select name="model" required disabled><option value="">Pick the make first</option></select></label>
+      <label><span>${esc(veh.yearLabel || "Year")}</span><select name="year"><option value="">Not sure</option>${years.map((y) => `<option>${y}</option>`).join("")}</select></label>
+      <label><span>${esc(veh.plateLabel || "Plate no. (optional)")}</span><input name="plate" autocomplete="off" autocapitalize="characters" placeholder="${esc(veh.platePlaceholder || "e.g. WXY 1234")}"></label>
+      <p class="size-note" data-size-note></p>`;
+    const make = form.elements.make, model = form.elements.model;
+    make.addEventListener("change", () => {
+      const groups = makes[make.value];
+      const opts = groups
+        ? Object.entries(groups).flatMap(([size, names]) => names.map((n) => `<option data-size="${size}">${esc(n)}</option>`)).sort((a, b) => a.localeCompare(b))
+        : make.value ? [`<option data-size="${veh.defaultSize || "m"}">${esc(veh.otherModel || "Other — I'll type it in the notes")}</option>`] : [];
+      model.innerHTML = `<option value="">${make.value ? "Choose…" : "Pick the make first"}</option>` + opts.join("");
+      model.disabled = !make.value;
+      if (!groups && make.value) model.selectedIndex = 1;
+    });
+    vehicle = () => {
+      const o = model.selectedOptions[0];
+      if (!model.value || !o) return null;
+      const size = o.dataset.size;
+      return { make: make.value, model: model.value, year: form.elements.year.value, plate: form.elements.plate.value.trim().toUpperCase(), size, sizeLabel: sizes[size] || "" };
+    };
+  }
+  if (cfg.hideSizing) { const sz = q("[data-sizing]"); if (sz) sz.hidden = true; }
+
+  /* optional · branches */
+  const branches = skin.branches || [], bList = q("[data-branch-list]");
+  if (branches.length && bList) {
+    bList.hidden = false;
+    bList.replaceChildren(...branches.map((b, i) => {
+      const l = document.createElement("label");
+      l.className = "win";
+      l.innerHTML = `<input type="radio" name="branch" value="${esc(b.id)}" ${i === 0 ? "checked" : ""}><span><strong>${esc(b.name)}</strong>${b.area ? `<small>${esc(b.area)}</small>` : ""}</span>`;
+      return l;
+    }));
+  }
+  const branch = () => branches.find((b) => form.elements.branch && b.id === form.elements.branch.value) || null;
+
+  /* optional · add-ons */
+  const extras = cfg.extras || [], xList = q("[data-extra-list]");
+  if (extras.length && xList) {
+    xList.hidden = false;
+    xList.replaceChildren(...extras.map((x) => {
+      const l = document.createElement("label");
+      l.className = "win";
+      l.innerHTML = `<input type="checkbox" name="extra" value="${esc(x.id)}"><span><strong>${esc(x.label)}</strong><small>${x.price ? "+" + money(x.price, currency) : esc(x.sub || "Free")}${x.price && x.sub ? " · " + esc(x.sub) : ""}</small></span>`;
+      return l;
+    }));
+  }
+  const chosenExtras = () => extras.filter((x) => [...form.querySelectorAll("input[name=extra]:checked")].some((i) => i.value === x.id));
 
   /* 2 · sizing stepper */
   const sizing = form.elements.sizing, minus = q("[data-step='-1']"), plus = q("[data-step='1']");
@@ -54,44 +119,56 @@ function init(skin) {
     return l;
   }));
 
+  /* "Myvi" when a vehicle is picked, otherwise "2 units" */
+  const units = (s, n) => `${n} ${(s.unit || "unit") + (n === 1 ? "" : "s")}`;
+  const what = (s, c) => { const v = vehicle(); return v ? v.model : units(s, c.n); };
+
   /* live price + summary */
   const priceEl = q("[data-price]"), priceNote = q("[data-price-note]"), sumEl = q("[data-summary]"), unitEl = q("[data-unit-label]");
   function calc() {
-    const s = service(), n = clamp(Number(sizing.value) || 1);
-    if (s.fromPrice == null) return { text: "", n };
-    const total = s.perUnit === false ? s.fromPrice : s.fromPrice * n;
+    const s = service(), n = clamp(Number(sizing.value) || 1), v = vehicle();
+    const base = s.sizePrices && v && s.sizePrices[v.size] != null ? s.sizePrices[v.size] : s.fromPrice;
+    if (base == null) return { text: "", n };
+    const add = chosenExtras().reduce((t, x) => t + (Number(x.price) || 0), 0);
+    const total = (s.perUnit === false ? base : base * n) + add;
     return { text: "from " + money(total, currency), n, total };
   }
   function update() {
     const s = service(), c = calc();
     list.querySelectorAll(".svc-card").forEach((el) => el.classList.toggle("is-on", el.querySelector("input").checked));
     strip.querySelectorAll(".day").forEach((el) => el.classList.toggle("is-on", el.querySelector("input").checked));
-    windows.querySelectorAll(".win").forEach((el) => el.classList.toggle("is-on", el.querySelector("input").checked));
+    module.querySelectorAll(".win").forEach((el) => el.classList.toggle("is-on", el.querySelector("input").checked));
+    const v = vehicle(), sn = q("[data-size-note]");
+    if (sn) sn.innerHTML = v ? `${esc(v.model)}${v.sizeLabel ? ` · priced as <strong>${esc(v.sizeLabel)}</strong>` : ""}` : esc((veh && veh.hint) || "");
     if (unitEl) unitEl.textContent = (s.unit || cfg.sizingUnit || "unit") + (c.n === 1 ? "" : "s");
     if (priceEl) { priceEl.textContent = c.text ? "Estimate " + c.text : ""; priceEl.hidden = !c.text; }
     if (priceNote) priceNote.textContent = s.note || cfg.estimateNote || "";
     const date = form.querySelector("input[name=date]:checked"), win = form.querySelector("input[name=window]:checked");
-    if (sumEl) sumEl.textContent = `${s.name} · ${c.n} ${(s.unit || "unit") + (c.n === 1 ? "" : "s")} · ${date ? date.dataset.label : "—"}, ${win ? win.dataset.label.split(" (")[0].toLowerCase() : ""}`;
+    if (sumEl) sumEl.textContent = `${s.name} · ${what(s, c)} · ${date ? date.dataset.label : "—"}, ${win ? win.dataset.label.split(" (")[0].toLowerCase() : ""}`;
     const dur = q("[data-duration]"); if (dur) dur.textContent = s.duration ? s.duration : "";
     const inc = q("[data-includes]"); if (inc) inc.replaceChildren(...(s.includes || []).map((t) => { const li = document.createElement("li"); li.textContent = t; return li; }));
   }
   form.addEventListener("input", update);
   form.addEventListener("change", update);
   update();
+  /* number whichever steps this skin shows */
+  module.querySelectorAll(".step:not([hidden]) .step-title .n").forEach((el, i) => (el.textContent = i + 1));
 
   /* submit → reference → WhatsApp / email */
   let text = "", ref = "";
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (!form.reportValidity()) return;
-    const s = service(), c = calc(), d = new FormData(form);
+    const s = service(), c = calc(), d = new FormData(form), v = vehicle(), br = branch();
     const date = form.querySelector("input[name=date]:checked"), win = form.querySelector("input[name=window]:checked");
     ref = createReference(skin.refPrefix || "BK");
     text = formatLines(skin, {
       opener: cfg.opener, closer: cfg.closer,
       fields: [
         ["Service", s.name],
-        [cfg.sizingField || "Units", `${c.n} ${(s.unit || "unit") + (c.n === 1 ? "" : "s")}`],
+        ...(v ? [["Car", [v.make, v.model, v.year].filter(Boolean).join(" ")], ["Plate", v.plate]] : [[cfg.sizingField || "Units", units(s, c.n)]]),
+        ["Add-ons", chosenExtras().map((x) => x.label).join(", ")],
+        ["Branch", br ? br.name : ""],
         ["Preferred date", date ? date.dataset.label : ""],
         ["Time", win ? win.dataset.label : ""],
         ["Name", d.get("name")],
@@ -101,10 +178,10 @@ function init(skin) {
       ],
       message: d.get("notes"),
     }, ref);
-    q("[data-ready-summary]").textContent = `${s.name} · ${c.n} ${(s.unit || "unit") + (c.n === 1 ? "" : "s")}\n${date ? date.dataset.label : ""}, ${win ? win.dataset.label : ""}${c.text ? "\nEstimate " + c.text : ""}`;
+    q("[data-ready-summary]").textContent = `${s.name} · ${what(s, c)}${br ? " · " + br.name : ""}\n${date ? date.dataset.label : ""}, ${win ? win.dataset.label : ""}${c.text ? "\nEstimate " + c.text : ""}`;
     q("[data-reference]").textContent = ref;
     const wa = q("[data-whatsapp]"), mail = q("[data-email]");
-    const waHref = whatsappLink(skin.contact && skin.contact.whatsapp, text);
+    const waHref = whatsappLink((br && br.whatsapp) || (skin.contact && skin.contact.whatsapp), text);
     if (wa) { if (waHref) { wa.href = waHref; wa.hidden = false; } else wa.hidden = true; }
     const mailHref = emailLink(skin.contact && skin.contact.email, `Booking ${ref} — ${s.name}`, text);
     if (mail) { if (mailHref) { mail.href = mailHref; mail.hidden = false; } else mail.hidden = true; }

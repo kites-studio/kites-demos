@@ -12,6 +12,7 @@
  *                                          to the item ("name", "fromPrice"), "." for the item itself, or absolute ("$.business.name");
  *                                          a template nested inside an item lists that item's own array ("levels")
  * Colours: skin.colors.* become CSS custom properties on :root (--navy, --blue, ...).
+ * Type: skin.type ("bold" | "warm"; default "clean") sets <html data-type>, which swaps the heading font (extra.css).
  * Links between template pages keep the ?skin= parameter automatically.
  */
 (function () {
@@ -140,6 +141,7 @@
     })
     .then((skin) => {
       window.SKIN = skin;
+      if (skin.type && skin.type !== "clean") document.documentElement.dataset.type = skin.type;
       colors(skin);
       lists(document, skin, skin);
       fill(document, skin, skin);

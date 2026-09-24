@@ -28,6 +28,20 @@
     "status": "prospect demo · register → WhatsApp"
   },
   {
+    "slug": "auto",
+    "name": "Kites Auto Care",
+    "industry": "Industry demo · car workshop / tint / service",
+    "template": "t2-book",
+    "status": "industry demo · pick car → price by size → branch → WhatsApp"
+  },
+  {
+    "slug": "catering",
+    "name": "Dapur Kites Catering",
+    "industry": "Industry demo · kenduri & corporate catering",
+    "template": "t1-quote",
+    "status": "industry demo · pax × package + add-ons + deposit → WhatsApp"
+  },
+  {
     "slug": "anyara-hills",
     "name": "Anyara Hills",
     "industry": "Land developer · Hulu Langat",

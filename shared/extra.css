@@ -122,3 +122,27 @@ html.skin-ready [data-skin],html.skin-ready [data-skin-html]{color:inherit}
       color-mix(in srgb,var(--navy) 72%,transparent) 62%,
       color-mix(in srgb,var(--navy) 88%,transparent) 100%)}
 }
+
+/* ---------- type presets (skin.type) ----------
+   skin.js sets <html data-type="…">. Only headings change; body copy stays DM Sans.
+   A preset's font file downloads only when a page uses it.
+   clean (default) — DM Sans throughout · bold — Barlow Condensed, workshops/trades · warm — DM Serif Display, food/hospitality */
+@font-face{font-family:'Barlow Condensed';src:url('barlow-condensed-600.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Barlow Condensed';src:url('barlow-condensed-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'DM Serif Display';src:url('dm-serif-display.woff2') format('woff2');font-weight:400;font-display:swap}
+html[data-type=bold]{--display:'Barlow Condensed','Arial Narrow',Arial,sans-serif}
+html[data-type=warm]{--display:'DM Serif Display',Georgia,serif;--serif:'DM Serif Display',Georgia,serif}
+html[data-type] :is(h1,h2,h3,.footer-cta h2,.year,.fact-row strong,.trust strong){font-family:var(--display)}
+html[data-type=bold] :is(h1,h2,h3){font-weight:700;letter-spacing:-.005em;line-height:1.02}
+html[data-type=bold] h1{text-transform:uppercase;font-size:clamp(2.6rem,5.6vw,4.6rem)}
+html[data-type=bold] .trust strong{font-weight:700;letter-spacing:0}
+html[data-type=warm] :is(h1,h2,h3,.footer-cta h2,.year,.fact-row strong){font-weight:400;letter-spacing:-.015em}
+html[data-type=warm] :is(h1,h2) em{font-style:italic}
+
+/* T1 brief: optional add-ons (brief.addons) */
+.addon-list{border:0;padding:0;margin:0 0 20px}.addon-list legend{font-size:.75rem;margin-bottom:8px;padding:0}
+.addon{display:flex;align-items:center;gap:10px;margin:0;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:.84rem;cursor:pointer}
+.addon+.addon{margin-top:6px}.addon input{width:18px;height:18px;margin:0;flex-shrink:0;accent-color:var(--blue)}
+.addon small{margin-left:auto;color:var(--muted);white-space:nowrap}.addon:has(input:checked){border-color:var(--blue);background:#f3f8fc}
+html[data-type=warm] :is(h1,h2,h3) .muted{color:color-mix(in srgb,var(--muted) 75%,#fff)}
+html[data-type=bold] :is(h1,h2,h3) em{font-style:normal}

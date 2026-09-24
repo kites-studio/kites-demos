@@ -1,0 +1,263 @@
+{
+  "slug": "auto",
+  "template": "t2-book",
+  "type": "bold",
+  "concept": true,
+  "currency": "RM",
+  "refPrefix": "KAC",
+  "_note": "INDUSTRY demo, not one prospect: send to any workshop / tint / service centre on the call sheet (rows with 'Auto workshop / tint'). 'Kites Auto Care' is a sample name — swap business, logo and colours for a warm lead (one skin copy, ~15 min). Prices are illustrative market rates from the 2026-09-24 competitor pass (GoCar oil change from RM98; KL Tint Studio tint RM249–576 entry tier); confirm with the client before quoting. Both branch WhatsApp numbers route to Kites until a client confirms.",
+  "colors": { "accent": "#e2560f", "accentDeep": "#a93d08", "accentSoft": "#fde5d6", "wash": "#f3f3f1", "ink": "#15171a", "muted": "#5d6166", "line": "#e2e1dd" },
+
+  "business": {
+    "name": "Kites Auto Care",
+    "short": "Kites Auto Care",
+    "initials": "KA",
+    "tagline": "Car servicing, brakes, aircond & tint — Klang Valley",
+    "since": "2014",
+    "ssm": "Concept preview — sample workshop, company details to be confirmed",
+    "description": "Pick your car, pick a service, see the price for your model and book a slot at the branch nearest you. Confirmed on WhatsApp."
+  },
+
+  "contact": {
+    "whatsapp": "60102156826",
+    "phones": [{ "label": "010-215 6826", "tel": "+60102156826" }],
+    "email": "kites.stdio@gmail.com",
+    "addressHtml": "Kajang &amp; Shah Alam<br>Selangor",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=car+workshop+Kajang",
+    "hoursNote": "Mon–Sat 9am–6pm · Sun closed",
+    "hours": [
+      { "day": "Monday – Friday", "time": "9:00am – 6:00pm" },
+      { "day": "Saturday", "time": "9:00am – 4:00pm" },
+      { "day": "Sunday & public holidays", "time": "Closed" }
+    ]
+  },
+
+  "branches": [
+    { "id": "kajang", "name": "Kajang", "area": "Near Stadium Kajang", "whatsapp": "60102156826" },
+    { "id": "shah-alam", "name": "Shah Alam", "area": "Seksyen 16 industrial", "whatsapp": "60102156826" }
+  ],
+
+  "nav": { "services": "Services & prices", "contact": "Branches & contact", "faq": "FAQ", "headerCta": "Book a service" },
+
+  "hero": {
+    "eyebrow": "Kajang · Shah Alam",
+    "title": "Your car. Your price. <em>Booked.</em>",
+    "description": "Choose your car and the service — the price updates for your model. Pick a branch and a slot, and the booking lands in our WhatsApp with a reference.",
+    "bullets": [
+      "Price for your model shown before you book",
+      "Photos on WhatsApp before any extra work",
+      "Pickup & drop-off within 10 km"
+    ],
+    "waText": "Car making a noise? WhatsApp us a video",
+    "image": "auto/workshop.jpg",
+    "imageAlt": "Mechanic checking the engine of a white hatchback on a hoist",
+    "badge": { "big": "Same day", "small": "minor service, most cars" }
+  },
+
+  "booking": {
+    "title": "Book a service",
+    "pill": "Confirmed on WhatsApp",
+    "serviceLabel": "What does the car need?",
+    "vehicle": {
+      "label": "Which car?",
+      "makeLabel": "Make",
+      "modelLabel": "Model",
+      "yearLabel": "Year",
+      "plateLabel": "Plate no. (optional)",
+      "platePlaceholder": "e.g. BQW 1234",
+      "hint": "Pick your model — the price changes with the car size.",
+      "oldestYear": 2005,
+      "defaultSize": "m",
+      "sizes": { "s": "Compact", "m": "Sedan / MPV", "l": "SUV / 4x4" },
+      "makes": {
+        "Perodua": { "s": ["Axia", "Myvi", "Bezza"], "m": ["Alza", "Ativa"], "l": ["Aruz"] },
+        "Proton": { "s": ["Saga", "Iriz", "Persona"], "m": ["X50", "S70"], "l": ["X70", "X90"] },
+        "Honda": { "s": ["City", "Jazz"], "m": ["Civic", "HR-V", "WR-V"], "l": ["CR-V", "Accord"] },
+        "Toyota": { "s": ["Vios", "Yaris"], "m": ["Corolla Cross", "Veloz", "Camry"], "l": ["Hilux", "Fortuner", "Innova"] },
+        "Nissan": { "s": ["Almera"], "m": ["Serena", "Kicks"], "l": ["X-Trail", "Navara"] },
+        "Mazda": { "m": ["Mazda 3", "CX-3", "CX-30"], "l": ["CX-5", "CX-8"] },
+        "Mitsubishi": { "m": ["ASX", "Xpander"], "l": ["Triton", "Outlander"] }
+      }
+    },
+    "hideSizing": true,
+    "sizingLabel": "What's included",
+    "sizingUnit": "car",
+    "sizingField": "Cars",
+    "sizingDefault": "1",
+    "sizingMin": "1",
+    "sizingMax": "1",
+    "estimateNote": "Estimate for standard parts. We WhatsApp photos and a price before any extra work.",
+    "extras": [
+      { "id": "pickup", "label": "Pickup & drop-off", "price": 40, "sub": "within 10 km" },
+      { "id": "wash", "label": "Wash & vacuum", "price": 25 },
+      { "id": "wait", "label": "I'll wait at the lounge", "sub": "Wi-Fi, drinks · free" }
+    ],
+    "dateLabel": "Which branch, and when?",
+    "daysAhead": 14,
+    "closedDays": [0],
+    "windows": [
+      { "id": "am", "label": "Drop off 9am", "sub": "ready by 1pm" },
+      { "id": "noon", "label": "Drop off 12pm", "sub": "ready by 4pm" },
+      { "id": "pm", "label": "Drop off 2pm", "sub": "ready by 6pm" }
+    ],
+    "contactLabel": "Your details",
+    "nameLabel": "Your name",
+    "phoneLabel": "WhatsApp number",
+    "addressLabel": "Pickup address (if pickup)",
+    "addressPlaceholder": "e.g. Taman Prima Saujana, Kajang",
+    "notesLabel": "What's the car doing? (optional)",
+    "notesPlaceholder": "Squeaky brakes, warning light on, aircond not cold, mileage…",
+    "summaryNote": "You'll confirm everything on WhatsApp before it's final.",
+    "submit": "Review booking",
+    "formNote": "No payment now. We reply within 30 minutes during working hours.",
+    "readyLabel": "One tap left",
+    "readyTitle": "Send your booking",
+    "whatsappCta": "Confirm on WhatsApp",
+    "emailCta": "Send by email instead",
+    "readyNote": "WhatsApp opens with your car, service and slot filled in — it goes straight to the branch you picked.",
+    "opener": "I'd like to book a car service.",
+    "closer": "Please confirm the slot and price. Thank you.",
+    "stickyLabel": "Your estimate",
+    "stickyFallback": "Book in under a minute"
+  },
+
+  "trust": [
+    { "big": "Same day", "small": "minor service, most cars" },
+    { "big": "3 months", "small": "workmanship warranty (illustrative)" },
+    { "big": "Photos first", "small": "before any extra work" },
+    { "big": "4.8 ★", "small": "Google rating (illustrative)" }
+  ],
+
+  "how": {
+    "label": "How it works",
+    "title": "Price first. <em>Then the spanner.</em>",
+    "steps": [
+      { "title": "Pick car and service", "text": "Choose your make and model — the price updates for your car size before you commit to anything." },
+      { "title": "Pick a branch and slot", "text": "Kajang or Shah Alam, any day in the next two weeks. Add pickup if you can't drop the car off." },
+      { "title": "We check, you approve", "text": "Anything extra we find, you get photos and a price on WhatsApp first. Nothing is done without your OK." }
+    ]
+  },
+
+  "servicesHome": {
+    "label": "Services",
+    "title": "Priced by car size, <em>shown upfront.</em>",
+    "text": "Starting prices for a compact car. Pick your model in the booking form to see the price for your car.",
+    "tileCta": "Book this"
+  },
+
+  "services": [
+    {
+      "id": "minor", "name": "Minor service", "popular": true,
+      "blurb": "Engine oil and filter change with a 20-point safety check.",
+      "fromPrice": 150, "sizePrices": { "s": 150, "m": 180, "l": 230 }, "perUnit": false, "unit": "car", "duration": "About 1 hour",
+      "includes": ["Semi-synthetic engine oil", "Oil filter", "20-point check", "Tyre pressure & fluids top-up"],
+      "note": "Every 5,000–10,000 km, depending on your oil.",
+      "image": "auto/oil-service.jpg", "imageAlt": "Fresh engine oil being poured into an engine"
+    },
+    {
+      "id": "major", "name": "Major service",
+      "blurb": "Minor service plus air, cabin and fuel filters, spark plugs and brake clean.",
+      "fromPrice": 380, "sizePrices": { "s": 380, "m": 450, "l": 580 }, "perUnit": false, "unit": "car", "duration": "Half a day",
+      "includes": ["Everything in the minor service", "Air & cabin filters", "Spark plugs", "Brake clean & adjust"],
+      "note": "Every 40,000 km or as your service book says.",
+      "image": "auto/workshop.jpg", "imageAlt": "Mechanic working under the bonnet of a hatchback"
+    },
+    {
+      "id": "brakes", "name": "Brake pads",
+      "blurb": "Front brake pads replaced, discs checked and skimmed if needed.",
+      "fromPrice": 160, "sizePrices": { "s": 160, "m": 190, "l": 240 }, "perUnit": false, "unit": "car", "duration": "About 1.5 hours",
+      "includes": ["Front pads (OEM-grade)", "Disc check", "Brake fluid check", "Road test"],
+      "note": "Disc skimming or replacement quoted with photos first.",
+      "image": "auto/brakes.jpg", "imageAlt": "Mechanic inspecting a brake disc and pads"
+    },
+    {
+      "id": "aircond", "name": "Car aircond service",
+      "blurb": "Gas check and top-up, cabin filter, cooling-coil clean.",
+      "fromPrice": 180, "sizePrices": { "s": 180, "m": 200, "l": 250 }, "perUnit": false, "unit": "car", "duration": "About 2 hours",
+      "includes": ["Pressure & leak check", "Gas top-up", "Cabin filter", "Vent temperature test"],
+      "note": "If it's losing gas, we find the leak before topping up again.",
+      "image": "auto/car-aircond.jpg", "imageAlt": "Technician checking car aircond with a gauge set"
+    },
+    {
+      "id": "tint", "name": "Window tint",
+      "blurb": "JPJ-legal heat-rejection film, full car. Warranty on film and fitting.",
+      "fromPrice": 350, "sizePrices": { "s": 350, "m": 450, "l": 550 }, "perUnit": false, "unit": "car", "duration": "About 3 hours",
+      "includes": ["Front, sides & rear", "JPJ-legal VLT", "Heat-rejection film", "Warranty card"],
+      "note": "Premium films quoted on request — ask for the comparison chart.",
+      "image": "auto/tint.jpg", "imageAlt": "Technician applying tint film to a car window"
+    }
+  ],
+
+  "brands": {
+    "label": "Cars we work on",
+    "title": "Local, Japanese and <em>Korean.</em>",
+    "text": "Service to manufacturer schedule, so your book stays stamped. Continental cars by appointment.",
+    "list": ["Perodua", "Proton", "Honda", "Toyota", "Nissan", "Mazda", "Mitsubishi", "Hyundai", "Kia", "Continental by appointment"]
+  },
+
+  "servicesPage": {
+    "label": "Services & prices",
+    "title": "What it costs, <em>before you drive in.</em>",
+    "text": "Starting prices for a compact car. In the booking form, pick your model and the price updates for your car."
+  },
+
+  "pricingNotes": {
+    "label": "Good to know",
+    "title": "How pricing works",
+    "items": [
+      "Prices by car size: compact, sedan / MPV, SUV / 4x4.",
+      "Anything extra we find: photos and price on WhatsApp first. You approve before we touch it.",
+      "Cash, card, DuitNow, Touch 'n Go eWallet. Instalments on jobs over RM500 (illustrative).",
+      "Insurance claims and windscreen: ask us — we'll tell you honestly if it's worth claiming."
+    ]
+  },
+
+  "areas": {
+    "label": "Two branches",
+    "title": "Kajang and <em>Shah Alam.</em>",
+    "text": "Pick the branch in the booking form — your booking goes straight to that branch's WhatsApp. Pickup & drop-off within 10 km of either.",
+    "list": ["Kajang", "Bangi", "Semenyih", "Cheras", "Shah Alam", "Klang", "Subang", "Setia Alam"],
+    "note": "Outside these areas? Book anyway and add pickup — we'll confirm on WhatsApp.",
+    "image": "auto/handover.jpg",
+    "imageAlt": "Service advisor handing car keys back to a customer"
+  },
+
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions drivers <em>ask.</em>",
+    "items": [
+      { "q": "Will servicing here void my warranty?", "a": "No. We follow the manufacturer's schedule and parts spec, and stamp your service book. Keep the receipt with it." },
+      { "q": "What if you find something else wrong?", "a": "You get photos and a price on WhatsApp first. We only do it if you say yes — no surprise bills." },
+      { "q": "Is your tint JPJ-legal?", "a": "Yes. We fit to JPJ light-transmission limits — at least 70% on the windscreen, 50% on the front side windows, 30% at the rear — and give you the film card." },
+      { "q": "Can you handle my insurance claim?", "a": "Tell us on WhatsApp what happened. We'll say honestly whether it's worth claiming, and what your insurer will need." },
+      { "q": "Can I wait while you work?", "a": "For a minor service, yes — about an hour in the lounge with Wi-Fi and drinks. Longer jobs, add pickup & drop-off." }
+    ]
+  },
+
+  "contactPage": {
+    "label": "Branches & contact",
+    "title": "Ask a <em>mechanic.</em>",
+    "text": "Booking is fastest on the home page. Want to ask first? Send a message, or WhatsApp a video of the noise.",
+    "formTitle": "Send a message",
+    "formText": "We reply on WhatsApp or email within 30 minutes during working hours.",
+    "serviceLabel": "About which service?",
+    "messageLabel": "Your message",
+    "messagePlaceholder": "Car model and year, what's happening, and which branch suits you.",
+    "note": "Your message opens in WhatsApp with a reference.",
+    "submit": "Prepare message",
+    "directTitle": "Direct",
+    "whatsappLine": "WhatsApp us",
+    "hoursTitle": "Hours",
+    "directions": "Open in Maps"
+  },
+
+  "footer": {
+    "title": "Price first. Then the spanner.",
+    "blurb": "Pick your car, see your price, book a slot. Confirmed on WhatsApp.",
+    "cta": "Book a service",
+    "contactTitle": "Contact",
+    "whatsappLink": "WhatsApp us",
+    "visitTitle": "Branches",
+    "directionsLink": "Get directions"
+  }
+}

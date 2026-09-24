@@ -76,6 +76,7 @@
   <form class="brief-form">
    <label><span data-skin="brief.productLabel"></span><select name="product"></select></label>
    <div class="field-row"><label><span data-skin="brief.quantityLabel"></span><input name="quantity" type="number" value="1" min="1" max="100000" required inputmode="numeric" data-skin-attr="value:brief.quantityDefault"></label><label><span data-skin="brief.deadlineLabel"></span><input name="deadline" type="date"></label></div>
+   <div data-brief-extra></div>
    <label><span data-skin="brief.detailsLabel"></span><textarea name="details" maxlength="1500" rows="2" data-skin-attr="placeholder:brief.detailsPlaceholder"></textarea></label>
    <div class="brief-summary" aria-live="polite"><span data-skin="brief.summaryLabel"></span><strong data-summary></strong><span data-estimate hidden></span><small data-estimate-note></small></div>
    <button class="button dark-button" type="submit"><span data-skin="brief.submit"></span> <span class="arrow">↗</span></button>

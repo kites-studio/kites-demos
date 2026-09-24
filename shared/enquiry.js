@@ -24,26 +24,27 @@ export function estimate(product, qty) {
 
 /** Plain-text brief used for WhatsApp, email and copy. Lines with empty values are dropped. */
 export function formatBrief(skin, d, reference) {
-  const b = skin.business || {};
-  const lines = [
-    `Hello ${b.name || ""},`,
-    skin.brief && skin.brief.opener ? skin.brief.opener : "I'd like a quote for the following.",
-    "",
+  const b = skin.business || {}, f = skin.brief || {};
+  const details = [
     reference ? `Reference: ${reference}` : "",
     d.name ? `Name: ${d.name}` : "",
     d.phone ? `Phone: ${d.phone}` : "",
     d.email ? `Email: ${d.email}` : "",
-    d.productLabel ? `Item: ${d.productLabel}` : "",
-    d.quantity ? `Quantity: ${d.quantity}` : "",
-    d.deadline ? `Needed by: ${d.deadline}` : "",
+    d.productLabel ? `${f.productField || "Item"}: ${d.productLabel}` : "",
+    d.quantity ? `${f.quantityField || "Quantity"}: ${d.quantity}` : "",
+    d.deadline ? `${f.deadlineField || "Needed by"}: ${d.deadline}` : "",
     d.estimate ? `Estimate shown: ${d.estimate}` : "",
     ...(d.extra || []),
+  ].filter(Boolean);
+  return [
+    `Hello ${b.name || ""},`,
+    f.opener || "I'd like a quote for the following.",
     "",
-    d.message || "",
+    ...details,
+    ...(d.message ? ["", d.message] : []),
     "",
-    skin.brief && skin.brief.closer ? skin.brief.closer : "Please confirm the details, price and timing. Thank you.",
-  ];
-  return lines.filter((x, i, a) => x !== "" || a[i - 1] !== "").join("\n").trim();
+    f.closer || "Please confirm the details, price and timing. Thank you.",
+  ].join("\n").trim();
 }
 
 /** wa.me link. Number may be "60167003007" or a local "016-700 3007" (leading 0 → country code, default 60 = Malaysia). */

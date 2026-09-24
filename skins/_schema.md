@@ -13,6 +13,7 @@ Open it with `<template>/index.html?skin=<slug>` (or `demo/<slug>/`). Links betw
 | `concept` | bool | `true` shows the "Concept preview · Made by Kites · not live" ribbon. Set `false` once the client has paid and the site goes live. |
 | `currency` | string | prefix for estimates, e.g. `RM` |
 | `refPrefix` | string | enquiry reference prefix, e.g. `PNG` → `PNG-20260922-3E41` |
+| `type` | string | heading font preset: `clean` (default, DM Sans), `bold` (Barlow Condensed, uppercase h1 — workshops, trades), `warm` (DM Serif Display — food, hospitality). Body copy stays DM Sans. Self-hosted in `shared/`; a preset's font only downloads when used |
 | `colors` | object | camelCase keys become CSS variables (`accentDeep` → `--accent-deep`). T1: `navy navyDeep blue blueBright accentSoft ink muted paper line`. T2: `accent accentDeep accentSoft wash ink muted line`. T3: `deep deepSoft accent accentSoft paper card ink muted line`. Omit to keep the template default. |
 
 ## `business`
@@ -56,6 +57,15 @@ Open it with `<template>/index.html?skin=<slug>` (or `demo/<slug>/`). Links betw
 | `minQty` | estimate never goes below this quantity |
 | `note` | one line under the estimate, e.g. "Site measurement before final quote" |
 
+## T1 extras for events / per-head pricing (optional, in `brief`)
+
+Reference skin: `catering.json`.
+
+- `fields[]` — extra questions shown under quantity/date: `{name, label, options[]}` (select) or `{name, label, placeholder}` (text). Each lands in the message as `Label: value`.
+- `addons[]` — priced ticks `{id, label, price, per}`; `per` = `"pax"` (× guests), `"flat"`, or `"<n>pax"` (per block of n guests, e.g. `"10pax"` for canopy, `"50pax"` for crew). Added to the estimate; the breakdown shows under it.
+- `deposit` — 0–1, e.g. `0.3`: shows "deposit RM …" and adds it to the message.
+- `productField`, `quantityField`, `deadlineField` — rename the message lines (default Item / Quantity / Needed by), e.g. Package / Guests / Event date.
+
 ## Images
 
 Paths are relative to `skins/` (`jibuild/hero.jpg` → `skins/jibuild/hero.jpg`) or full `https://` URLs. Hero 1600×900, panels 800×600. Keep each under 300 KB (`cwebp -q 80`).
@@ -83,7 +93,14 @@ Loop: service → how many → price → date + time window → name/phone/addre
 - `trust[]{big,small}` (4) · `how{label,title html,steps[]{title,text}}` · `servicesHome{label,title html,text,tileCta}` · `servicesPage{label,title html,text}` · `pricingNotes{label,title,items[]}` · `areas{label,title html,text,list[],note,image,imageAlt}` · `faq` · `contactPage{label,title html,text,formTitle,formText,serviceLabel,messageLabel,messagePlaceholder,note,submit,directTitle,whatsappLine,hoursTitle,directions}` · `footer{title html,blurb html,cta,contactTitle,whatsappLink,visitTitle,directionsLink}`.
 - `services[]` — `id`, `name`, `popular` (bool → "Most booked" tag), `blurb`, `fromPrice`, `perUnit` (`false` = flat), `unit` ("unit", "car", "room"), `duration`, `includes[]`, `note`, `image` (4:3), `imageAlt`. Estimate = `fromPrice × quantity` unless `perUnit:false`.
 
-Auto-workshop variant: `unit:"car"`, `sizingLabel:"How many cars?"` (usually max 1 — set `sizingMax:"1"` and `sizingHint` to the car-model question, put the model in `notesPlaceholder`). Per-branch numbers: not in T2 yet — use T3's `branches[].whatsapp` pattern if needed.
+Optional T2 blocks (reference skin: `auto.json`):
+
+- `booking.vehicle` — adds a "Which car?" step: `label`, `makeLabel`, `modelLabel`, `yearLabel`, `plateLabel`, `platePlaceholder`, `hint`, `oldestYear`, `defaultSize`, `sizes{s,m,l}` (display names), `makes{Make:{s:[models],m:[…],l:[…]}}`. The picked model's size selects `services[].sizePrices{s,m,l}`; without a pick, `fromPrice` shows. "Other" make is always offered.
+- `booking.hideSizing` — `true` hides the quantity stepper (one car per booking); step 2's title then reads `sizingLabel` (e.g. "What's included").
+- `booking.extras[]` — add-on chips `{id, label, price?, sub?}` added to the estimate (no price = free).
+- `branches[]` — `{id, name, area, whatsapp}` chips above the date strip; the booking goes to that branch's `whatsapp` (falls back to `contact.whatsapp`).
+- `brands{label, title html, text, list[]}` — "cars we work on" chip band; omit to hide.
+- Steps renumber themselves, so any mix of these works.
 
 ## T3 — Register / Trial (`t3-register`) — tuition, music, enrichment, studios
 

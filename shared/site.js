@@ -44,11 +44,40 @@ function onSkin(skin) {
     select.replaceChildren(...products.map((p) => { const o = document.createElement("option"); o.value = p.id; o.textContent = p.name; return o; }));
     let draft = null, ref = "";
     const product = () => products.find((p) => p.id === select.value) || products[0];
+
+    /* optional: brief.fields[] (extra questions) and brief.addons[] (priced extras) — e.g. catering
+       service style + venue, canopy per 10 pax, waiters. brief.deposit (0–1) shows the deposit to lock the date. */
+    const cfg = skin.brief || {}, fields = cfg.fields || [], addons = cfg.addons || [];
+    const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+    /* addon.per: "pax" (× guests), "flat", or "<n>pax" (per block of n guests, e.g. "10pax") */
+    const block = (a) => (a.per === "pax" ? 1 : Number((/^(\d+)pax$/.exec(a.per || "") || [])[1]) || 0);
+    const perLabel = (a) => (a.per === "pax" ? "/ pax" : block(a) ? `/ ${block(a)} pax` : "");
+    const extraBox = module.querySelector("[data-brief-extra]");
+    if (extraBox && (fields.length || addons.length)) {
+      extraBox.innerHTML =
+        (fields.length ? `<div class="field-row">${fields.map((f) => `<label><span>${esc(f.label)}</span>${f.options
+          ? `<select name="x-${esc(f.name)}">${f.options.map((o) => `<option>${esc(o)}</option>`).join("")}</select>`
+          : `<input name="x-${esc(f.name)}" placeholder="${esc(f.placeholder)}">`}</label>`).join("")}</div>` : "") +
+        (addons.length ? `<fieldset class="addon-list"><legend>${esc(cfg.addonsLabel || "Add-ons")}</legend>${addons.map((a) =>
+          `<label class="addon"><input type="checkbox" name="addon" value="${esc(a.id)}"><span>${esc(a.label)}</span><small>+${esc(money(a.price, skin.currency))} ${perLabel(a)}</small></label>`).join("")}</fieldset>` : "");
+    }
+    const addonCost = (a, q) => a.price * (block(a) ? Math.ceil(q / block(a)) : 1);
     const read = () => {
       const d = new FormData(form), p = product(), est = estimate(p, d.get("quantity"));
+      const picked = addons.filter((a) => d.getAll("addon").includes(a.id));
+      const total = est ? est.total + picked.reduce((t, a) => t + addonCost(a, est.qty), 0) : null;
+      const deposit = total && cfg.deposit ? Math.round(total * cfg.deposit) : null;
       return {
-        productLabel: p ? p.name : "", quantity: d.get("quantity") ? `${d.get("quantity")}${p && p.unit ? " " + p.unit : ""}` : "", deadline: d.get("deadline"), message: d.get("details"),
-        estimate: est ? `from ${money(est.total, skin.currency)}` : "",
+        productLabel: p ? p.name : "", quantity: d.get("quantity") ? `${d.get("quantity")}${p && p.unit ? " " + p.unit : ""}` : "", deadline: d.get("deadline") ? new Date(d.get("deadline") + "T12:00").toLocaleDateString("en-MY", { weekday: "short", day: "numeric", month: "short", year: "numeric" }) : "", message: d.get("details"),
+        estimate: total != null ? `from ${money(total, skin.currency)}` : "",
+        breakdown: est && (picked.length || p.minQty > (Number(d.get("quantity")) || 0) || deposit)
+          ? [p.perUnit === false ? p.name : `${money(p.fromPrice, skin.currency)} × ${est.qty} ${p.unit || ""}`.trim(), ...picked.map((a) => `${a.label} ${money(addonCost(a, est.qty), skin.currency)}`)].join(" + ") + (deposit ? ` · deposit ${money(deposit, skin.currency)}` : "")
+          : "",
+        extra: [
+          ...fields.map((f) => (d.get("x-" + f.name) ? `${f.label}: ${d.get("x-" + f.name)}` : "")),
+          picked.length ? `Add-ons: ${picked.map((a) => a.label).join(", ")}` : "",
+          deposit ? `Deposit to confirm the date: ${money(deposit, skin.currency)}` : "",
+        ].filter(Boolean),
         line: p && p.unit && p.unit !== "pcs" ? `${p.name} · ${d.get("quantity") || "—"} ${p.unit}` : `${d.get("quantity") || "—"} × ${p ? p.name : ""}`,
       };
     };
@@ -61,7 +90,8 @@ function onSkin(skin) {
         else { estEl.hidden = true; }
       }
       const noteEl = module.querySelector("[data-estimate-note]");
-      if (noteEl) noteEl.textContent = p && p.note ? p.note : (skin.brief && skin.brief.note) || "Final price and timing confirmed by the team.";
+      const note = p && p.note ? p.note : (skin.brief && skin.brief.note) || "Final price and timing confirmed by the team.";
+      if (noteEl) noteEl.textContent = d.breakdown ? d.breakdown + ". " + note : note;
     };
     form.addEventListener("input", summarise);
     select.addEventListener("change", summarise);
@@ -72,7 +102,7 @@ function onSkin(skin) {
       draft = read();
       ref = createReference(skin.refPrefix || "KQ");
       const text = formatBrief(skin, draft, ref);
-      module.querySelector("[data-ready-summary]").textContent = `${draft.line}\n${draft.deadline ? "Needed by " + draft.deadline : "Timing to discuss"}${draft.estimate ? "\nEstimate " + draft.estimate : ""}`;
+      module.querySelector("[data-ready-summary]").textContent = `${draft.line}\n${draft.deadline ? (cfg.deadlineField || "Needed by") + " " + draft.deadline : "Timing to discuss"}${draft.estimate ? "\nEstimate " + draft.estimate : ""}`;
       module.querySelector("[data-reference]").textContent = ref;
       const wa = module.querySelector("[data-whatsapp]"), mail = module.querySelector("[data-email]");
       const waHref = whatsappLink(skin.contact && skin.contact.whatsapp, text);
