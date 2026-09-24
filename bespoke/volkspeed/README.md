@@ -1,4 +1,4 @@
-# Volkspeed — T2 service enquiry, distinct motorsport presentation
+# Volkspeed — T2 service enquiry, silver automotive presentation — v2
 
 Client pitch concept, 24 September 2026. Five static pages: Home, Services, Our Expertise,
 Workshops and Book a Service. No dependencies, video, third-party fonts or database.
@@ -13,7 +13,7 @@ Public entry: https://kites-studio.github.io/preview/volkspeed/
 - No prices, ratings, guarantees or example perks copied from the generic auto skin.
 - First-party logo and vehicle images from Volkspeed; three already-generated Higgsfield
   images reused from `assets/auto/`. Full provenance: `assets/volkspeed/SOURCES.md` in the private parent repo.
-- Concept notice in top/footer flow, never a fixed overlay over form fields.
+- Concept notice in footer flow, never a fixed overlay over form fields.
 
 ## Enquiry boundary
 
@@ -36,3 +36,7 @@ Five pages at 1440 / 768 / 390 / 320 pixels; no horizontal page overflow. Menu/E
 service + branch preselection, make/model/year, review/edit, encoded WhatsApp draft, Sunday
 and Saturday constraints, reduced motion checked. No messages sent. Real Android hardware,
 mobile-network timing and workshop availability are not tested or claimed.
+
+## Redesign v2
+
+User rejected the dark, condensed first design. Rebuilt all five pages with light silver/white surfaces, restrained red, DM Sans, large client-owned vehicle imagery, rounded photography and a functional opening enquiry panel. Both service and branch carry into T2. Mobile receives its own stacked opening. Original content and enquiry boundaries retained. One new image generation attempt hit the account usage limit; no generated output was used.
