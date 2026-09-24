@@ -40,3 +40,7 @@ mobile-network timing and workshop availability are not tested or claimed.
 ## Redesign v2
 
 User rejected the dark, condensed first design. Rebuilt all five pages with light silver/white surfaces, restrained red, DM Sans, large client-owned vehicle imagery, rounded photography and a functional opening enquiry panel. Both service and branch carry into T2. Mobile receives its own stacked opening. Original content and enquiry boundaries retained. One new image generation attempt hit the account usage limit; no generated output was used.
+
+## Personality pass
+
+L-09 kinetic headline adapted from `docs/feature-bench.html`: 9-second word cycle, fixed layout, static accessible label, pause/play, reduced-motion and visibility controls. Red plus soft red surfaces express the requested roughly 30% branding balance. No new dependencies/assets.

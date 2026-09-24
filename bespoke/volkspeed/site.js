@@ -40,3 +40,12 @@ if(book){
   status.hidden=true;form.hidden=false;
  }catch(error){status.textContent='The enquiry options could not load. Reload the page, or email kites.stdio@gmail.com to try the demo.';console.error(error);}
 }
+
+// Adapted from Feature Bench L-09 kinCycle; pause offscreen and respect motion preferences.
+const kineticHero=document.querySelector('.hero'),motionButton=document.querySelector('.motion-toggle');
+if(kineticHero&&motionButton){
+ const preference=matchMedia('(prefers-reduced-motion: reduce)');let paused=false,visible=true;
+ function syncMotion(){const running=!paused&&!preference.matches&&visible&&!document.hidden;kineticHero.classList.toggle('motion-on',running);motionButton.hidden=preference.matches;motionButton.textContent=paused?'Play motion':'Pause motion';motionButton.setAttribute('aria-pressed',String(paused));}
+ motionButton.addEventListener('click',()=>{paused=!paused;syncMotion()});preference.addEventListener('change',syncMotion);document.addEventListener('visibilitychange',syncMotion);
+ new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;syncMotion()},{threshold:.1}).observe(kineticHero);syncMotion();
+}
